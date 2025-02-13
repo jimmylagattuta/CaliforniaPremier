@@ -17,7 +17,7 @@
   "scripts": {
   "start": "react-scripts start",
   "build": "webpack --config webpack.config.js",
-  "postinstall": "npm run build && shx cp -r build/* ../public/",
+  "postinstall": "npm run build && npx shx cp -r build/* ../public/",
   "test": "react-scripts test",
   "eject": "react-scripts eject"
 },
