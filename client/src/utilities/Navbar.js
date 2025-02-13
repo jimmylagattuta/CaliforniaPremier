@@ -26,7 +26,7 @@ function Navbar() {
             Home
           </li>
           <li className="nav-item" onClick={() => navigate('/services')}>
-            Services<span className="new">(new)</span>
+            Services
           </li>
           <li className="nav-item" onClick={() => navigate('/about')}>
             About Us

@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 5px 0px 5px;
+    margin: 0px;
     position: relative;
   }
   .navbar-container {
@@ -51,29 +52,37 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
-    right: 0;
+    top: 55px; /* Below navbar */
+    left: 0;
     width: 100%;
+    height: calc(100vh - 65px);
     background-color: #7ea19f;
-    padding: 1rem;
-    transition: all 0.3s ease-in-out;
-    z-index: 99;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 999;
   }
   
   .nav-menu.active {
     display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: flex-start; /* Horizontally center */
   }
   
-  .nav-item {
-    padding: 10px;
+/* Style the list items */
+.nav-item {
+    list-style: none; /* Removes bullets */
+    padding: 20px 0; /* Slightly more spacing */
     text-align: center;
     color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
+    font-size: 1.75rem; /* Slightly bigger font */
+    font-weight: 500;
     transition: color 0.3s;
   }
+  
   
   .nav-item:hover {
     color: #c5c5c5;
   }
+  
   
