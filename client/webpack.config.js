@@ -2,23 +2,32 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+  },
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js',
+    filename: '[name].[contenthash].js', // Unique filenames for each chunk
     clean: true,
   },
   optimization: {
     minimize: true,
+    splitChunks: {
+      chunks: 'all',
+    },
     minimizer: [
       new TerserPlugin({
         terserOptions: {
           compress: {
             drop_console: true,
+            unused: true,
+            dead_code: true,
           },
+          mangle: true,
           format: {
             comments: false,
           },
@@ -27,6 +36,23 @@ module.exports = {
       }),
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      filename: 'index.html',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+      },
+    }),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false,
+      reportFilename: 'bundle-report.html',
+    }),
+  ],
   module: {
     rules: [
       {
@@ -48,15 +74,4 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-      minify: {
-        collapseWhitespace: true,
-        removeComments: true,
-        removeRedundantAttributes: true,
-        useShortDoctype: true,
-      },
-    }),
-  ],
 };
