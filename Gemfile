@@ -34,7 +34,12 @@ gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use the latest stable version (0.6.0 as listed)
-gem 'brotli', '~> 0.6.0'
+# Brotli gem for asset compression
+gem 'brotli', '~> 0.4.0'
+# Use rack-brotli for Brotli compression middleware
+gem 'rack-brotli', '~> 2.0.0'
+# Gem for JavaScript compression
+gem 'uglifier', '>= 4.1.20'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"

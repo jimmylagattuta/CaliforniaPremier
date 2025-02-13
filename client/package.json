@@ -15,12 +15,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "webpack --config webpack.config.js",
-    "postinstall": "npm run build && cp -r build/* ../public/",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+  "start": "react-scripts start",
+  "build": "webpack --config webpack.config.js",
+  "postinstall": "npm run build && shx cp -r build/* ../public/",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -40,6 +40,8 @@
     ]
   },
   "devDependencies": {
-    "webpack-bundle-analyzer": "^4.10.2"
+    "shx": "^0.3.4",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^6.0.1"
   }
 }

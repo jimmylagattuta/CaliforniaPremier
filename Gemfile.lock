@@ -83,7 +83,7 @@ GEM
       msgpack (~> 1.2)
     brakeman (7.0.0)
       racc
-    brotli (0.6.0)
+    brotli (0.4.0)
     builder (3.3.0)
     capybara (3.40.0)
       addressable
@@ -104,6 +104,7 @@ GEM
     drb (2.2.1)
     error_highlight (0.7.0)
     erubi (1.13.1)
+    execjs (2.10.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.7)
@@ -166,6 +167,9 @@ GEM
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.10)
+    rack-brotli (2.0.0)
+      brotli (>= 0.3)
+      rack (>= 3)
     rack-session (2.1.0)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
@@ -266,6 +270,8 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2025.1)
       tzinfo (>= 1.0.0)
+    uglifier (4.2.1)
+      execjs (>= 0.3.0, < 3)
     unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
@@ -291,7 +297,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   brakeman
-  brotli (~> 0.6.0)
+  brotli (~> 0.4.0)
   capybara
   debug
   error_highlight (>= 0.4.0)
@@ -299,6 +305,7 @@ DEPENDENCIES
   jbuilder
   pg (~> 1.1)
   puma (>= 5.0)
+  rack-brotli (~> 2.0.0)
   rails (~> 7.2.2, >= 7.2.2.1)
   rubocop-rails-omakase
   selenium-webdriver
@@ -306,6 +313,7 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
+  uglifier (>= 4.1.20)
   web-console
 
 RUBY VERSION

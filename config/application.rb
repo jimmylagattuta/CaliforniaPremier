@@ -4,6 +4,7 @@ require "rails"
 require "action_controller/railtie" 
 require "action_mailer/railtie"
 require "sprockets/railtie" # If you're using assets
+require 'rack/brotli'  # Add this to load Rack::Brotli middleware
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -21,6 +22,14 @@ module Californiapremier
     config.action_dispatch.default_headers = {
       'Cross-Origin-Resource-Policy' => 'same-site'
     }
+
+        # Enable Brotli compression for text assets
+    if defined?(Rack::Brotli)
+      config.middleware.use Rack::Brotli, quality: 5, extensions: ['.html', '.js', '.css', '.svg', '.json']
+    end
+
+    # Enable Gzip as a fallback
+    config.middleware.insert_after Rack::Brotli, Rack::Deflater
     
     # Configuration for the application, engines, and railties goes here.
     #
