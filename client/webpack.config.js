@@ -1,4 +1,3 @@
-// client/webpack.config.js
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -6,13 +5,16 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   mode: 'production',
-  entry: {
-    main: './src/index.js',
-  },
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: '[name].[contenthash].js', // Unique filenames for each chunk
+    filename: '[name].[contenthash].js',
+    publicPath: '/', // Important for React Router
     clean: true,
+  },
+  devtool: 'source-map', // Source maps for debugging
+  cache: {
+    type: 'filesystem', // Faster rebuilds
   },
   optimization: {
     minimize: true,
@@ -27,7 +29,6 @@ module.exports = {
             unused: true,
             dead_code: true,
           },
-          mangle: true,
           format: {
             comments: false,
           },
@@ -62,6 +63,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react'],
+            cacheDirectory: true, // Speeds up builds
           },
         },
       },
@@ -73,5 +75,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+      components: path.resolve(__dirname, 'src/components/'),
+      utils: path.resolve(__dirname, 'src/utils/'),
+    },
   },
 };

@@ -39,8 +39,7 @@ gem 'brotli', '~> 0.4.0'
 # Use rack-brotli for Brotli compression middleware
 gem 'rack-brotli', '~> 2.0.0'
 # Gem for JavaScript compression
-gem 'uglifier', '>= 4.2.0'
-
+gem 'terser'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
