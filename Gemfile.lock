@@ -1,3 +1,6 @@
+RUBY VERSION
+   ruby 3.2.2
+
 GEM
   remote: https://rubygems.org/
   specs:
