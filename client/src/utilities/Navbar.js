@@ -14,7 +14,14 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo" onClick={() => navigate('/')}>
-          <img src="https://i.imgur.com/rOMqkCn.jpeg" alt="Company Logo" />
+          <img
+            src="https://i.imgur.com/rOMqkCn.jpeg"
+            alt="Company Logo"
+            width="100%" 
+            height="auto" 
+            loading="eager" 
+            fetchpriority="high"
+          />
         </div>
         <div className="menu-icon" onClick={toggleMenu}>
           <div className={isOpen ? 'bar change' : 'bar'}></div>
