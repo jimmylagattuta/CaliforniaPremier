@@ -313,7 +313,7 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
-  uglifier (>= 4.1.20)
+  uglifier (>= 4.2.0)
   web-console
 
 RUBY VERSION
