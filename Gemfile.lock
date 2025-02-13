@@ -83,6 +83,7 @@ GEM
       msgpack (~> 1.2)
     brakeman (7.0.0)
       racc
+    brotli (0.6.0)
     builder (3.3.0)
     capybara (3.40.0)
       addressable
@@ -290,6 +291,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   brakeman
+  brotli (~> 0.6.0)
   capybara
   debug
   error_highlight (>= 0.4.0)
