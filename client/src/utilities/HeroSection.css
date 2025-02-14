@@ -50,13 +50,17 @@
     right: -100px;
   }
   
-  @media (max-width: 768px) {
-    .hero-section img {
-      content: url('https://i.imgur.com/yourHeroImageMobile.jpeg');
-    }
-    
+/* Tablet (From 481px up to 768px) */
+/* Tablet */
+@media (max-width: 768px) {
     .company-name {
       font-size: 2rem;
     }
   }
   
+  /* Desktop */
+  @media (min-width: 769px) {
+    .company-name {
+      font-size: 3rem;
+    }
+  }
