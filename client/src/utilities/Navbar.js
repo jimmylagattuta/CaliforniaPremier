@@ -15,7 +15,7 @@ function Navbar() {
       <div className="navbar-container">
         <div className="navbar-logo" onClick={() => navigate('/')}>
           <img
-            src="https://i.imgur.com/rOMqkCn.jpeg"
+            src="https://i.postimg.cc/vHxSVm2p/i-Stock-2161608991-1.webp"
             alt="Company Logo"
             width="100%" 
             height="auto" 

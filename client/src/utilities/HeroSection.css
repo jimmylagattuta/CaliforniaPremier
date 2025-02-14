@@ -1,8 +1,8 @@
-/* HeroSection.css */
+/* Base (Mobile First) */
 .hero-section {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 60vh; /* Reduce height for mobile */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,9 +17,32 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
+    object-position: center center; /* Center the image */
   }
   
+  /* Tablet (From 481px up to 768px) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .hero-section {
+      height: 75vh; /* Slightly larger for tablets */
+    }
+  
+    .company-name {
+      font-size: 2.5rem;
+    }
+  }
+  
+  /* Desktop */
+  @media (min-width: 769px) {
+    .hero-section {
+      height: 100vh; /* Full height for desktops */
+    }
+  
+    .company-name {
+      font-size: 3rem;
+    }
+  }
+  
+  /* Content Style */
   .hero-content {
     position: relative;
     text-align: center;
@@ -28,39 +51,9 @@
   }
   
   .company-name {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
     letter-spacing: 2px;
   }
   
-  .line {
-    position: absolute;
-    width: 80px;
-    height: 4px;
-    background-color: white;
-    top: 50%;
-  }
-  
-  .line.left {
-    left: -100px;
-  }
-  
-  .line.right {
-    right: -100px;
-  }
-  
-/* Tablet (From 481px up to 768px) */
-/* Tablet */
-@media (max-width: 768px) {
-    .company-name {
-      font-size: 2rem;
-    }
-  }
-  
-  /* Desktop */
-  @media (min-width: 769px) {
-    .company-name {
-      font-size: 3rem;
-    }
-  }
