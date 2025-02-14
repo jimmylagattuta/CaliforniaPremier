@@ -37,9 +37,18 @@ function HeroSection() {
       </picture>
 
       <div className="hero-content">
-        <h1 className="company-name">PURE HEALTH & WELLNESS</h1>
-        <div className="line left"></div>
-        <div className="line right"></div>
+        <div className="hero-content-title">
+          <div className="line"></div>
+          <h1 className="company-name">CALIFNORIA PREMIER PAIN CLINICS</h1>
+          <div className="line"></div>
+        </div>  
+        <h1 className="slogan">Relieve. Restore. Renew.</h1>
+        <p className="hero-paragraph">
+          At California Premier Pain Clinics, our mission is to help you find relief and regain your quality of life. Our experts craft personalized treatment plans using advanced therapies to ensure the best outcomes for your recovery.
+        </p>
+        <h1 className="subslogan">Your Path to a Pain-Free Life Begins Here.</h1>
+
+        <a href="#appointment" className="cta-button">Book an Appointment</a>
       </div>
     </section>
   );
