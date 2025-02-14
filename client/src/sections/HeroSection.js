@@ -39,7 +39,7 @@ function HeroSection() {
       <div className="hero-content">
         <div className="hero-content-title">
           <div className="line"></div>
-          <h1 className="company-name">CALIFNORIA PREMIER PAIN CLINICS</h1>
+          <h1 className="company-name">CALIFORNIA PREMIER PAIN CLINICS</h1>
           <div className="line"></div>
         </div>  
         <h1 className="slogan">Relieve. Restore. Renew.</h1>
