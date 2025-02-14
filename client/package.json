@@ -21,14 +21,14 @@
     "@babel/preset-react": "^7.20.0",
     "babel-loader": "^9.1.0",
     "shx": "^0.3.4",
-    "webpack-bundle-analyzer": "^4.10.2",
     "webpack": "^5.98.0",
+    "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^6.0.1"
   },
   "scripts": {
     "clean": "rm -rf node_modules build && npm cache clean --force",
     "start": "react-scripts start",
-    "build": "webpack --config webpack.config.js",
+    "build": "npx webpack-cli --config webpack.config.js",
     "heroku-postbuild": "npm install --legacy-peer-deps && npm run build",
     "postinstall": "npm run build && npx shx cp -r build/* ../public/",
     "test": "react-scripts test",
