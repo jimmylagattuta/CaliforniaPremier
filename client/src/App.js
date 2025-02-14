@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./utilities/Navbar";
+import HeroSection from "./utilities/HeroSection";
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/appointment" element={<h1>Book Appointment</h1>} />
         </Routes>
       </main>
+      <HeroSection />
     </div>
   );
 }
