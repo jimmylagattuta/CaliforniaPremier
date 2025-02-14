@@ -10,7 +10,6 @@ function HeroSection() {
         width="100%"
         height="auto"
         loading="eager"
-        fetchpriority="high"
       />
       <div className="hero-content">
         <h1 className="company-name">PURE HEALTH & WELLNESS</h1>
