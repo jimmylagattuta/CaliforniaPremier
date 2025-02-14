@@ -7,28 +7,28 @@ function HeroSection() {
       <picture>
         {/* Mobile Image (Default) */}
         <source
-          srcSet="https://www.imghippo.com/i/bWgu8669KvI.webp"
+          srcSet="https://i.imghippo.com/files/bWgu8669KvI.webp"
           media="(max-width: 480px)"
           type="image/webp"
         />
 
         {/* Tablet Image */}
         <source
-          srcSet="https://www.imghippo.com/i/bWgu8669KvITablet.webp"
+          srcSet="https://i.imghippo.com/files/bWgu8669KvI.webp"
           media="(max-width: 768px)"
           type="image/webp"
         />
 
         {/* Desktop Image */}
         <source
-          srcSet="https://www.imghippo.com/i/bWgu8669KvIDesktop.webp"
+          srcSet="https://i.imghippo.com/files/bWgu8669KvI.webp"
           media="(min-width: 769px)"
           type="image/webp"
         />
 
         {/* Fallback */}
         <img
-          src="https://www.imghippo.com/i/bWgu8669KvI.webp"
+          src="https://i.imghippo.com/files/bWgu8669KvI.webp"
           alt="Hero"
           width="100%"
           height="auto"
