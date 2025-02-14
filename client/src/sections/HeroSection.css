@@ -6,7 +6,6 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    overflow: scroll;
     background-color: #f0f0f0;
   }
   .hero-section::before {
@@ -55,7 +54,7 @@
   .hero-paragraph {
     font-size: 1.2rem;
     line-height: 1.6;
-    margin: 100px 0px;
+    margin: 50px 0px;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     z-index: 2;
