@@ -1,0 +1,10 @@
+{
+  "compress": {
+    "drop_console": true,
+    "passes": 3
+  },
+  "format": {
+    "comments": false
+  },
+  "mangle": true
+}
