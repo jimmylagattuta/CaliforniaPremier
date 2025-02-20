@@ -1,7 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./utilities/Navbar";
-import "./App.css";
 
 // Lazy load each route
 const Home = lazy(() => import("./utilities/Home"));

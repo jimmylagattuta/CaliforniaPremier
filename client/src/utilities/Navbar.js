@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Navbar.css';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +21,7 @@ function Navbar() {
             loading="eager" 
           />
         </div>
-        <div className="menu-icon" onClick={toggleMenu}>
+        <div className="menu-icon" aria-label="Toggle navigation menu" onClick={toggleMenu}>
           <div className={isOpen ? 'bar change' : 'bar'}></div>
           <div className={isOpen ? 'bar change' : 'bar'}></div>
           <div className={isOpen ? 'bar change' : 'bar'}></div>
