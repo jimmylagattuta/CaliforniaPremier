@@ -43,7 +43,7 @@ gem 'terser'
 # Gemfile
 
 gem 'rack', '~> 3.0'
-gem 'heroku-deflater'
+# gem 'heroku-deflater'
 
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
