@@ -2,6 +2,7 @@ const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -12,9 +13,9 @@ module.exports = {
     publicPath: '/', // Important for React Router
     clean: true,
   },
-  devtool: 'source-map', // Source maps for debugging
+  devtool: 'source-map', // Source maps for debugging production issues
   cache: {
-    type: 'filesystem', // Faster rebuilds
+    type: 'filesystem', // Faster rebuilds using persistent caching
   },
   optimization: {
     minimize: true,
@@ -48,6 +49,33 @@ module.exports = {
         useShortDoctype: true,
       },
     }),
+    // Generate a service worker that caches images, JS, and CSS files
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true,
+      runtimeCaching: [
+        {
+          // Cache images with a Cache First strategy.
+          urlPattern: /\.(?:png|jpg|jpeg|svg|webp)$/,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'images',
+            expiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
+            },
+          },
+        },
+        {
+          // Cache JS and CSS files using a Stale While Revalidate strategy.
+          urlPattern: /\.(?:js|css)$/,
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'static-resources',
+          },
+        },
+      ],
+    }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false,
@@ -63,7 +91,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react'],
-            cacheDirectory: true, // Speeds up builds
+            cacheDirectory: true, // Speeds up builds by caching Babel output
           },
         },
       },
