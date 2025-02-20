@@ -6,14 +6,13 @@ require "action_mailer/railtie"
 require "sprockets/railtie" # if you're using assets
 require 'rack/brotli'  # loads Rack::Brotli middleware
 
-# Require the gems listed in Gemfile, including any gems you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module Californiapremier
   class Application < Rails::Application
     config.load_defaults 7.2
 
-    # config/initializers/rack_deflater_patch.rb
+    # Patch Rack::Deflater early to safely append to Cache-Control
     module ::Rack
       class Deflater
         instance_eval do
@@ -28,14 +27,13 @@ module Californiapremier
               [status, headers, body]
             end
           else
-            # If call is not defined, log or do nothing
-            Rails.logger.info "Rack::Deflater.call not defined; skipping patch."
+            # Use puts instead of Rails.logger since it might not be available
+            puts "Rack::Deflater.call not defined; skipping patch."
           end
         end
       end
     end
 
-    # Existing configuration
     config.autoload_lib(ignore: %w[assets tasks])
     config.action_dispatch.default_headers = {
       'Cross-Origin-Resource-Policy' => 'same-site'
