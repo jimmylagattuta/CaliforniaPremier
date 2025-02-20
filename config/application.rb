@@ -13,23 +13,24 @@ module Californiapremier
   class Application < Rails::Application
     config.load_defaults 7.2
 
-    # Insert our patch for Rack::Deflater before adding it to the middleware stack.
-    module Rack
+    # config/initializers/rack_deflater_patch.rb
+    module ::Rack
       class Deflater
-        alias_method :orig_call, :call
+        instance_eval do
+          if method_defined?(:call) && !method_defined?(:orig_call)
+            alias_method :orig_call, :call
 
-        def call(env)
-          status, headers, body = orig_call(env)
-          if headers["Cache-Control"]
-            if headers["Cache-Control"].is_a?(Hash)
-              # Convert the hash to a string by joining key=value pairs
-              cc_string = headers["Cache-Control"].map { |k, v| "#{k}=#{v}" }.join(", ")
-              headers["Cache-Control"] = cc_string + ", no-transform"
-            else
-              headers["Cache-Control"] = headers["Cache-Control"].to_s + ", no-transform"
+            define_method(:call) do |env|
+              status, headers, body = orig_call(env)
+              if headers["Cache-Control"]
+                headers["Cache-Control"] = headers["Cache-Control"].to_s + ", no-transform"
+              end
+              [status, headers, body]
             end
+          else
+            # If call is not defined, log or do nothing
+            Rails.logger.info "Rack::Deflater.call not defined; skipping patch."
           end
-          [status, headers, body]
         end
       end
     end
