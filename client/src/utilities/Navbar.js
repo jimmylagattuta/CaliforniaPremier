@@ -21,7 +21,7 @@ function Navbar() {
             loading="eager" 
           />
         </div>
-        <div className="menu-icon" aria-label="Toggle navigation menu" onClick={toggleMenu}>
+        <div className="menu-icon" aria="Toggle navigation menu" onClick={toggleMenu}>
           <div className={isOpen ? 'bar change' : 'bar'}></div>
           <div className={isOpen ? 'bar change' : 'bar'}></div>
           <div className={isOpen ? 'bar change' : 'bar'}></div>
