@@ -20,7 +20,15 @@ Rails.application.configure do
   # key such as config/credentials/production.key. This key is used to decrypt credentials (and other encrypted files).
   # config.require_master_key = true
 
-  # Disable serving static files from `public/`, relying on NGINX/Apache to do so instead.
+  # Set the cache store to Redis
+  config.cache_store = :redis_cache_store, {
+    url: ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" },
+    namespace: "californiapremier_cache",
+    expires_in: 1.day,        # Default expiration for cache entries (adjust as needed)
+    reconnect_attempts: 1,      # Optional: set reconnect attempts if needed
+    pool_size: 5               # Optional: set a pool size for concurrent requests
+  }
+  # Your static file server configuration
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present? || true
   config.public_file_server.headers = {
     'Cache-Control' => "public, max-age=#{1.year.to_i}"
