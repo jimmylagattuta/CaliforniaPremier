@@ -307,6 +307,7 @@ DEPENDENCIES
   jbuilder
   pg (~> 1.1)
   puma (>= 5.0)
+  rack (~> 3.0)
   rack-brotli (~> 2.0.0)
   rails (~> 7.2.2, >= 7.2.2.1)
   rubocop-rails-omakase
