@@ -1,0 +1,44 @@
+/* Mobile First Styles */
+.about-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    position: relative;
+    max-width: -webkit-fit-content;
+    max-width: fit-content;
+  }
+  
+
+  /* Image with rounded corners */
+  .about-image {
+    width: 100%;
+    max-width: 500px;  /* Adjust size as needed */
+    border-radius: 10px;
+    display: block;
+  }
+  
+  /* Tablet (481px to 768px) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .about-section {
+      padding: 30px;
+    }
+    
+    .about-image {
+      max-width: 350px;
+    }
+  }
+  
+  /* Desktop (769px and up) */
+  @media (min-width: 769px) {
+    .about-section {
+      padding: 50px;
+    }
+    
+    .about-image {
+      max-width: 400px;
+    }
+  }
+  
