@@ -15,7 +15,10 @@
     max-width: 400px;
     text-align: center;
     padding: 30px 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 
+    0,
+    10px 0 15px rgba(0, 0, 0, 0.1),   /* right shadow */
+    -10px 0 15px rgba(0, 0, 0, 0.1);  /* left shadow */
     transition: all 0.5s ease-in-out;
     transition-delay: 0.5s;
   }
