@@ -11,7 +11,7 @@ function AboutUsComponent() {
           alt="About Us"
           loading="lazy"
           className="about-image"
-          width="350"
+          width="372"
           height="328"
         />
         <div className="about-us-content-title">
