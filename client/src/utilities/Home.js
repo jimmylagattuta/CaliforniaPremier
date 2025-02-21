@@ -3,6 +3,7 @@ import HeroSection from "../sections/HeroSection";
 const AboutUsComponent = lazy(() => import("../sections/AboutUsComponent"));
 const PlaquesComponent = lazy(() => import("../sections/PlaquesComponent"));
 const OurServicesComponent = lazy(() => import("../sections/OurServicesComponent"));
+const HowItWorksComponent = lazy(() => import("../sections/HowItWorksComponent")); // <-- NEW
 
 function Home() {
   return (
@@ -16,6 +17,9 @@ function Home() {
       </Suspense>
       <Suspense fallback={<div>Loading Features...</div>}>
         <OurServicesComponent />
+      </Suspense>
+      <Suspense fallback={<div>Loading Steps...</div>}>
+        <HowItWorksComponent />
       </Suspense>
     </div>
   );
