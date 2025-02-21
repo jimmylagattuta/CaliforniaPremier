@@ -12,7 +12,7 @@ function AboutUsComponent() {
           loading="lazy"
           className="about-image"
           width="372"
-          height="328"
+          height="auto"
         />
         <div className="about-us-content-title">
           <div className="about-us-line"></div>
