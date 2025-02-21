@@ -1,7 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./HowItWorksComponent.css";
 
 function HowItWorksComponent() {
+  const navigate = useNavigate();
+  
+  const handleContactFormClick = (e) => {
+    e.preventDefault();
+    navigate("/become-a-patient");
+  };
+
   return (
     <section 
       className="how-it-works-section" 
@@ -32,9 +40,17 @@ function HowItWorksComponent() {
             <h3 className="hiw-step-title">Start Your Journey</h3>
           </div>
           <p className="hiw-step-description">
-            Complete the new patient intake form and confirm your service selection. 
-            Get started today to begin your path to a pain-free life.
+            Complete our{" "}
+            <a 
+              href="/become-a-patient" 
+              onClick={handleContactFormClick} 
+              className="hiw-contact-link"
+            >
+              contact form
+            </a>{" "}
+            to initiate your patient intake and confirm your service selection. Begin your journey toward a pain-free life today.
           </p>
+
         </div>
 
         {/* Step 2 */}
