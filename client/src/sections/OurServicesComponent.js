@@ -101,7 +101,7 @@ Book your appointment at California Premier Pain Clinics online or by phone now.
           />
           <h2 className="service-title">{treatment.title}</h2>
           <p className="service-description">{treatment.description}</p>
-          <a href={treatment.link} className="service-link">
+          <a className="service-link">
             Learn More About {treatment.title}
           </a>
         </button>

@@ -114,4 +114,10 @@
   .service-link:hover {
     text-decoration: underline;
   }
+
+  .service-link:active {
+    /* Slightly scale down and change background to give tactile feedback */
+    transform: scale(0.95);
+    background-color: rgba(105, 151, 148, 0.25);
+  }
   
