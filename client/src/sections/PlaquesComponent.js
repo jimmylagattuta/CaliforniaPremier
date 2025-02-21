@@ -38,10 +38,10 @@ function PlaquesComponent() {
               [index]: true,
             }));
           } else if (entry.intersectionRatio < 0.4) {
-            setVisiblePlaques((prev) => ({
-              ...prev,
-              [index]: false,
-            }));
+            // setVisiblePlaques((prev) => ({
+            //   ...prev,
+            //   [index]: false,
+            // }));
           }
         });
       },
