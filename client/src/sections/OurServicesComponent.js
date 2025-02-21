@@ -70,17 +70,17 @@ Book your appointment at California Premier Pain Clinics online or by phone now.
     <section className="our-services-section">
       <div className="hero-content-title">
         <div
-          style={{ backgroundColor: "rgb(87, 128, 124)", width: "40px", height: "2px" }}
+          style={{ backgroundColor: "rgb(37, 54, 53)", width: "40px", height: "2px" }}
           className="line"
         ></div>
         <h1
-          style={{ color: "rgb(87, 128, 124)", fontSize: "0.9rem", fontWeight: "bolder" }}
+          style={{ color: "rgb(37, 54, 53)", fontSize: "0.9rem", fontWeight: "bolder" }}
           className="company-name"
         >
           OUR SERVICES
         </h1>
         <div
-          style={{ backgroundColor: "rgb(87, 128, 124)", width: "40px", height: "2px" }}
+          style={{ backgroundColor: "rgb(37, 54, 53)", width: "40px", height: "2px" }}
           className="line"
         ></div>
       </div>

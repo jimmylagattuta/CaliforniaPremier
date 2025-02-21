@@ -65,7 +65,7 @@
   }
   /* Hover effect: change background to match the link color */
   .service-card:hover {
-    background-color: rgb(87, 128, 124);
+    background-color: rgb(37, 54, 53);
     color: #fff; /* Adjust text color for contrast */
   }
   
@@ -111,9 +111,9 @@
   /* "Learn More" Link */
   .service-link {
     display: inline-block;
-    margin-top: 5px;
+    margin-top: 15px;
     font-size: 0.9rem;
-    color: rgb(87, 128, 124);
+    color: rgb(37, 54, 53);
     text-decoration-line: underline;
     font-weight: 600;
   }
