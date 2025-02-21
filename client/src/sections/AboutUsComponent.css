@@ -16,6 +16,7 @@
   .about-image {
     width: 100%;
     max-width: 500px;  /* Adjust size as needed */
+    aspect-ratio: 372 / 328; 
     border-radius: 10px;
     display: block;
     box-shadow: 
