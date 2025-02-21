@@ -74,7 +74,7 @@ function PlaquesComponent() {
             className="plaque-icon"
             loading="lazy"
           />
-          <h3 className="plaque-title">{plaque.title}</h3>
+          <h1 className="plaque-title">{plaque.title}</h1>
           <p
             className={`plaque-description ${
               visiblePlaques[index] ? "visible" : ""
