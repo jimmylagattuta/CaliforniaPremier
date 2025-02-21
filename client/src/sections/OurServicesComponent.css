@@ -37,49 +37,42 @@
     padding: 5px 0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   }
-  
- /* Remove default button styles and allow full-width clickable card */
+/* Style the entire service-card button with increased padding, margin, and min-height */
 .service-card {
     display: block;
-    width: 100%;
-    text-align: left;
-    border: none;
-    background: none;
-    padding: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Optional: add a border or shadow to separate cards visually */
-  .service-card {
-    background-color: #fff;
-    border-radius: 8px;
     width: 90%;
     max-width: 400px;
+    min-height: 120px;         /* Ensures a larger touch target */
+    background-color: #fff;
+    border: none;
     text-align: center;
     padding: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08),
+    margin: 20px auto;         /* Adds space above and below each card */
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08), 
                 0 4px 6px rgba(0, 0, 0, 0.04);
     transition: all 0.5s ease-in;
-    margin: 0 auto; /* Centers the card if your parent isn't controlling layout */
-  }
-  /* Hover effect: change background to match the link color */
-  .service-card:hover {
-    background-color: rgb(37, 54, 53);
-    color: #fff; /* Adjust text color for contrast */
+    cursor: pointer;
   }
   
-  /* Ensure child elements inherit color changes if needed */
+  /* Hover effect: change background to match the link color and adjust text for contrast */
+  .service-card:hover {
+    background-color: rgb(37, 54, 53);
+    color: #fff;
+  }
+  
+  /* Ensure child elements inherit color changes on hover */
   .service-card:hover .service-title,
   .service-card:hover .service-description {
     color: #fff;
   }
   
-  /* Remove any default focus outline for accessibility if desired, but consider a custom focus style */
+  /* Focus style for accessibility */
   .service-card:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(87, 128, 124, 0.5);
   }
+  
   
   /* Circular Image */
   .service-image {
