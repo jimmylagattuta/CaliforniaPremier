@@ -3,7 +3,7 @@ import HeroSection from "../sections/HeroSection";
 const AboutUsComponent = lazy(() => import("../sections/AboutUsComponent"));
 const PlaquesComponent = lazy(() => import("../sections/PlaquesComponent"));
 const OurServicesComponent = lazy(() => import("../sections/OurServicesComponent"));
-const HowItWorksComponent = lazy(() => import("../sections/HowItWorksComponent")); // <-- NEW
+const HowItWorksComponent = lazy(() => import("../sections/HowItWorksComponent"));
 
 function Home() {
   return (

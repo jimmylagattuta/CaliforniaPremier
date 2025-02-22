@@ -15,6 +15,23 @@ function HowItWorksComponent() {
       className="how-it-works-section" 
       aria-labelledby="how-it-works-title"
     >
+      <div className="hero-content-title">
+        <div
+            style={{ backgroundColor: "rgb(37, 54, 53)", width: "40px", height: "2px" }}
+            className="line"
+          ></div>
+          <h1
+            style={{ color: "rgb(37, 54, 53)", fontSize: "0.9rem", fontWeight: "bolder" }}
+            className="company-name"
+          >
+            HOW IT WORKS
+          </h1>
+          <div
+            style={{ backgroundColor: "rgb(37, 54, 53)", width: "40px", height: "2px" }}
+            className="line"
+          >
+        </div>
+      </div>
       <h2 id="how-it-works-title" className="hiw-title">
         How Do I Become a Patient at California Premier Pain Clinics?
       </h2>
