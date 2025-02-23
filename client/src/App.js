@@ -5,6 +5,8 @@ import Navbar from "./utilities/Navbar";
 
 // Lazy load your routes/components as needed
 const Home = lazy(() => import("./utilities/Home"));
+const LocationsPage = lazy(() => import("./pages/LocationsPage"));
+
 
 // Add more routes as needed
 
@@ -16,6 +18,7 @@ function App() {
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/locations" element={<LocationsPage />} />
             {/* Other routes */}
           </Routes>
         </Suspense>

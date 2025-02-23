@@ -101,6 +101,11 @@ function LocationsSection() {
           </div>
         ))}
       </div>
+      <div className="button-container" style={{ textAlign: "center", marginTop: "20px" }}>
+        <a href="/locations" className="location-section-button">
+          View All Locations
+        </a>
+      </div>
     </section>
   );
 }
