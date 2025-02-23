@@ -35,7 +35,7 @@ function FooterComponent() {
           >
             {/* Instagram Icon */}
             <img
-              src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png"
+              src="https://i.postimg.cc/j5G6vJHJ/Screenshot-2025-02-22-181601-bg-removed-png.webp"
               alt="Instagram"
               className="social-icon-img"
               height="24"
@@ -86,7 +86,7 @@ function FooterComponent() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
+                src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
                 alt="Map icon"
                 className="map-icon"
                 height="16"
@@ -102,7 +102,7 @@ function FooterComponent() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
+                src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
                 alt="Map icon"
                 className="map-icon"
                 height="16"
@@ -118,7 +118,7 @@ function FooterComponent() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
+                src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
                 alt="Map icon"
                 className="map-icon"
                 height="16"
@@ -134,7 +134,7 @@ function FooterComponent() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
+                src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
                 alt="Map icon"
                 className="map-icon"
                 height="16"
@@ -150,7 +150,7 @@ function FooterComponent() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
+                src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
                 alt="Map icon"
                 className="map-icon"
                 height="16"
@@ -166,7 +166,7 @@ function FooterComponent() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
+                src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
                 alt="Map icon"
                 className="map-icon"
                 height="16"
@@ -182,7 +182,7 @@ function FooterComponent() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
+                src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
                 alt="Map icon"
                 className="map-icon"
                 height="16"
@@ -198,7 +198,7 @@ function FooterComponent() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
+                src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
                 alt="Map icon"
                 className="map-icon"
                 height="16"
@@ -214,7 +214,7 @@ function FooterComponent() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
+                src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
                 alt="Map icon"
                 className="map-icon"
                 height="16"
@@ -230,7 +230,7 @@ function FooterComponent() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
+                src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
                 alt="Map icon"
                 className="map-icon"
                 height="16"
