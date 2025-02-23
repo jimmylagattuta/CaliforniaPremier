@@ -7,11 +7,11 @@ function FooterComponent() {
       {/* Fancy Brand Row: Logo + Two-Line Title */}
       <div className="fancy-brand-row">
         <img
-          src="https://i.postimg.cc/mrH0xfnF/i-Stock-1137683414-1-3.webp"
+          src="https://i.postimg.cc/wT3CPKY5/i-Stock-1137683414-1-1-bg-removed-png.webp"
           alt="California Premier Pain Clinics"
           className="fancy-brand-logo"
-          height="24"
-          width="24" 
+          height="40"
+          width="40" 
         />
         <div className="fancy-text-group">
           <h1 className="fancy-brand-title">CALIFORNIA PREMIER</h1>
