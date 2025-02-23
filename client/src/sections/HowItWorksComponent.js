@@ -48,7 +48,7 @@ function HowItWorksComponent() {
               src="https://i.postimg.cc/T1zSsXbW/i-Stock-2151690936-4-1-1.webp"
               alt="Icon representing the first step: starting your journey"
               width="55"
-              height="auto"
+              height="65"
               loading="lazy"
             />
           </div>
@@ -77,7 +77,7 @@ function HowItWorksComponent() {
               src="https://i.postimg.cc/FKRsVjVk/i-Stock-2151690936-5-1-1.webp"
               alt="Icon representing the second step: consultation"
               width="55"
-              height="auto"
+              height="65"
               loading="lazy"
             />
           </div>
@@ -98,7 +98,7 @@ function HowItWorksComponent() {
               src="https://i.postimg.cc/q7Q2DXKs/i-Stock-2151690936-7-1.webp"
               alt="Icon representing the third step: beginning treatment"
               width="55"
-              height="auto"
+              height="65"
               loading="lazy"
             />
           </div>
