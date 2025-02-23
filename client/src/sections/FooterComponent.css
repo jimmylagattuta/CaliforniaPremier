@@ -165,7 +165,7 @@
     display: inline-block;
     color: #fff;
     text-decoration: none;
-    background-color: rgb(87, 128, 124);
+    background-color: rgb(49, 71, 69);
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
     font-weight: bold;
@@ -199,7 +199,7 @@
     padding-top: 1rem;
     text-align: center;
     font-size: 0.75rem;
-    opacity: 0.5;
+    opacity: 0.8;
   }
   
   .footer-bottom-links {

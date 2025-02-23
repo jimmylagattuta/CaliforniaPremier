@@ -10,6 +10,8 @@ function FooterComponent() {
           src="https://i.postimg.cc/mrH0xfnF/i-Stock-1137683414-1-3.webp"
           alt="California Premier Pain Clinics"
           className="fancy-brand-logo"
+          height="24"
+          width="24" 
         />
         <div className="fancy-text-group">
           <h1 className="fancy-brand-title">CALIFORNIA PREMIER</h1>
@@ -36,6 +38,8 @@ function FooterComponent() {
               src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png"
               alt="Instagram"
               className="social-icon-img"
+              height="24"
+              width="24"
             />
           </a>
         </div>
@@ -85,6 +89,8 @@ function FooterComponent() {
                 src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
                 alt="Map icon"
                 className="map-icon"
+                height="16"
+                width="16"
               />
               Santa Rosa - 864 2nd Street Suite B, Santa Rosa, CA 95404
             </a>
@@ -99,6 +105,8 @@ function FooterComponent() {
                 src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
                 alt="Map icon"
                 className="map-icon"
+                height="16"
+                width="16"
               />
               Sacramento - 7275 E. Southgate Drive Suite 306, Sacramento, CA 95823
             </a>
@@ -113,6 +121,8 @@ function FooterComponent() {
                 src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
                 alt="Map icon"
                 className="map-icon"
+                height="16"
+                width="16"
               />
               Stockton - 420 Acacia Street Suite 19, Stockton, CA 95203
             </a>
@@ -127,6 +137,8 @@ function FooterComponent() {
                 src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
                 alt="Map icon"
                 className="map-icon"
+                height="16"
+                width="16"
               />
               Modesto - 1130 Coffee Road BLDG 2B, Modesto, CA 95355
             </a>
@@ -141,6 +153,8 @@ function FooterComponent() {
                 src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
                 alt="Map icon"
                 className="map-icon"
+                height="16"
+                width="16"
               />
               Hayward - 24700 Calaroga Ave Suite 103, Hayward, CA 94545
             </a>
@@ -155,6 +169,8 @@ function FooterComponent() {
                 src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
                 alt="Map icon"
                 className="map-icon"
+                height="16"
+                width="16"
               />
               Salinas - 945 N. Blanco Suite A, Salinas, CA 93901
             </a>
@@ -169,6 +185,8 @@ function FooterComponent() {
                 src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
                 alt="Map icon"
                 className="map-icon"
+                height="16"
+                width="16"
               />
               San Jose - 2375 Montpelier Drive Suite 10, San Jose, CA 95116
             </a>
@@ -183,6 +201,8 @@ function FooterComponent() {
                 src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
                 alt="Map icon"
                 className="map-icon"
+                height="16"
+                width="16"
               />
               Fresno - 349 E. Bullard Ave Suite 105, Fresno, CA 93710
             </a>
@@ -197,6 +217,8 @@ function FooterComponent() {
                 src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
                 alt="Map icon"
                 className="map-icon"
+                height="16"
+                width="16"
               />
               Hanford - 1004 N. Douty Street, Hanford, CA 93230
             </a>
@@ -211,6 +233,8 @@ function FooterComponent() {
                 src="https://img.icons8.com/ios-filled/16/ffffff/marker.png"
                 alt="Map icon"
                 className="map-icon"
+                height="16"
+                width="16"
               />
               Bakersfield - 3550 Q. Street Suite 105, Bakersfield, CA 93301
             </a>
