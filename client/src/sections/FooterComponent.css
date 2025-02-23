@@ -145,7 +145,7 @@
     width: 16px;
     height: auto;
     margin-right: 0.5rem;
-    vertical-align: middle;
+    vertical-align: text-bottom;
   }
   
   /* Updated address link styling with blue underline */

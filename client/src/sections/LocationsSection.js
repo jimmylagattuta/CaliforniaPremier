@@ -68,9 +68,9 @@ function LocationsSection() {
   return (
     <section className="locations-section">
       <div className="hero-content-title">
-        <div className="line"></div>
-        <h1 className="company-name">OUR LOCATIONS</h1>
-        <div className="line"></div>
+        <div className="line-locations"></div>
+        <h1 className="company-name-locations">OUR LOCATIONS</h1>
+        <div className="line-locations"></div>
       </div>
       <div className="locations-grid">
         {locations.map((location, index) => (
