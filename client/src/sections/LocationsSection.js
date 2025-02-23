@@ -80,7 +80,7 @@ function LocationsSection() {
           >
             <div className="location-image" style={{ backgroundImage: `url(${location.image})` }}></div>
             <div className="location-info">
-              <h3 className="location-city">{location.city}</h3>
+              <h2 className="location-city">{location.city}</h2>
               <p className="location-address">
                 <a
                   href={`https://www.google.com/maps/search/?api=1&query=${location.mapsQuery}`}
@@ -91,6 +91,8 @@ function LocationsSection() {
                     src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
                     alt="Map icon"
                     className="map-icon"
+                    height="16"
+                    weight="16"
                   />
                   {location.address}
                 </a>
