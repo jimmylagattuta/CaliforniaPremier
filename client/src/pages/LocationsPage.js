@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./LocationsPage.css";
 import LocationsSection from "../sections/LocationsSection"; // Recycled office list component
+import FooterComponent from "../sections/FooterComponent"; // Recycled office list component
 
 function LocationsPage() {
   const [formData, setFormData] = useState({
@@ -153,6 +154,7 @@ function LocationsPage() {
       )}
 
       <LocationsSection showButton={false} />
+      <FooterComponent />
     </div>
   );
 }
