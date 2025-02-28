@@ -134,9 +134,10 @@ function LocationsPage() {
             </div>
             <div className="form-group">
               <div style={{ display: 'flex', flexDirection: 'row' }}>
+                <input type="checkbox" name="agreement" checked={formData.agreement} onChange={handleInputChange} required />
                 <label htmlFor="agreement">
-                <input type="checkbox" name="agreement" checked={formData.agreement} onChange={handleInputChange} required /> By checking this box, I acknowledge and agree that any information submitted will be forwarded to the CPPC office via email and is not a secure messaging system.
-                This form should not be used to transmit private health information. We exclusively provide treatment for personal injury patients (patients on liens).
+                By clicking SEND, I understand and agree that any information submitted will be forwarded to the CPPC office by email and is not a secure messaging system.
+                This form should not be used to transmit private health information. We only treat personal injury patients (patients on liens).
                 </label>
               </div>
               {errors.agreement && <span className="error-message">{errors.agreement}</span>}
