@@ -17,6 +17,7 @@ function LocationsPage() {
   useEffect(() => {
     const loadRecaptchaScript = () => {
       const script = document.createElement("script");
+      console.log('process', process);
       script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_RECAPTCHA}`;
       script.async = true;
       script.defer = true;
