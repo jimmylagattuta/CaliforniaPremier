@@ -20,7 +20,10 @@ function Home() {
       </Suspense>
     );
   }
-
+  console.log("process:", typeof process);
+  console.log("process.env:", process?.env);
+  console.log("REACT_APP_RECAPTCHA:", process?.env?.REACT_APP_RECAPTCHA);
+  
   return (
     <div>
       <HeroSection />
