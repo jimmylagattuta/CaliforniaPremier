@@ -8,22 +8,45 @@ function LocationsPage() {
     lastName: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
+    agreement: false,
   });
-  const [status, setStatus] = useState("");
-  const [recaptchaToken, setRecaptchaToken] = useState("");
 
-  // Ensure reCAPTCHA key is properly set
+  const [errors, setErrors] = useState({});
+  const [submitted, setSubmitted] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState("");
   const recaptchaKey = window.env?.RECAPTCHA_KEY || "your-default-recaptcha-key";
 
-  // Debugging: Log reCAPTCHA key
   console.log("Using reCAPTCHA key:", recaptchaKey);
 
-  const handleChange = (e) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      [e.target.name]: e.target.value
+  // Handle Input Changes
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
     }));
+  };
+
+  // Form Validation Function
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.firstName) newErrors.firstName = "First Name is required.";
+    if (!formData.lastName) newErrors.lastName = "Last Name is required.";
+    if (!formData.email) {
+      newErrors.email = "Email address is required.";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Invalid email format.";
+    }
+    if (!formData.phone) {
+      newErrors.phone = "Phone number is required.";
+    } else if (!/^\+?[1-9]\d{1,14}$/.test(formData.phone)) {
+      newErrors.phone = "Invalid phone number. Include country code.";
+    }
+    if (!formData.message) newErrors.message = "Message is required.";
+    if (!formData.agreement) newErrors.agreement = "You must agree to the terms.";
+
+    return newErrors;
   };
 
   // Function to execute reCAPTCHA
@@ -66,10 +89,20 @@ function LocationsPage() {
     loadRecaptchaScript();
   }, [recaptchaKey, executeRecaptcha]);
 
+  // Handle Form Submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
     console.log("Submitting form with data:", formData);
+
+    const formErrors = validateForm();
+    if (Object.keys(formErrors).length > 0) {
+      console.log("Form errors detected:", formErrors);
+      setErrors(formErrors);
+      return;
+    }
+
+    setErrors({});
+    setSubmitted(false);
 
     try {
       const freshToken = await executeRecaptcha();
@@ -81,22 +114,21 @@ function LocationsPage() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(payload),
       });
 
       console.log("Backend response:", response.status, response.statusText);
 
       if (response.ok) {
-        setStatus("Message sent successfully!");
-        setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+        setSubmitted(true);
+        console.log("Message sent successfully!");
       } else {
-        const errorData = await response.json();
-        console.error("Error response from backend:", errorData);
-        setStatus("Error sending message.");
+        console.error("Error response from backend:", await response.json());
+        setErrors({ form: "There was an error sending your message. Try again later." });
       }
     } catch (error) {
       console.error("Error during form submission:", error);
-      setStatus("Error sending message.");
+      setErrors({ form: "There was an error sending your message. Try again later." });
     }
   };
 
@@ -116,62 +148,48 @@ function LocationsPage() {
         </p>
       </div>
 
-      <form className="contact-container" onSubmit={handleSubmit}>
-        <div className="contact-left">
-          <div className="form-row">
+      {!submitted ? (
+        <form className="contact-container" onSubmit={handleSubmit}>
+          <div className="contact-left">
             <div className="form-group">
-              <input id="firstName" name="firstName" type="text" value={formData.firstName} onChange={handleChange} required />
-              <label htmlFor="firstName" className={formData.firstName ? "float-label label-active" : "float-label"}>
-                First Name
-              </label>
+              <label htmlFor="firstName">First Name</label>
+              <input type="text" name="firstName" value={formData.firstName} onChange={handleInputChange} required />
+              {errors.firstName && <span className="error-message">{errors.firstName}</span>}
             </div>
             <div className="form-group">
-              <input id="lastName" name="lastName" type="text" value={formData.lastName} onChange={handleChange} required />
-              <label htmlFor="lastName" className={formData.lastName ? "float-label label-active" : "float-label"}>
-                Last Name
-              </label>
+              <label htmlFor="lastName">Last Name</label>
+              <input type="text" name="lastName" value={formData.lastName} onChange={handleInputChange} required />
+              {errors.lastName && <span className="error-message">{errors.lastName}</span>}
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email Address</label>
+              <input type="email" name="email" value={formData.email} onChange={handleInputChange} required />
+              {errors.email && <span className="error-message">{errors.email}</span>}
+            </div>
+            <div className="form-group">
+              <label htmlFor="phone">Phone Number</label>
+              <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} required />
+              {errors.phone && <span className="error-message">{errors.phone}</span>}
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea name="message" value={formData.message} onChange={handleInputChange} required />
+              {errors.message && <span className="error-message">{errors.message}</span>}
+            </div>
+            <div className="form-group">
+              <input type="checkbox" name="agreement" checked={formData.agreement} onChange={handleInputChange} required />
+              <label htmlFor="agreement">I agree to the terms</label>
+              {errors.agreement && <span className="error-message">{errors.agreement}</span>}
             </div>
           </div>
-
-          <div className="form-row">
-            <div className="form-group">
-              <input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required />
-              <label htmlFor="email" className={formData.email ? "float-label label-active" : "float-label"}>
-                Email Address
-              </label>
-            </div>
-            <div className="form-group">
-              <input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} />
-              <label htmlFor="phone" className={formData.phone ? "float-label label-active" : "float-label"}>
-                Phone Number
-              </label>
-            </div>
-          </div>
-
-          <div className="form-row">
-            <div className="form-group full-width">
-              <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleChange} required />
-              <label htmlFor="message" className={formData.message ? "float-label label-active" : "float-label"}>
-                How can we help you?
-              </label>
-            </div>
-          </div>
+          <button type="submit" className="submit-button">SEND</button>
+        </form>
+      ) : (
+        <div className="contact-submitted-message">
+          <h3>Thank You!</h3>
+          <p>Your message has been sent successfully. We will get back to you shortly.</p>
         </div>
-
-        <div className="contact-right">
-          <p className="disclaimer-text">
-            By clicking SEND, I understand and agree that any information submitted will be forwarded to the CPPC office by email and is not a secure messaging system.
-            This form should not be used to transmit private health information. We only treat personal injury patients (patients on liens).
-          </p>
-
-          <div className="button-row">
-            <button type="submit" className="submit-button">
-              SEND
-            </button>
-          </div>
-          {status && <p className="form-status">{status}</p>}
-        </div>
-      </form>
+      )}
 
       <LocationsSection />
     </div>
