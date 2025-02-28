@@ -17,7 +17,6 @@ function Home() {
     return (
       <Suspense fallback={<div>Loading Locations...</div>}>
         <LocationsSection />
-        <FooterComponent />
       </Suspense>
     );
   }
