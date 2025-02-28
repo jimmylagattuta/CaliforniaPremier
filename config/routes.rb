@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  post '/contact', to: 'emails#create'
+  post '/contact', to: 'email#create'
 
   root 'static#index' # React frontend
   get '*path', to: 'static#index', constraints: ->(req) { !req.xhr? && req.format.html? }
