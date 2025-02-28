@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./LocationsPage.css";
 import LocationsSection from "../sections/LocationsSection"; // Recycled office list component
 
@@ -13,67 +13,67 @@ function LocationsPage() {
   const [status, setStatus] = useState("");
   const [recaptchaToken, setRecaptchaToken] = useState("");
 
-  // Uncomment and set your recaptchaKey appropriately.
+  // Ensure reCAPTCHA key is properly set
   const recaptchaKey = window.env?.RECAPTCHA_KEY || "your-default-recaptcha-key";
+
+  // Debugging: Log reCAPTCHA key
   console.log("Using reCAPTCHA key:", recaptchaKey);
 
-  // Optional: load reCAPTCHA Enterprise script and get an initial token
-  // useEffect(() => {
-  //   const loadRecaptchaScript = () => {
-  //     if (!recaptchaKey) {
-  //       console.error("reCAPTCHA key is missing.");
-  //       return;
-  //     }
-  // 
-  //     const script = document.createElement("script");
-  //     script.src = `https://www.google.com/recaptcha/enterprise.js?render=${recaptchaKey}`;
-  //     script.async = true;
-  //     script.defer = true;
-  //     script.onload = () => {
-  //       console.log("reCAPTCHA script loaded successfully.");
-  //       if (window.grecaptcha && window.grecaptcha.enterprise) {
-  //         window.grecaptcha.enterprise.ready(() => {
-  //           window.grecaptcha.enterprise
-  //             .execute(recaptchaKey, { action: "submit_form" })
-  //             .then((token) => {
-  //               console.log("Initial reCAPTCHA token acquired:", token);
-  //               setRecaptchaToken(token);
-  //             });
-  //         });
-  //       } else {
-  //         console.error("reCAPTCHA enterprise not available after script load.");
-  //       }
-  //     };
-  //     script.onerror = () => console.error("Failed to load reCAPTCHA script.");
-  //     document.head.appendChild(script);
-  //   };
-  // 
-  //   loadRecaptchaScript();
-  // }, [recaptchaKey]);
-
   const handleChange = (e) => {
-    console.log(`Field ${e.target.name} changed to:`, e.target.value);
-    setFormData({
-      ...formData,
+    setFormData((prevData) => ({
+      ...prevData,
       [e.target.name]: e.target.value
-    });
+    }));
   };
+
+  // Function to execute reCAPTCHA
+  const executeRecaptcha = useCallback(async () => {
+    if (!window.grecaptcha || !window.grecaptcha.enterprise) {
+      console.error("reCAPTCHA not available.");
+      return null;
+    }
+    try {
+      const token = await window.grecaptcha.enterprise.execute(recaptchaKey, { action: "submit_form" });
+      console.log("reCAPTCHA token received:", token);
+      return token;
+    } catch (error) {
+      console.error("reCAPTCHA execution error:", error);
+      return null;
+    }
+  }, [recaptchaKey]);
+
+  // Load reCAPTCHA script
+  useEffect(() => {
+    const loadRecaptchaScript = () => {
+      if (!recaptchaKey) {
+        console.error("reCAPTCHA key is missing.");
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.src = `https://www.google.com/recaptcha/enterprise.js?render=${recaptchaKey}`;
+      script.async = true;
+      script.defer = true;
+      script.onload = async () => {
+        console.log("reCAPTCHA script loaded.");
+        const token = await executeRecaptcha();
+        if (token) setRecaptchaToken(token);
+      };
+      script.onerror = () => console.error("Failed to load reCAPTCHA script.");
+      document.head.appendChild(script);
+    };
+
+    loadRecaptchaScript();
+  }, [recaptchaKey, executeRecaptcha]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submission started with data:", formData);
     setStatus("Sending...");
+    console.log("Submitting form with data:", formData);
 
     try {
-      if (!window.grecaptcha || !window.grecaptcha.enterprise) {
-        console.error("reCAPTCHA not loaded.", window.grecaptcha);
-        throw new Error("reCAPTCHA not loaded.");
-      }
-
-      console.log("Executing reCAPTCHA with key:", recaptchaKey);
-      // Get a fresh token right before submission
-      const freshToken = await window.grecaptcha.enterprise.execute(recaptchaKey, { action: "submit_form" });
-      console.log("Fresh reCAPTCHA token received:", freshToken);
+      const freshToken = await executeRecaptcha();
+      if (!freshToken) throw new Error("Failed to acquire reCAPTCHA token.");
 
       const payload = { ...formData, recaptchaToken: freshToken };
       console.log("Payload being sent:", payload);
@@ -84,19 +84,14 @@ function LocationsPage() {
         body: JSON.stringify(payload)
       });
 
-      console.log("Backend response status:", response.status);
+      console.log("Backend response:", response.status, response.statusText);
+
       if (response.ok) {
-        console.log("Message sent successfully!");
         setStatus("Message sent successfully!");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          message: ""
-        });
+        setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
       } else {
-        console.error("Error response from backend:", response);
+        const errorData = await response.json();
+        console.error("Error response from backend:", errorData);
         setStatus("Error sending message.");
       }
     } catch (error) {
@@ -107,7 +102,6 @@ function LocationsPage() {
 
   return (
     <div className="locations-page-container">
-      {/* Contact Form Section */}
       <div className="contact-header">
         <p className="small-heading">CALIFORNIA PREMIER PAIN CLINICS</p>
         <h2 className="main-heading">Finding Paths to Relief</h2>
@@ -123,40 +117,17 @@ function LocationsPage() {
       </div>
 
       <form className="contact-container" onSubmit={handleSubmit}>
-        {/* Left Column: Contact Fields */}
         <div className="contact-left">
           <div className="form-row">
             <div className="form-group">
-              <input
-                id="firstName"
-                name="firstName"
-                type="text"
-                value={formData.firstName}
-                onChange={handleChange}
-                placeholder=" "
-                required
-              />
-              <label
-                htmlFor="firstName"
-                className={formData.firstName ? "float-label label-active" : "float-label"}
-              >
+              <input id="firstName" name="firstName" type="text" value={formData.firstName} onChange={handleChange} required />
+              <label htmlFor="firstName" className={formData.firstName ? "float-label label-active" : "float-label"}>
                 First Name
               </label>
             </div>
             <div className="form-group">
-              <input
-                id="lastName"
-                name="lastName"
-                type="text"
-                value={formData.lastName}
-                onChange={handleChange}
-                placeholder=" "
-                required
-              />
-              <label
-                htmlFor="lastName"
-                className={formData.lastName ? "float-label label-active" : "float-label"}
-              >
+              <input id="lastName" name="lastName" type="text" value={formData.lastName} onChange={handleChange} required />
+              <label htmlFor="lastName" className={formData.lastName ? "float-label label-active" : "float-label"}>
                 Last Name
               </label>
             </div>
@@ -164,35 +135,14 @@ function LocationsPage() {
 
           <div className="form-row">
             <div className="form-group">
-              <input
-                id="email"
-                name="email"
-                type="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder=" "
-                required
-              />
-              <label
-                htmlFor="email"
-                className={formData.email ? "float-label label-active" : "float-label"}
-              >
+              <input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required />
+              <label htmlFor="email" className={formData.email ? "float-label label-active" : "float-label"}>
                 Email Address
               </label>
             </div>
             <div className="form-group">
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder=" "
-              />
-              <label
-                htmlFor="phone"
-                className={formData.phone ? "float-label label-active" : "float-label"}
-              >
+              <input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} />
+              <label htmlFor="phone" className={formData.phone ? "float-label label-active" : "float-label"}>
                 Phone Number
               </label>
             </div>
@@ -200,26 +150,14 @@ function LocationsPage() {
 
           <div className="form-row">
             <div className="form-group full-width">
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder=" "
-                required
-              />
-              <label
-                htmlFor="message"
-                className={formData.message ? "float-label label-active" : "float-label"}
-              >
+              <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleChange} required />
+              <label htmlFor="message" className={formData.message ? "float-label label-active" : "float-label"}>
                 How can we help you?
               </label>
             </div>
           </div>
         </div>
 
-        {/* Right Column: Disclaimer, reCAPTCHA Box, and Submit Button */}
         <div className="contact-right">
           <p className="disclaimer-text">
             By clicking SEND, I understand and agree that any information submitted will be forwarded to the CPPC office by email and is not a secure messaging system.
@@ -227,13 +165,14 @@ function LocationsPage() {
           </p>
 
           <div className="button-row">
-            <button type="submit" className="submit-button">SEND</button>
+            <button type="submit" className="submit-button">
+              SEND
+            </button>
           </div>
           {status && <p className="form-status">{status}</p>}
         </div>
       </form>
 
-      {/* Recycled Office List Section from LocationsSection */}
       <LocationsSection />
     </div>
   );
