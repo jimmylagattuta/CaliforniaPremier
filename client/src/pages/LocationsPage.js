@@ -155,7 +155,6 @@ function LocationsPage() {
         )}
 
         <LocationsSection showButton={false} />
-        <FooterComponent />
       </div>
       <FooterComponent />
     </div>
