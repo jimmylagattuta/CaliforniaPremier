@@ -13,32 +13,37 @@ function LocationsPage() {
   const [status, setStatus] = useState("");
   const [recaptchaToken, setRecaptchaToken] = useState("");
 
-  // Load reCAPTCHA Enterprise script and get an initial token
-  // useEffect(() => {
-  //   const loadRecaptchaScript = () => {
-  //     const script = document.createElement("script");
-  //     console.log('process', process);
-  //     const recaptchaKey = process.env.REACT_APP_RECAPTCHA;
-  //     console.log('process', process);
-  //     script.src = `https://www.google.com/recaptcha/enterprise.js?render=${recaptchaKey}`;
-  //     script.async = true;
-  //     script.defer = true;
-  //     script.onload = () => {
-  //       if (window.grecaptcha && window.grecaptcha.enterprise) {
-  //         window.grecaptcha.enterprise.ready(() => {
-  //           window.grecaptcha.enterprise
-  //             .execute(process.env.REACT_APP_RECAPTCHA, { action: "submit_form" })
-  //             .then((token) => {
-  //               setRecaptchaToken(token);
-  //             });
-  //         });
-  //       }
-  //     };
-  //     document.head.appendChild(script);
-  //   };
+  // Replace this with the correct way to access your environment variable
+  const recaptchaKey = window.env?.RECAPTCHA_KEY || "your-default-recaptcha-key";
 
-  //   loadRecaptchaScript();
-  // }, []);
+  // Load reCAPTCHA Enterprise script and get an initial token
+  useEffect(() => {
+    const loadRecaptchaScript = () => {
+      if (!recaptchaKey) {
+        console.error("reCAPTCHA key is missing.");
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.src = `https://www.google.com/recaptcha/enterprise.js?render=${recaptchaKey}`;
+      script.async = true;
+      script.defer = true;
+      script.onload = () => {
+        if (window.grecaptcha && window.grecaptcha.enterprise) {
+          window.grecaptcha.enterprise.ready(() => {
+            window.grecaptcha.enterprise
+              .execute(recaptchaKey, { action: "submit_form" })
+              .then((token) => {
+                setRecaptchaToken(token);
+              });
+          });
+        }
+      };
+      document.head.appendChild(script);
+    };
+
+    loadRecaptchaScript();
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -52,11 +57,13 @@ function LocationsPage() {
     setStatus("Sending...");
 
     try {
+      if (!window.grecaptcha || !window.grecaptcha.enterprise) {
+        throw new Error("reCAPTCHA not loaded.");
+      }
+
       // Get a fresh token right before submission
-      const freshToken = await window.grecaptcha.enterprise.execute(
-        process.env.REACT_APP_RECAPTCHA,
-        { action: "submit_form" }
-      );
+      const freshToken = await window.grecaptcha.enterprise.execute(recaptchaKey, { action: "submit_form" });
+
       const payload = { ...formData, recaptchaToken: freshToken };
 
       const response = await fetch("/api/contact", {
@@ -78,6 +85,7 @@ function LocationsPage() {
         setStatus("Error sending message.");
       }
     } catch (error) {
+      console.error("Error:", error);
       setStatus("Error sending message.");
     }
   };
