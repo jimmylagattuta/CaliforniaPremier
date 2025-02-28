@@ -64,7 +64,7 @@ const locations = [
   }
 ];
 
-function LocationsSection() {
+function LocationsSection({ showButton = true }) {
   return (
     <section className="locations-section">
       <div className="hero-content-title">
@@ -92,7 +92,7 @@ function LocationsSection() {
                     alt="Map icon"
                     className="map-icon"
                     height="16"
-                    weight="16"
+                    width="16"
                   />
                   {location.address}
                 </a>
@@ -101,11 +101,13 @@ function LocationsSection() {
           </div>
         ))}
       </div>
-      <div className="button-container" style={{ textAlign: "center", marginTop: "20px" }}>
-        <a href="/locations" className="location-section-button">
-          View All Locations
-        </a>
-      </div>
+      {showButton && (
+        <div className="button-container" style={{ textAlign: "center", marginTop: "20px" }}>
+          <a href="/locations" className="location-section-button">
+            View All Locations
+          </a>
+        </div>
+      )}
     </section>
   );
 }

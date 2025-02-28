@@ -133,11 +133,13 @@ function LocationsPage() {
               {errors.message && <span className="error-message">{errors.message}</span>}
             </div>
             <div className="form-group">
-              <input type="checkbox" name="agreement" checked={formData.agreement} onChange={handleInputChange} required />
-              <label htmlFor="agreement">
-              By clicking SEND, I understand and agree that any information submitted will be forwarded to the CPPC office by email and is not a secure messaging system.
-              This form should not be used to transmit private health information. We only treat personal injury patients (patients on liens).
-              </label>
+              <div style={{ display: 'flex', flexDirection: 'row' }}>
+                <input type="checkbox" name="agreement" checked={formData.agreement} onChange={handleInputChange} required />
+                <label htmlFor="agreement">
+                By clicking SEND, I understand and agree that any information submitted will be forwarded to the CPPC office by email and is not a secure messaging system.
+                This form should not be used to transmit private health information. We only treat personal injury patients (patients on liens).
+                </label>
+              </div>
               {errors.agreement && <span className="error-message">{errors.agreement}</span>}
             </div>
           </div>
@@ -150,7 +152,7 @@ function LocationsPage() {
         </div>
       )}
 
-      <LocationsSection />
+      <LocationsSection showButton={false} />
     </div>
   );
 }
