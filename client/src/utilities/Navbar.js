@@ -45,12 +45,6 @@ function Navbar() {
           <li className="nav-item" onClick={() => handleNavItemClick('/about')}>
             About Us
           </li>
-          <li className="nav-item" onClick={() => handleNavItemClick('/patient')}>
-            Become a Patient
-          </li>
-          <li className="nav-item" onClick={() => handleNavItemClick('/portal')}>
-            Patient Portal
-          </li>
           <li className="nav-item" onClick={() => handleNavItemClick('/appointment')}>
             Book Appointment
           </li>
