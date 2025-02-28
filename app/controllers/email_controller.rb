@@ -11,5 +11,4 @@ class EmailController < ApplicationController
         puts "Error sending email: #{e.message}"
         render json: { success: false, message: 'Error sending email', error: e.message }, status: :unprocessable_entity
     end
-    end
 end
