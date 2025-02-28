@@ -62,7 +62,7 @@ function LocationsPage() {
 
     try {
       const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
-      const response = await fetch("https://bcb-carts-f625407d6d04.herokuapp.com/contact", {
+      const response = await fetch("https://californiapremier-5591e4325563.herokuapp.com/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -134,7 +134,10 @@ function LocationsPage() {
             </div>
             <div className="form-group">
               <input type="checkbox" name="agreement" checked={formData.agreement} onChange={handleInputChange} required />
-              <label htmlFor="agreement">I agree to the terms</label>
+              <label htmlFor="agreement">
+              By clicking SEND, I understand and agree that any information submitted will be forwarded to the CPPC office by email and is not a secure messaging system.
+              This form should not be used to transmit private health information. We only treat personal injury patients (patients on liens).
+              </label>
               {errors.agreement && <span className="error-message">{errors.agreement}</span>}
             </div>
           </div>
