@@ -89,48 +89,11 @@ function LocationsPage() {
     loadRecaptchaScript();
   }, [recaptchaKey, executeRecaptcha]);
 
-  // Handle Form Submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitting form with data:", formData);
-
-    const formErrors = validateForm();
-    if (Object.keys(formErrors).length > 0) {
-      console.log("Form errors detected:", formErrors);
-      setErrors(formErrors);
-      return;
-    }
-
-    setErrors({});
-    setSubmitted(false);
-
-    try {
-      const freshToken = await executeRecaptcha();
-      if (!freshToken) throw new Error("Failed to acquire reCAPTCHA token.");
-
-      const payload = { ...formData, recaptchaToken: freshToken };
-      console.log("Payload being sent:", payload);
-
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-
-      console.log("Backend response:", response.status, response.statusText);
-
-      if (response.ok) {
-        setSubmitted(true);
-        console.log("Message sent successfully!");
-      } else {
-        console.error("Error response from backend:", await response.json());
-        setErrors({ form: "There was an error sending your message. Try again later." });
-      }
-    } catch (error) {
-      console.error("Error during form submission:", error);
-      setErrors({ form: "There was an error sending your message. Try again later." });
-    }
+    console.log("🚀 Form submission started!", formData);
   };
+  
 
   return (
     <div className="locations-page-container">
