@@ -13,39 +13,46 @@ function LocationsPage() {
   const [status, setStatus] = useState("");
   const [recaptchaToken, setRecaptchaToken] = useState("");
 
-  // Replace this with the correct way to access your environment variable
-  // const recaptchaKey = window.env?.RECAPTCHA_KEY || "your-default-recaptcha-key";
+  // Uncomment and set your recaptchaKey appropriately.
+  const recaptchaKey = window.env?.RECAPTCHA_KEY || "your-default-recaptcha-key";
+  console.log("Using reCAPTCHA key:", recaptchaKey);
 
-  // Load reCAPTCHA Enterprise script and get an initial token
+  // Optional: load reCAPTCHA Enterprise script and get an initial token
   // useEffect(() => {
   //   const loadRecaptchaScript = () => {
   //     if (!recaptchaKey) {
   //       console.error("reCAPTCHA key is missing.");
   //       return;
   //     }
-
+  // 
   //     const script = document.createElement("script");
   //     script.src = `https://www.google.com/recaptcha/enterprise.js?render=${recaptchaKey}`;
   //     script.async = true;
   //     script.defer = true;
   //     script.onload = () => {
+  //       console.log("reCAPTCHA script loaded successfully.");
   //       if (window.grecaptcha && window.grecaptcha.enterprise) {
   //         window.grecaptcha.enterprise.ready(() => {
   //           window.grecaptcha.enterprise
   //             .execute(recaptchaKey, { action: "submit_form" })
   //             .then((token) => {
+  //               console.log("Initial reCAPTCHA token acquired:", token);
   //               setRecaptchaToken(token);
   //             });
   //         });
+  //       } else {
+  //         console.error("reCAPTCHA enterprise not available after script load.");
   //       }
   //     };
+  //     script.onerror = () => console.error("Failed to load reCAPTCHA script.");
   //     document.head.appendChild(script);
   //   };
-
+  // 
   //   loadRecaptchaScript();
-  // }, []);
+  // }, [recaptchaKey]);
 
   const handleChange = (e) => {
+    console.log(`Field ${e.target.name} changed to:`, e.target.value);
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -54,17 +61,22 @@ function LocationsPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Form submission started with data:", formData);
     setStatus("Sending...");
 
     try {
       if (!window.grecaptcha || !window.grecaptcha.enterprise) {
+        console.error("reCAPTCHA not loaded.", window.grecaptcha);
         throw new Error("reCAPTCHA not loaded.");
       }
 
+      console.log("Executing reCAPTCHA with key:", recaptchaKey);
       // Get a fresh token right before submission
       const freshToken = await window.grecaptcha.enterprise.execute(recaptchaKey, { action: "submit_form" });
+      console.log("Fresh reCAPTCHA token received:", freshToken);
 
       const payload = { ...formData, recaptchaToken: freshToken };
+      console.log("Payload being sent:", payload);
 
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -72,7 +84,9 @@ function LocationsPage() {
         body: JSON.stringify(payload)
       });
 
+      console.log("Backend response status:", response.status);
       if (response.ok) {
+        console.log("Message sent successfully!");
         setStatus("Message sent successfully!");
         setFormData({
           firstName: "",
@@ -82,10 +96,11 @@ function LocationsPage() {
           message: ""
         });
       } else {
+        console.error("Error response from backend:", response);
         setStatus("Error sending message.");
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error during form submission:", error);
       setStatus("Error sending message.");
     }
   };
@@ -210,8 +225,6 @@ function LocationsPage() {
             By clicking SEND, I understand and agree that any information submitted will be forwarded to the CPPC office by email and is not a secure messaging system.
             This form should not be used to transmit private health information. We only treat personal injury patients (patients on liens).
           </p>
-
-
 
           <div className="button-row">
             <button type="submit" className="submit-button">SEND</button>
