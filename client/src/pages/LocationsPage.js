@@ -211,9 +211,7 @@ function LocationsPage() {
             This form should not be used to transmit private health information. We only treat personal injury patients (patients on liens).
           </p>
 
-          <div className="recaptcha-box">
-            {recaptchaToken ? <p>reCAPTCHA verified</p> : <p>Loading reCAPTCHA...</p>}
-          </div>
+
 
           <div className="button-row">
             <button type="submit" className="submit-button">SEND</button>
