@@ -14,36 +14,36 @@ function LocationsPage() {
   const [recaptchaToken, setRecaptchaToken] = useState("");
 
   // Replace this with the correct way to access your environment variable
-  const recaptchaKey = window.env?.RECAPTCHA_KEY || "your-default-recaptcha-key";
+  // const recaptchaKey = window.env?.RECAPTCHA_KEY || "your-default-recaptcha-key";
 
   // Load reCAPTCHA Enterprise script and get an initial token
-  useEffect(() => {
-    const loadRecaptchaScript = () => {
-      if (!recaptchaKey) {
-        console.error("reCAPTCHA key is missing.");
-        return;
-      }
+  // useEffect(() => {
+  //   const loadRecaptchaScript = () => {
+  //     if (!recaptchaKey) {
+  //       console.error("reCAPTCHA key is missing.");
+  //       return;
+  //     }
 
-      const script = document.createElement("script");
-      script.src = `https://www.google.com/recaptcha/enterprise.js?render=${recaptchaKey}`;
-      script.async = true;
-      script.defer = true;
-      script.onload = () => {
-        if (window.grecaptcha && window.grecaptcha.enterprise) {
-          window.grecaptcha.enterprise.ready(() => {
-            window.grecaptcha.enterprise
-              .execute(recaptchaKey, { action: "submit_form" })
-              .then((token) => {
-                setRecaptchaToken(token);
-              });
-          });
-        }
-      };
-      document.head.appendChild(script);
-    };
+  //     const script = document.createElement("script");
+  //     script.src = `https://www.google.com/recaptcha/enterprise.js?render=${recaptchaKey}`;
+  //     script.async = true;
+  //     script.defer = true;
+  //     script.onload = () => {
+  //       if (window.grecaptcha && window.grecaptcha.enterprise) {
+  //         window.grecaptcha.enterprise.ready(() => {
+  //           window.grecaptcha.enterprise
+  //             .execute(recaptchaKey, { action: "submit_form" })
+  //             .then((token) => {
+  //               setRecaptchaToken(token);
+  //             });
+  //         });
+  //       }
+  //     };
+  //     document.head.appendChild(script);
+  //   };
 
-    loadRecaptchaScript();
-  }, []);
+  //   loadRecaptchaScript();
+  // }, []);
 
   const handleChange = (e) => {
     setFormData({
