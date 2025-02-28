@@ -14,31 +14,31 @@ function LocationsPage() {
   const [recaptchaToken, setRecaptchaToken] = useState("");
 
   // Load reCAPTCHA Enterprise script and get an initial token
-  useEffect(() => {
-    const loadRecaptchaScript = () => {
-      const script = document.createElement("script");
-      console.log('process', process);
-      const recaptchaKey = process.env.REACT_APP_RECAPTCHA;
-      console.log('process', process);
-      script.src = `https://www.google.com/recaptcha/enterprise.js?render=${recaptchaKey}`;
-      script.async = true;
-      script.defer = true;
-      script.onload = () => {
-        if (window.grecaptcha && window.grecaptcha.enterprise) {
-          window.grecaptcha.enterprise.ready(() => {
-            window.grecaptcha.enterprise
-              .execute(process.env.REACT_APP_RECAPTCHA, { action: "submit_form" })
-              .then((token) => {
-                setRecaptchaToken(token);
-              });
-          });
-        }
-      };
-      document.head.appendChild(script);
-    };
+  // useEffect(() => {
+  //   const loadRecaptchaScript = () => {
+  //     const script = document.createElement("script");
+  //     console.log('process', process);
+  //     const recaptchaKey = process.env.REACT_APP_RECAPTCHA;
+  //     console.log('process', process);
+  //     script.src = `https://www.google.com/recaptcha/enterprise.js?render=${recaptchaKey}`;
+  //     script.async = true;
+  //     script.defer = true;
+  //     script.onload = () => {
+  //       if (window.grecaptcha && window.grecaptcha.enterprise) {
+  //         window.grecaptcha.enterprise.ready(() => {
+  //           window.grecaptcha.enterprise
+  //             .execute(process.env.REACT_APP_RECAPTCHA, { action: "submit_form" })
+  //             .then((token) => {
+  //               setRecaptchaToken(token);
+  //             });
+  //         });
+  //       }
+  //     };
+  //     document.head.appendChild(script);
+  //   };
 
-    loadRecaptchaScript();
-  }, []);
+  //   loadRecaptchaScript();
+  // }, []);
 
   const handleChange = (e) => {
     setFormData({
