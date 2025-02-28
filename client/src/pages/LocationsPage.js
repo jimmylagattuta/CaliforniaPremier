@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState } from "react";
 import "./LocationsPage.css";
 import LocationsSection from "../sections/LocationsSection"; // Recycled office list component
 
@@ -14,10 +14,6 @@ function LocationsPage() {
 
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
-  const [recaptchaToken, setRecaptchaToken] = useState("");
-  const recaptchaKey = window.env?.RECAPTCHA_KEY || "your-default-recaptcha-key";
-
-  console.log("Using reCAPTCHA key:", recaptchaKey);
 
   // Handle Input Changes
   const handleInputChange = (e) => {
@@ -49,46 +45,6 @@ function LocationsPage() {
     return newErrors;
   };
 
-  // Function to execute reCAPTCHA
-  const executeRecaptcha = useCallback(async () => {
-    if (!window.grecaptcha || !window.grecaptcha.enterprise) {
-      console.error("reCAPTCHA not available.");
-      return null;
-    }
-    try {
-      const token = await window.grecaptcha.enterprise.execute(recaptchaKey, { action: "submit_form" });
-      console.log("reCAPTCHA token received:", token);
-      return token;
-    } catch (error) {
-      console.error("reCAPTCHA execution error:", error);
-      return null;
-    }
-  }, [recaptchaKey]);
-
-  // Load reCAPTCHA script
-  useEffect(() => {
-    const loadRecaptchaScript = () => {
-      if (!recaptchaKey) {
-        console.error("reCAPTCHA key is missing.");
-        return;
-      }
-
-      const script = document.createElement("script");
-      script.src = `https://www.google.com/recaptcha/enterprise.js?render=${recaptchaKey}`;
-      script.async = true;
-      script.defer = true;
-      script.onload = async () => {
-        console.log("reCAPTCHA script loaded.");
-        const token = await executeRecaptcha();
-        if (token) setRecaptchaToken(token);
-      };
-      script.onerror = () => console.error("Failed to load reCAPTCHA script.");
-      document.head.appendChild(script);
-    };
-
-    loadRecaptchaScript();
-  }, [recaptchaKey, executeRecaptcha]);
-
   // Handle Form Submission
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -96,7 +52,7 @@ function LocationsPage() {
 
     const formErrors = validateForm();
     if (Object.keys(formErrors).length > 0) {
-      console.log("Form errors detected:", formErrors);
+      console.log("❌ Form errors detected:", formErrors);
       setErrors(formErrors);
       return;
     }
@@ -105,16 +61,16 @@ function LocationsPage() {
     setSubmitted(false);
 
     try {
-      const freshToken = await executeRecaptcha();
-      if (!freshToken) throw new Error("Failed to acquire reCAPTCHA token.");
-
-      const payload = { ...formData, recaptchaToken: freshToken };
-      console.log("Payload being sent:", payload);
-
-      const response = await fetch("/api/contact", {
+      const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
+      const response = await fetch("https://bcb-carts-f625407d6d04.herokuapp.com/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        headers: {
+          "Content-Type": "application/json",
+          "X-CSRF-Token": csrfToken,
+        },
+        body: JSON.stringify({
+          contact: formData,
+        }),
       });
 
       console.log("Backend response:", response.status, response.statusText);
