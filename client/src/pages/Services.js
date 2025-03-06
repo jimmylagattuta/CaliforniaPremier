@@ -7,7 +7,7 @@ import "./Services.css"; // Optional styling
 const Services = () => {
   const { serviceId } = useParams();
   const service = servicesData[serviceId];
-
+    console.log("serviceData", servicesData);
   if (!service) {
     return (
       <div className="service-page">
