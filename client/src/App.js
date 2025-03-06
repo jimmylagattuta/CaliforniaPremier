@@ -22,7 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/locations" element={<LocationsPage />} />
-            <Route path="/services" element={<Services />} />
+            <Route path="/services/:serviceId?" element={<Services />} />
 
             {/* Other routes */}
           </Routes>

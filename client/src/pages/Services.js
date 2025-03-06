@@ -6,8 +6,30 @@ import "./Services.css"; // Optional styling
 
 const Services = () => {
   const { serviceId } = useParams();
+
+  // If no serviceId, display a list of all services
+  if (!serviceId) {
+    return (
+      <div className="services-list">
+        <h1>Our Services</h1>
+        <ul>
+          {Object.entries(servicesData).map(([key, service]) => (
+            <li key={key}>
+              <Link to={`/services/${key}`}>
+                <strong>{service.title}</strong>
+              </Link>
+              <p>{service.shortDescription}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
+  // If we do have a serviceId, show the detail view
   const service = servicesData[serviceId];
-    console.log("serviceData", servicesData);
+
+  // If the serviceId doesn't match anything in servicesData, show "Not Found"
   if (!service) {
     return (
       <div className="service-page">
@@ -18,6 +40,7 @@ const Services = () => {
     );
   }
 
+  // Otherwise, we have a valid service. Show its details.
   return (
     <div className="service-page">
       {/* Hero Section */}
@@ -28,7 +51,9 @@ const Services = () => {
         <div className="hero-overlay">
           <h1>{service.title}</h1>
           <p>{service.shortDescription}</p>
-          <Link to="/contact" className="cta-button">Book an Appointment</Link>
+          <Link to="/contact" className="cta-button">
+            Book an Appointment
+          </Link>
         </div>
       </div>
 
