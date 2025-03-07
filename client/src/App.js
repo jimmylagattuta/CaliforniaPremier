@@ -7,6 +7,7 @@ import Navbar from "./utilities/Navbar";
 const Home = lazy(() => import("./utilities/Home"));
 const LocationsPage = lazy(() => import("./pages/LocationsPage"));
 const Services = lazy(() => import("./pages/Services"));
+const PrivacyPolicy = lazy(() => import("./sections/PrivacyPolicy"));
 
 // Add more routes as needed
 
@@ -27,6 +28,7 @@ function App() {
 
             <Route path="/contact" element={<LocationsPage />} />
             <Route path="/services/:serviceId?" element={<Services />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
             {/* Other routes */}
           </Routes>

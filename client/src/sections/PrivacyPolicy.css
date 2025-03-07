@@ -1,0 +1,29 @@
+/* src/pages/PrivacyPolicy.css */
+.privacy-policy {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: "Helvetica", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+  }
+  
+  .privacy-policy h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .privacy-policy p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer image styling */
+  .privacy-footer-image {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 2rem;
+    border-radius: 8px;
+  }
+  
