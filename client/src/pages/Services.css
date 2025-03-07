@@ -1,0 +1,174 @@
+/* --- Overall Page Container --- */
+.service-page {
+    position: relative; /* So .overlay-images can be absolutely positioned */
+  }
+  
+  /* --- Hero Section --- */
+  .service-hero {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Adjust for desired hero height */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+  }
+  
+  /* Dark overlay inside hero */
+  .services-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Hero text styling */
+  .services-hero-overlay h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(119, 116, 148, 0.6);
+    width: 70%;
+    margin: 40px auto;
+  }
+  
+  .services-hero-overlay p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+  }
+  .services-hero-content-title {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  /* Company name small title */
+  .company-name-services {
+    font-size: 0.7rem !important;
+    font-weight: lighter;
+    letter-spacing: 1.5px;
+    margin: 0 12px;
+    padding: 40px 20px;
+  }
+  
+  /* Lines around small title */
+  .line {
+    width: 30px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 20px;
+  }
+  
+  /* CTA button styling */
+  .cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #00a38c;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #008977;
+  }
+  
+  /* --- Main Content Styles --- */
+  .service-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  /* On larger screens, side-by-side layout */
+/* .content-section {
+    flex-direction: row;
+    align-items: flex-start;
+} */
+
+  
+  /* Image styling */
+  .content-image {
+    width: 100%;
+    min-width: 100vw;
+    border-radius: 8px;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+  
+  /* Text block styling */
+  .content-text {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+
+  }
+  
+  .content-text p {
+    margin-bottom: 1rem;
+  }
+  
+  /* --- Overlay Images --- */
+  .overlay-images {
+    position: absolute;
+    top: 100vh; /* Adjust for desired overlap */
+    left: 48%;
+    transform: translateX(-50%);
+    z-index: 5;
+    width: 300px;
+    height: 200px;
+  }
+  
+  .overlay-images .image1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .overlay-images .image2 {
+    position: absolute;
+    top: 18vh;
+    left: 35%;
+    width: 70%;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* --- Service Not Found Page --- */
+  .service-page h1 {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 3rem;
+    
+  }
+  #services-title-small {
+    margin: 1rem 0rem 0rem 0rem;
+    text-align: left;
+    font-size: 2.5rem;
+  }
+  

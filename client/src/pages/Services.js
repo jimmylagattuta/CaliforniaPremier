@@ -2,37 +2,17 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { servicesData } from "../data";
-import "./Services.css"; // Optional styling
+import "./Services.css";
 
 const Services = () => {
   const { serviceId } = useParams();
+  // For now, we're using a hardcoded service.
+  const service = servicesData["new-patient-consultations"];
 
-  // If no serviceId, display a list of all services
-  if (!serviceId) {
-    return (
-      <div className="services-list">
-        <h1>Our Services</h1>
-        <ul>
-          {Object.entries(servicesData).map(([key, service]) => (
-            <li key={key}>
-              <Link to={`/services/${key}`}>
-                <strong>{service.title}</strong>
-              </Link>
-              <p>{service.shortDescription}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
-
-  // If we do have a serviceId, show the detail view
-  const service = servicesData[serviceId];
-
-  // If the serviceId doesn't match anything in servicesData, show "Not Found"
   if (!service) {
     return (
       <div className="service-page">
+        <p className="small-heading">CALIFORNIA PREMIER PAIN CLINICS</p>
         <h1>Service Not Found</h1>
         <p>We couldn’t find the service you’re looking for.</p>
         <Link to="/services">Go back to all services</Link>
@@ -40,7 +20,6 @@ const Services = () => {
     );
   }
 
-  // Otherwise, we have a valid service. Show its details.
   return (
     <div className="service-page">
       {/* Hero Section */}
@@ -48,7 +27,14 @@ const Services = () => {
         className="service-hero"
         style={{ backgroundImage: `url(${service.images.hero})` }}
       >
-        <div className="hero-overlay">
+        <div className="services-hero-overlay">
+          <div className="services-hero-content-title">
+            <div className="line"></div>
+            <h1 className="company-name-services">
+              CALIFORNIA PREMIER PAIN CLINICS
+            </h1>
+            <div className="line"></div>
+          </div>
           <h1>{service.title}</h1>
           <p>{service.shortDescription}</p>
           <Link to="/contact" className="cta-button">
@@ -57,18 +43,28 @@ const Services = () => {
         </div>
       </div>
 
+      {/* Overlapping images bridging hero and next content */}
+      <div className="overlay-images">
+        <img src={service.images.overlay1} alt="Overlay 1" className="image1" />
+        <img src={service.images.overlay2} alt="Overlay 2" className="image2" />
+      </div>
+
       {/* Main Content Section */}
       <div className="service-content">
         <div className="content-section">
-          <img 
-            src={service.images.section} 
-            alt={service.title} 
-            className="content-image" 
+          <img
+            src={service.images.section}
+            alt={service.title}
+            className="content-image"
           />
+          <h1 id="services-title-small">{service.title}</h1>
           <div className="content-text">
-            {service.mainContent.split("\n").map((paragraph, index) => (
-              <p key={index}>{paragraph.trim()}</p>
-            ))}
+            {service.mainContent
+              .split("\n\n")
+              .filter((paragraph) => paragraph.trim() !== "")
+              .map((paragraph, index) => (
+                <p key={index}>{paragraph.trim()}</p>
+              ))}
           </div>
         </div>
       </div>
