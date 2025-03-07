@@ -22,6 +22,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/locations" element={<LocationsPage />} />
+            <Route path="/locations/:locationId" element={<LocationsPage />} />
+
+
+            <Route path="/contact" element={<LocationsPage />} />
             <Route path="/services/:serviceId?" element={<Services />} />
 
             {/* Other routes */}

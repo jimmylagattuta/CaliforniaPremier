@@ -325,3 +325,84 @@ Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, sp
       },
   };
   
+// src/data.js
+
+export const locationsData = {
+  "santa-rosa": {
+    name: "Santa Rosa Clinic",
+    address: "864 2nd Street Suite B, Santa Rosa, CA 95404",
+    heroImage: "https://i.postimg.cc/8cBRDRnQ/i-Stock-1878629507-2-1-1.webp",
+    description:
+      "Our Santa Rosa clinic offers personalized pain management and comprehensive care to help you achieve lasting relief.",
+  },
+  "sacramento": {
+    name: "Sacramento Clinic",
+    address: "7275 E. Southgate Drive Suite 306, Sacramento, CA 95823",
+    heroImage: "https://i.postimg.cc/K8NmLRCG/i-Stock-2159424867-1.webp",
+    description:
+      "Our Sacramento location offers expert consultations and advanced treatments to restore your quality of life.",
+  },
+  "stockton": {
+    name: "Stockton Clinic",
+    address: "420 Acacia Street Suite 19, Stockton, CA 95203",
+    heroImage: "https://i.postimg.cc/KjyWJ5gd/i-Stock-1357814327-1.webp",
+    description:
+      "Experience personalized care and effective pain management at our Stockton clinic.",
+  },
+  "modesto": {
+    name: "Modesto Clinic",
+    address: "1130 Coffee Road BLDG 2B, Modesto, CA 95355",
+    heroImage: "https://i.postimg.cc/QdpHz8Pw/i-Stock-1343463188-1.webp",
+    description:
+      "Our Modesto office is dedicated to restoring your quality of life with advanced treatments tailored to your needs.",
+  },
+  "hayward": {
+    name: "Hayward Clinic",
+    address: "24700 Calaroga Ave Suite 103, Hayward, CA 94545",
+    heroImage: "https://i.postimg.cc/Hnwkh3v5/i-Stock-1135194294-1.webp",
+    description:
+      "Visit our Hayward clinic for expert pain management and compassionate care in a welcoming environment.",
+  },
+  "salinas": {
+    name: "Salinas Clinic",
+    address: "945 N. Blanco Suite A, Salinas, CA 93901",
+    heroImage: "https://i.postimg.cc/MTzPBG2S/i-Stock-1176374269-1.webp",
+    description:
+      "Our Salinas location offers state-of-the-art treatments in a comfortable, patient-friendly setting.",
+  },
+  "san-jose": {
+    name: "San Jose Clinic",
+    address: "2375 Montpelier Drive Suite 10, San Jose, CA 95116",
+    heroImage: "https://i.postimg.cc/13PWgKkd/i-Stock-465837688-1.webp",
+    description:
+      "At our San Jose clinic, you'll receive personalized care and advanced pain management treatments tailored to your needs.",
+  },
+  "fresno": {
+    name: "Fresno Clinic",
+    address: "349 E. Bullard Ave Suite 105, Fresno, CA 93710",
+    heroImage: "https://i.postimg.cc/cH87kgqY/i-Stock-588965234-1.webp",
+    description:
+      "Our Fresno clinic provides comprehensive pain management and a range of treatment options in a modern, comfortable setting.",
+  },
+  "hanford": {
+    name: "Hanford Clinic",
+    address: "1004 N. Douty Street, Hanford, CA 93230",
+    heroImage: "https://i.postimg.cc/50qytbLT/i-Stock-2198440524-1.webp",
+    description:
+      "Visit our Hanford clinic for effective treatments and expert care in a friendly atmosphere.",
+  },
+  "bakersfield": {
+    name: "Bakersfield Clinic",
+    address: "3550 Q. Street Suite 105, Bakersfield, CA 93301",
+    heroImage: "https://i.postimg.cc/ZnCGMLbH/i-Stock-2178001181-1.webp",
+    description:
+      "Our Bakersfield clinic offers personalized treatment plans and advanced care to help you manage pain and improve your quality of life.",
+  },
+  "coming-soon": {
+    name: "Coming Soon",
+    address: "",
+    heroImage: "https://via.placeholder.com/1200x600?text=Coming+Soon",
+    description:
+      "Exciting News!!! Napa and San Francisco locations coming soon in 2025!",
+  },
+};
