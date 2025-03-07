@@ -1,13 +1,14 @@
-/* --- Overall Page Container --- */
+/* Overall font styling */
 .service-page {
-    position: relative; /* So .overlay-images can be absolutely positioned */
+    position: relative;
+    font-family: "Helvetica", sans-serif;
   }
   
   /* --- Hero Section --- */
   .service-hero {
     position: relative;
     width: 100%;
-    height: 90vh; /* Adjust for desired hero height */
+    height: 90vh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -16,7 +17,6 @@
     color: #fff;
   }
   
-  /* Dark overlay inside hero */
   .services-hero-overlay {
     position: absolute;
     top: 0;
@@ -29,9 +29,30 @@
     justify-content: flex-start;
     align-items: center;
     text-align: center;
+    padding-top: 2rem;
   }
   
-  /* Hero text styling */
+  .services-hero-content-title {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  
+  .company-name-services {
+    font-size: 0.7rem !important;
+    font-weight: lighter;
+    letter-spacing: 1.5px;
+    margin: 0 12px;
+    padding: 40px 20px;
+  }
+  
+  .line {
+    width: 30px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 20px;
+  }
+  
   .services-hero-overlay h1 {
     font-size: 2.6rem;
     font-weight: 700;
@@ -47,29 +68,8 @@
     max-width: 600px;
     margin: 0 auto 1.5rem auto;
   }
-  .services-hero-content-title {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-  }
-  /* Company name small title */
-  .company-name-services {
-    font-size: 0.7rem !important;
-    font-weight: lighter;
-    letter-spacing: 1.5px;
-    margin: 0 12px;
-    padding: 40px 20px;
-  }
   
-  /* Lines around small title */
-  .line {
-    width: 30px;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.5);
-    margin: 20px;
-  }
-  
-  /* CTA button styling */
+  /* CTA Button */
   .cta-button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -80,61 +80,15 @@
     font-weight: 600;
     transition: background-color 0.3s;
   }
-  
   .cta-button:hover {
     background-color: #008977;
   }
   
-  /* --- Main Content Styles --- */
-  .service-content {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  
-  .content-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  /* On larger screens, side-by-side layout */
-/* .content-section {
-    flex-direction: row;
-    align-items: flex-start;
-} */
-
-  
-  /* Image styling */
-  .content-image {
-    width: 100%;
-    min-width: 100vw;
-    border-radius: 8px;
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-  }
-  
-  /* Text block styling */
-  .content-text {
-    flex: 1;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333;
-
-  }
-  
-  .content-text p {
-    margin-bottom: 1rem;
-  }
-  
-  /* --- Overlay Images --- */
+  /* --- Overlay Images bridging hero & next content --- */
   .overlay-images {
     position: absolute;
-    top: 100vh; /* Adjust for desired overlap */
-    left: 48%;
+    top: 100vh;
+    left: 50%;
     transform: translateX(-50%);
     z-index: 5;
     width: 300px;
@@ -159,16 +113,126 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
   
-  /* --- Service Not Found Page --- */
-  .service-page h1 {
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 3rem;
-    
+  /* --- Main Content Section --- */
+  .service-content {
+    max-width: 1200px;
+    margin: 0rem auto;
+    padding: 0 1rem;
   }
+  
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  /* If you want side-by-side on large screens, uncomment:
+  @media (min-width: 768px) {
+    .content-section {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+  */
+  
+  /* Fading bottom of content image */
+  .content-image {
+    width: 100%;
+    min-width: 100vw;
+    border-radius: 8px;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+  
   #services-title-small {
-    margin: 1rem 0rem 0rem 0rem;
+    margin: 4rem 0rem 0rem 0rem;
     text-align: left;
     font-size: 2.5rem;
   }
+  
+  .content-text {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  .content-text p {
+    margin-bottom: 1rem;
+  }
+  
+  /* --- INFO SECTION with background image --- */
+  .info-section {
+    max-width: 1200px;
+    margin: 2rem auto 0 auto;
+    padding: 2rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  /* Dark overlay for better text contrast */
+  .info-overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Increase alpha to 0.5 or 0.6 */
+    padding: 2rem;
+    border-radius: 8px;
+    color: #fff;
+  }
+  
+  .info-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .info-subtitle {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #fff;
+  }
+  
+  .info-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  .info-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+  }
+  
+  .info-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .info-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #00a38c;
+    font-weight: bold;
+  }
+
+  /* Example: adding a subtle shadow to text in the .info-overlay */
+.info-overlay h2,
+.info-overlay h3,
+.info-overlay p,
+.info-overlay li {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
   

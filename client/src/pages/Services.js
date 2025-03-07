@@ -2,12 +2,13 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { servicesData } from "../data";
+import FooterComponent from "../sections/FooterComponent";
 import "./Services.css";
 
 const Services = () => {
   const { serviceId } = useParams();
-  // For now, we're using a hardcoded service.
-  const service = servicesData["new-patient-consultations"];
+  const service = servicesData[serviceId];
+
 
   if (!service) {
     return (
@@ -22,7 +23,7 @@ const Services = () => {
 
   return (
     <div className="service-page">
-      {/* Hero Section */}
+      {/* HERO SECTION */}
       <div
         className="service-hero"
         style={{ backgroundImage: `url(${service.images.hero})` }}
@@ -43,13 +44,13 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Overlapping images bridging hero and next content */}
+      {/* OVERLAY IMAGES bridging hero & next content */}
       <div className="overlay-images">
         <img src={service.images.overlay1} alt="Overlay 1" className="image1" />
         <img src={service.images.overlay2} alt="Overlay 2" className="image2" />
       </div>
 
-      {/* Main Content Section */}
+      {/* MAIN CONTENT SECTION */}
       <div className="service-content">
         <div className="content-section">
           <img
@@ -68,6 +69,35 @@ const Services = () => {
           </div>
         </div>
       </div>
+
+      {/* INFO SECTION with background image + dark overlay */}
+      <div
+        className="info-section"
+        style={{
+          backgroundImage: `url(${service.whyChooseBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="info-overlay">
+          <h2 className="info-title">{service.whyChooseTitle}</h2>
+          <p className="info-text">{service.whyChooseContent}</p>
+
+          <h3 className="info-subtitle">{service.helpTitle}</h3>
+          <ul className="info-list">
+            {service.helpList.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+
+          <h3 className="info-subtitle">{service.providerTitle}</h3>
+          <p className="info-text">{service.providerContent}</p>
+        </div>
+      </div>
+
+      {/* FOOTER */}
+      <FooterComponent />
     </div>
   );
 };
