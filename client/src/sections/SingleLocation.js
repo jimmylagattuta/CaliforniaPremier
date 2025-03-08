@@ -1,4 +1,3 @@
-// src/sections/SingleLocation.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import { servicesData } from "../data";
@@ -43,6 +42,35 @@ const SingleLocation = ({ office }) => {
             )}
           </p>
         </div>
+      </div>
+
+      {/* Redesigned Contact Info Section */}
+      <div className="sl-contact-info">
+        <ul className="sl-contact-list">
+          {office.phone && (
+            <li className="sl-contact-item">
+              <strong>Phone:&nbsp;</strong>{" "}
+              <a href={`tel:${office.phone.replace(/[^0-9]/g, "")}`}>
+                {office.phone}
+              </a>
+            </li>
+          )}
+          {office.fax && (
+            <li className="sl-contact-item">
+              <strong>Fax:&nbsp;</strong> {office.fax}
+            </li>
+          )}
+          {office.email && (
+            <li className="sl-contact-item">
+              <a href={`mailto:${office.email}`}>Email us</a>
+            </li>
+          )}
+          {office.hours && (
+            <li className="sl-contact-item">
+              <strong>Hours:&nbsp;</strong> {office.hours}
+            </li>
+          )}
+        </ul>
       </div>
 
       {/* Office Description */}

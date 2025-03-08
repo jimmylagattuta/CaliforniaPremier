@@ -91,8 +91,24 @@ const Services = () => {
             ))}
           </ul>
 
-          <h3 className="info-subtitle">{service.providerTitle}</h3>
-          <p className="info-text">{service.providerContent}</p>
+          <Link to="/about-us">
+  <h3 className="info-subtitle">{service.providerTitle}</h3>
+</Link>          <div className="provider-container">
+      {/* Text on the left */}
+      <div className="provider-text">
+        <p className="info-text">{service.providerContent}</p>
+      </div>
+      {/* Image on the right */}
+      <div className="provider-image">
+        <img
+          src="https://i.postimg.cc/tRW060nV/Screenshot-2025-03-08-132625-1-1.webp"
+          alt="Our Provider"
+        />
+      </div>
+    </div>
+              <Link to="/contact" className="cta-button" style={{ margin: "20px" }}>
+                Book an Appointment
+              </Link>
         </div>
       </div>
 

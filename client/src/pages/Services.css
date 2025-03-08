@@ -135,7 +135,29 @@
     }
   }
   */
-  
+  /* Container for the provider text and image */
+.provider-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+/* Text block */
+.provider-text {
+  flex: 1;
+}
+
+/* Image block */
+.provider-image img {
+  width: 100%;
+  max-width: 80px; /* Adjust as needed */
+  border-radius: 4px;
+  display: block;
+}
+
+
   /* Fading bottom of content image */
   .content-image {
     width: 100%;

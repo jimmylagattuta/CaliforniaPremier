@@ -334,6 +334,10 @@ export const locationsData = {
     heroImage: "https://i.postimg.cc/8cBRDRnQ/i-Stock-1878629507-2-1-1.webp",
     description:
       "Our Santa Rosa clinic offers personalized pain management and comprehensive care to help you achieve lasting relief.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
   "sacramento": {
     name: "Sacramento Clinic",
@@ -341,6 +345,10 @@ export const locationsData = {
     heroImage: "https://i.postimg.cc/K8NmLRCG/i-Stock-2159424867-1.webp",
     description:
       "Our Sacramento location offers expert consultations and advanced treatments to restore your quality of life.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
   "stockton": {
     name: "Stockton Clinic",
@@ -348,6 +356,10 @@ export const locationsData = {
     heroImage: "https://i.postimg.cc/KjyWJ5gd/i-Stock-1357814327-1.webp",
     description:
       "Experience personalized care and effective pain management at our Stockton clinic.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
   "modesto": {
     name: "Modesto Clinic",
@@ -355,6 +367,10 @@ export const locationsData = {
     heroImage: "https://i.postimg.cc/QdpHz8Pw/i-Stock-1343463188-1.webp",
     description:
       "Our Modesto office is dedicated to restoring your quality of life with advanced treatments tailored to your needs.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
   "hayward": {
     name: "Hayward Clinic",
@@ -362,6 +378,10 @@ export const locationsData = {
     heroImage: "https://i.postimg.cc/Hnwkh3v5/i-Stock-1135194294-1.webp",
     description:
       "Visit our Hayward clinic for expert pain management and compassionate care in a welcoming environment.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
   "salinas": {
     name: "Salinas Clinic",
@@ -369,6 +389,10 @@ export const locationsData = {
     heroImage: "https://i.postimg.cc/MTzPBG2S/i-Stock-1176374269-1.webp",
     description:
       "Our Salinas location offers state-of-the-art treatments in a comfortable, patient-friendly setting.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
   "san-jose": {
     name: "San Jose Clinic",
@@ -376,6 +400,10 @@ export const locationsData = {
     heroImage: "https://i.postimg.cc/13PWgKkd/i-Stock-465837688-1.webp",
     description:
       "At our San Jose clinic, you'll receive personalized care and advanced pain management treatments tailored to your needs.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
   "fresno": {
     name: "Fresno Clinic",
@@ -383,6 +411,10 @@ export const locationsData = {
     heroImage: "https://i.postimg.cc/cH87kgqY/i-Stock-588965234-1.webp",
     description:
       "Our Fresno clinic provides comprehensive pain management and a range of treatment options in a modern, comfortable setting.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
   "hanford": {
     name: "Hanford Clinic",
@@ -390,6 +422,10 @@ export const locationsData = {
     heroImage: "https://i.postimg.cc/50qytbLT/i-Stock-2198440524-1.webp",
     description:
       "Visit our Hanford clinic for effective treatments and expert care in a friendly atmosphere.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
   "bakersfield": {
     name: "Bakersfield Clinic",
@@ -397,6 +433,10 @@ export const locationsData = {
     heroImage: "https://i.postimg.cc/ZnCGMLbH/i-Stock-2178001181-1.webp",
     description:
       "Our Bakersfield clinic offers personalized treatment plans and advanced care to help you manage pain and improve your quality of life.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
   "coming-soon": {
     name: "Coming Soon",
@@ -404,5 +444,9 @@ export const locationsData = {
     heroImage: "https://via.placeholder.com/1200x600?text=Coming+Soon",
     description:
       "Exciting News!!! Napa and San Francisco locations coming soon in 2025!",
+    phone: "",
+    fax: "",
+    email: "",
+    hours: "",
   },
 };

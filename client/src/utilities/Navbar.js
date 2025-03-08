@@ -67,7 +67,10 @@ function Navbar() {
           <li className="nav-item" onClick={() => handleNavItemClick('/locations')}>
             Locations
           </li>
-          <li className="nav-item" onClick={() => handleNavItemClick('/about')}>
+          <li className="nav-item" onClick={() => handleNavItemClick('/faq')}>
+            FAQ
+          </li>
+          <li className="nav-item" onClick={() => handleNavItemClick('/about-us')}>
             About Us
           </li>
           <li className="nav-item" onClick={() => handleNavItemClick('/appointment')}>

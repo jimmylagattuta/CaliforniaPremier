@@ -1,0 +1,192 @@
+/* Container for the whole page */
+.aboutus-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Hero Section */
+  .aboutus-hero {
+    background-image: url("https://i.postimg.cc/SsdRrXJJ/i-Stock-824369786-1.webp"); /* Example hero image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .aboutus-hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+  }
+  
+  .aboutus-hero-title {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem;
+  }
+  
+  .aboutus-hero-subtitle {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  /* About Us Section */
+  .aboutus-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .aboutus-heading {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .aboutus-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .aboutus-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+  
+  .aboutus-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .aboutus-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #555;
+  }
+  
+  /* Provider Section */
+  .aboutus-provider {
+    padding: 1.5rem 1rem;
+  }
+  
+  .aboutus-provider-title {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .aboutus-provider-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .aboutus-provider-image {
+    width: 197px;
+    height: 200px;
+    background-image: url("https://i.postimg.cc/J7KKyP4W/Screenshot-2025-03-08-132625.webp"); /* Example image */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    align-self: center;
+  }
+  
+  .aboutus-provider-info {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+  
+  .aboutus-provider-info h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .aboutus-provider-info p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Services Section */
+  .aboutus-services {
+    padding: 1.5rem 1rem;
+    background-color: #f9f9f9;
+  }
+  
+  .aboutus-services-title {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .aboutus-services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .aboutus-service-card {
+    background-color: #fff;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .aboutus-service-image {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .aboutus-service-title {
+    font-size: 1rem;
+    margin: 0.75rem;
+  }
+  
+  .aboutus-service-desc {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0 0.75rem 0.75rem;
+    line-height: 1.4;
+  }
+  
+  /* Larger Screens */
+  @media (min-width: 768px) {
+    .aboutus-content {
+      flex-direction: row;
+    }
+    .aboutus-card {
+      flex: 1;
+    }
+    .aboutus-provider-row {
+      flex-direction: row;
+    }
+    .aboutus-provider-image {
+      flex: 0 0 40%;
+    }
+    .aboutus-provider-info {
+      flex: 1;
+    }
+    .aboutus-services-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+  

@@ -26,7 +26,7 @@ function AboutUsComponent() {
           Proudly serving communities across California, our clinics are strategically located in Santa Rosa, Sacramento, Stockton, Modesto, Hayward, Salinas, San Jose, Fresno, Hanford, and Bakersfield—with exciting new locations coming soon in Napa and San Francisco in 2025. Our extensive network enables us to offer both in-person and telemedicine appointments, ensuring convenient access to top-quality pain management services. Trust California Premier Pain Clinics for comprehensive, expert care as you begin your journey to a pain-free and healthier life.
         </p>
         {/* SEO-friendly Link to About page */}
-        <Link to="/about" className="about-us-button">
+        <Link to="/about-us" className="about-us-button">
           Learn More About California Premier Pain Clinics
         </Link>
       </div>

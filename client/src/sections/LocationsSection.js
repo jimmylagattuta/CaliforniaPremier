@@ -28,7 +28,9 @@ function LocationsSection({ showButton = true }) {
             <div className={`location-card ${index % 2 !== 0 ? "reverse" : ""}`}>
               <div
                 className="location-image"
-                style={{ backgroundImage: `url(${location.image || location.heroImage})` }}
+                style={{
+                  backgroundImage: `url(${location.image || location.heroImage})`,
+                }}
               ></div>
               <div className="location-info">
                 <h2 className="location-city">{location.name}</h2>
@@ -52,13 +54,27 @@ function LocationsSection({ showButton = true }) {
                     "Address coming soon"
                   )}
                 </p>
+                {location.phone && (
+                  <p className="location-address">
+                    <strong>Phone:</strong>
+                    <a href={`tel:${location.phone.replace(/[^0-9]/g, "")}`}>
+                      {location.phone}
+                    </a>
+                  </p>
+                )}
+
+
+              
               </div>
             </div>
           </Link>
         ))}
       </div>
       {showButton && (
-        <div className="button-container" style={{ textAlign: "center", marginTop: "20px" }}>
+        <div
+          className="button-container"
+          style={{ textAlign: "center", marginTop: "20px" }}
+        >
           <Link to="/locations" className="location-section-button">
             View All Locations
           </Link>

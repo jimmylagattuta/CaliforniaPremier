@@ -11,7 +11,7 @@ function FooterComponent() {
           alt="California Premier Pain Clinics"
           className="fancy-brand-logo"
           height="40"
-          width="40" 
+          width="40"
         />
         <div className="fancy-text-group">
           <h1 className="fancy-brand-title">CALIFORNIA PREMIER</h1>
@@ -33,7 +33,6 @@ function FooterComponent() {
             rel="noopener noreferrer"
             className="social-circle"
           >
-            {/* Instagram Icon */}
             <img
               src="https://i.postimg.cc/j5G6vJHJ/Screenshot-2025-02-22-181601-bg-removed-png.webp"
               alt="Instagram"
@@ -79,6 +78,7 @@ function FooterComponent() {
       <div className="footer-section">
         <h3>Get In Touch</h3>
         <ul className="address-list">
+          {/* Existing address links (with icons) */}
           <li>
             <a
               href="https://www.google.com/maps/search/?api=1&query=Santa+Rosa+-+864+2nd+Street+Suite+B,+Santa+Rosa,+CA+95404"
@@ -239,7 +239,28 @@ function FooterComponent() {
               Bakersfield - 3550 Q. Street Suite 105, Bakersfield, CA 93301
             </a>
           </li>
+
+          {/* Phone, Fax, Email, Hours (no icons, no new classes) */}
+          <li>
+            <strong>Phone: </strong>
+            <a href="tel:8772710203">&nbsp;(877) 271-0203</a>
+          </li>
+          <li>
+            <strong>Fax:</strong>
+            &nbsp;(800) 887-1723
+          </li>
+          <li>
+            <strong>Email: </strong>
+            <a href="mailto:referrals@californiapremierpainclinics.com">
+              &nbsp;referrals@californiapremierpainclinics.com
+            </a>
+          </li>
+          <li>
+            <strong>Hours:&nbsp; </strong>
+              Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed
+          </li>
         </ul>
+
         <p className="book-appointment-p">
           <a href="/book-appointment" className="book-appointment-link">
             Book Appointment
@@ -257,7 +278,7 @@ function FooterComponent() {
         <ul className="footer-bottom-links">
           <li><a href="/privacy-policy">Privacy Policy</a></li>
           <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
-          <li><a href="/return-and-refund">Return and Refund Policy</a></li>
+          {/* <li><a href="/return-and-refund">Return and Refund Policy</a></li> */}
         </ul>
         <p className="footer-credit">Website by James Lagattuta</p>
       </div>
