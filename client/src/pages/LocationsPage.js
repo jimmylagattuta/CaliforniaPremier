@@ -209,7 +209,6 @@ function LocationsPage() {
                 )}
               </div>
               <div className="form-group">
-                <div style={{ display: "flex", flexDirection: "row" }}>
                   <input
                     id="checkbox-agree"
                     type="checkbox"
@@ -218,6 +217,7 @@ function LocationsPage() {
                     onChange={handleInputChange}
                     required
                   />
+                <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
                   <label htmlFor="agreement">
                     By checking this box, I acknowledge and agree that any
                     information submitted will be forwarded to the CPPC office via
