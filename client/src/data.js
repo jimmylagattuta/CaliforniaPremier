@@ -437,16 +437,5 @@ export const locationsData = {
     fax: "(800) 887-1723",
     email: "referrals@californiapremierpainclinics.com",
     hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
-  },
-  "coming-soon": {
-    name: "Coming Soon",
-    address: "",
-    heroImage: "https://via.placeholder.com/1200x600?text=Coming+Soon",
-    description:
-      "Exciting News!!! Napa and San Francisco locations coming soon in 2025!",
-    phone: "",
-    fax: "",
-    email: "",
-    hours: "",
-  },
+  }
 };
