@@ -13,7 +13,7 @@ function HeroSection() {
 
         {/* Tablet Image */}
         <source
-          srcSet="https://i.postimg.cc/Gm8z43zH/i-Stock-1069988650-1-3.webp"
+          srcSet="https://i.postimg.cc/cCfFRpJ7/i-Stock-1069988650-3-1.webp"
           media="(max-width: 768px)"
           type="image/webp"
         />
