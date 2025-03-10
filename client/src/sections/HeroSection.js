@@ -20,14 +20,14 @@ function HeroSection() {
 
         {/* Desktop Image */}
         <source
-          srcSet="https://i.postimg.cc/Gm8z43zH/i-Stock-1069988650-1-3.webp"
+          srcSet="https://i.postimg.cc/9QZmWsHc/i-Stock-1069988650-4-2.webp"
           media="(min-width: 769px)"
           type="image/webp"
         />
 
         {/* Fallback */}
         <img
-          src="https://i.postimg.cc/Gm8z43zH/i-Stock-1069988650-1-3.webp"
+          src="https://i.postimg.cc/15gRdfWn/i-Stock-1069988650-4-1.webp"
           alt="Hero"
           width="auto"
           height="100$"
