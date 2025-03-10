@@ -1,21 +1,31 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="icon" href="https://i.postimg.cc/BZpn6kSK/i-Stock-1137683414-1-2-2-1.webp"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000"><meta name="description" content="Web site created using create-react-app"><link rel="apple-touch-icon" href="https://i.postimg.cc/mrH0xfnF/i-Stock-1137683414-1-3.webp"><link rel="preconnect" href="https://i.postimg.cc" crossorigin><link rel="dns-prefetch" href="//i.postimg.cc"><link rel="preload" as="image" href="https://i.postimg.cc/mrH0xfnF/i-Stock-1137683414-1-3.webp" type="image/webp" fetchpriority="high"><link rel="preload" as="image" href="https://i.postimg.cc/Gm8z43zH/i-Stock-1069988650-1-3.webp" type="image/webp" fetchpriority="high"><style>/* ----------------------------------------------------- */
-/*  Base Navbar Styles (Mobile-first)                    */
-/* ----------------------------------------------------- */
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="icon" href="https://i.postimg.cc/BZpn6kSK/i-Stock-1137683414-1-2-2-1.webp"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000"><meta name="description" content="Web site created using create-react-app"><link rel="apple-touch-icon" href="https://i.postimg.cc/mrH0xfnF/i-Stock-1137683414-1-3.webp"><link rel="preconnect" href="https://i.postimg.cc" crossorigin><link rel="dns-prefetch" href="//i.postimg.cc"><link rel="preload" as="image" href="https://i.postimg.cc/mrH0xfnF/i-Stock-1137683414-1-3.webp" type="image/webp" fetchpriority="high"><link rel="preload" as="image" href="https://i.postimg.cc/Gm8z43zH/i-Stock-1069988650-1-3.webp" type="image/webp" fetchpriority="high"><style>/*******************************************************
+ * NAVBAR & NAVIGATION STYLES (Mobile-First)
+ *******************************************************/
 
+/* Navbar container */
 .navbar {
-  background: #fff;           /* White navbar background */
-  border-top: 6px solid #2c6f55; /* Thin green border on top */
+  background: #fff;               /* White background */
+  border-top: 6px solid #2c6f55;  /* Thin green top border */
   height: 65px;
   display: flex;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 1rem;
   position: relative;
 }
 
+/* Centering and max width */
 .navbar-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Brand container: Logo & Desktop name */
+.navbar-brand {
+  display: flex;
   align-items: center;
 }
 
@@ -25,7 +35,12 @@
   cursor: pointer;
 }
 
-/* Burger Icon (visible on mobile, hidden on desktop) */
+/* Desktop-only name, hidden on mobile */
+.company-name-desktop {
+  display: none;
+}
+
+/* Mobile burger icon */
 .menu-icon {
   display: flex;
   flex-direction: column;
@@ -57,44 +72,48 @@
   display: none;
   flex-direction: column;
   position: absolute;
-  top: 55px;
+  top: 65px;
   left: 0;
   width: 100%;
-  background-color: #7ea19f;  /* mobile background */
-  padding: 2rem;
+  background-color: #7ea19f;  /* Teal background for mobile menu */
+  padding: 2rem 0;
   box-sizing: border-box;
-  overflow: hidden;
   z-index: 999;
 }
 .nav-menu.active {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
 }
 
-/* Nav items (mobile) */
+/* Mobile nav items */
 .nav-item {
   list-style: none;
-  padding: 20px 0;
+  width: 100%;
   text-align: center;
   color: white;
   font-size: 1.75rem;
   font-weight: 500;
-  transition: color 0.3s;
+  padding: 1rem 0;
   cursor: pointer;
+  transition: color 0.3s;
 }
 .nav-item:hover {
   color: #c5c5c5;
 }
 
-/* Submenu (Services) - mobile style */
+/* Submenu hidden by default; .show => display: block */
 .sub-nav-menu {
+  display: none;           /* hidden by default */
   list-style: none;
   padding: 0;
   margin-top: 10px;
   background: #6b8a82;
   border-radius: 5px;
-  width: 97vw;
+  width: 90%;
+  margin: 0.5rem auto;
+}
+.sub-nav-menu.show {
+  display: block;          /* show when subMenuOpen = true */
 }
 .sub-nav-item {
   padding: 10px 0;
@@ -108,78 +127,108 @@
   background: #5a7872;
 }
 
-/* ----------------------------------------------------- */
-/*  Desktop (min-width: 769px) - replicate second screenshot */
-/* ----------------------------------------------------- */
+/*******************************************************
+ * DESKTOP STYLES (min-width: 769px)
+ *******************************************************/
 @media (min-width: 769px) {
+  /* Increase navbar height for desktop */
+  .navbar {
+    height: 85px;
+  }
+  
+  /* Show desktop company name */
+  .company-name-desktop {
+    display: block;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+
   /* Hide burger icon on desktop */
   .menu-icon {
     display: none;
   }
 
-  /* Show nav menu as horizontal list on desktop */
+  /* Horizontal layout for nav menu */
   .nav-menu {
-    display: flex !important;   /* Force flex on desktop */
-    position: static;           /* Remove absolute positioning */
+    display: flex !important;
+    position: static;
     flex-direction: row;
-    background-color: transparent;
+    background: none;
+    width: auto;
     padding: 0;
-    margin-right: 2rem;         /* Move the nav items away from right edge */
+    margin: 0;
     align-items: center;
     justify-content: flex-end;
   }
 
-  /* Desktop nav items: smaller font, black text, inline spacing */
+  /* Desktop nav items: inline, spaced, larger font */
   .nav-item {
-    font-size: 1rem;
-    color: #333;                /* black/dark text */
-    padding: 0 1rem;            /* horizontal spacing */
-    margin: 0;
-    list-style: none;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0;
+    margin-left: 2.5rem;
+    width: auto;
     text-align: left;
-    text-transform: none;
-  }
-  .nav-item:hover {
-    color: #555;                /* subtle hover effect */
-  }
-
-  /* Make the 'Home' link appear underlined or “active” to match the screenshot */
-  .home-link {
     position: relative;
   }
+  .nav-item:hover {
+    color: #4a8f78;
+  }
+
+  /* "Home" with subtle underline for example */
   .home-link::after {
     content: "";
-    display: block;
+    position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;     /* black underline */
-    margin: 0 auto;
-    position: absolute;
-    bottom: -6px;               /* position underline just below the text */
+    background: #000;
+    bottom: -4px;
     left: 0;
   }
 
-  /* Make 'Services' red to match the screenshot text color */
+  /* Services link with default styling (no special color) */
   .services-link {
-    color: red;
+    color: inherit !important;
+    position: relative; /* so submenu can be absolute */
   }
 
-  /* Book Appointment as a button-like style (green background, white text) */
-  .book-appointment {
-    background-color: #7ea19f;
-    color: #fff !important;
+  /* Submenu on desktop: absolute below "Services" */
+  .sub-nav-menu {
+    position: absolute;
+    top: 2.8rem; /* or however far down you want it to appear */
+    left: 0;
+    width: 200px; /* optional fixed width */
+    margin: 0;    /* override the mobile margin */
+    border-radius: 5px;
+    padding: 0.5rem 0;
+  }
+  .sub-nav-item {
+    font-size: 1rem;
+    text-align: left;
     padding: 0.5rem 1rem;
+  }
+
+  /* "Book Appointment" as a solid green button, slightly thinner */
+  .book-appointment {
+    background-color: #2c6f55;
+    color: #fff;
+    padding: 1rem 1.75rem;  /* slightly reduced from previous (1.2rem x 2rem) */
     border-radius: 4px;
-    font-weight: 600;
+    margin-left: 2.5rem;
+    font-weight: 800;       /* slightly less than 900 */
+    transition: background-color 0.3s;
   }
   .book-appointment:hover {
-    background-color: #4a8f78;  /* darker on hover */
+    background-color: #1f4f3c;
   }
 }
 
-/* ----------------------------------------------------- */
-/*  Hero section (unchanged, if you like your original)  */
-/* ----------------------------------------------------- */
+/*******************************************************
+ * HERO SECTION & OTHER GLOBAL STYLES
+ *******************************************************/
 .hero-section {
   position: relative;
   width: 100%;
@@ -291,7 +340,7 @@
   background-color: #4a8f78;
 }
 
-/* Media Queries for the hero content if needed */
+/* Additional media queries if needed */
 @media (min-width: 481px) and (max-width: 768px) {
   .hero-section {
     height: 95vh;
@@ -300,7 +349,8 @@
     font-size: 2.5rem;
   }
 }
-@media (min-width: 769px) {
+
+@media (min-width: 992px) {
   .hero-section {
     height: 100vh;
   }
@@ -310,4 +360,4 @@
   .hero-content {
     justify-content: center;
   }
-}</style><title>React App</title><script defer="defer" src="/74.47ec1958f84e5cfa056c.js"></script><script defer="defer" src="/main.7a5d00db18776a8f71b0.js"></script></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+}</style><title>React App</title><script defer="defer" src="/74.47ec1958f84e5cfa056c.js"></script><script defer="defer" src="/main.3d1cd18f20343cf6ad1e.js"></script></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
