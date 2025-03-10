@@ -11,6 +11,21 @@ function LocationsSection({ showButton = true }) {
     id: key,
   }));
 
+  // Handler to open the address in Google Maps
+  const openMap = (address, e) => {
+    e.stopPropagation();
+    window.open(
+      `https://www.google.com/maps/search/?api=1&query=${address.replace(/ /g, "+")}`,
+      "_blank"
+    );
+  };
+
+  // Handler for calling the phone number
+  const callPhone = (phone, e) => {
+    e.stopPropagation();
+    window.location.href = `tel:${phone.replace(/[^0-9]/g, "")}`;
+  };
+
   return (
     <section className="locations-section">
       <div className="hero-content-title">
@@ -36,10 +51,10 @@ function LocationsSection({ showButton = true }) {
                 <h2 className="location-city">{location.name}</h2>
                 <p className="location-address">
                   {location.address ? (
-                    <a
-                      href={`https://www.google.com/maps/search/?api=1&query=${location.address.replace(/ /g, "+")}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <span
+                      onClick={(e) => openMap(location.address, e)}
+                      className="map-link"
+                      style={{ cursor: "pointer" }}
                     >
                       <img
                         src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
@@ -49,7 +64,7 @@ function LocationsSection({ showButton = true }) {
                         width="16"
                       />
                       {location.address}
-                    </a>
+                    </span>
                   ) : (
                     "Address coming soon"
                   )}
@@ -57,14 +72,15 @@ function LocationsSection({ showButton = true }) {
                 {location.phone && (
                   <p className="location-address">
                     <strong>Phone:</strong>
-                    <a href={`tel:${location.phone.replace(/[^0-9]/g, "")}`}>
+                    <span
+                      onClick={(e) => callPhone(location.phone, e)}
+                      className="phone-link"
+                      style={{ cursor: "pointer", marginLeft: "5px" }}
+                    >
                       {location.phone}
-                    </a>
+                    </span>
                   </p>
                 )}
-
-
-              
               </div>
             </div>
           </Link>
