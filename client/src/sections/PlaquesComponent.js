@@ -31,18 +31,20 @@ function PlaquesComponent() {
       (entries) => {
         entries.forEach((entry) => {
           const index = entry.target.dataset.index;
-          // Apply hysteresis: show if >0.6, hide if <0.4
+          // Show the text if intersectionRatio > 0.6
           if (entry.intersectionRatio > 0.6) {
             setVisiblePlaques((prev) => ({
               ...prev,
               [index]: true,
             }));
-          } else if (entry.intersectionRatio < 0.4) {
-            // setVisiblePlaques((prev) => ({
-            //   ...prev,
-            //   [index]: false,
-            // }));
           }
+          // If you ever want to hide the text again when scrolled out, uncomment:
+          // else if (entry.intersectionRatio < 0.4) {
+          //   setVisiblePlaques((prev) => ({
+          //     ...prev,
+          //     [index]: false,
+          //   }));
+          // }
         });
       },
       { threshold: [0, 0.4, 0.6, 1] }

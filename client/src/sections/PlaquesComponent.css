@@ -1,58 +1,81 @@
+/* -----------
+   PLAQUES
+   Mobile-First
+------------ */
 .plaques-section {
-    background-color: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 40px 20px;
-    margin: 0 auto;
-  }
-  
-  .plaque-card {
-    background-color: #fff;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    padding: 10px 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08), 
-    0 4px 6px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px; /* optional overall max width */
+  margin: 0 auto;    /* center the section horizontally */
+  display: flex;
+  flex-direction: column; /* stack on mobile */
+  align-items: center;
+  justify-content: center;
+  gap: 20px;         /* spacing between plaques on mobile */
+  padding: 40px 20px;
+  background-color: #f8f8f8; /* background or none */
+}
 
-    transition: all 0.5s ease-in;
-    transition-delay: 0.5s;
+.plaque-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;      /* full width on mobile */
+  max-width: 600px; /* so it doesn't get too wide */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Plaque icon */
+.plaque-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Plaque title */
+.plaque-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Plaque description (with optional fade-in effect) */
+.plaque-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Add a "visible" class once it’s in view */
+.plaque-description.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover effect (optional) */
+.plaque-card:hover {
+  transform: translateY(-3px);
+}
+
+/* -----------
+   DESKTOP
+   ≥ 769px
+------------ */
+@media (min-width: 769px) {
+  .plaques-section {
+    flex-direction: row; /* side by side */
+    align-items: flex-start;
+    justify-content: space-between; /* space plaques out horizontally */
   }
-  
-  .plaque-icon {
-    width: 67px;
-    height: 67px;
-    margin-bottom: 15px;
-    object-fit: contain;
+
+  .plaque-card {
+    flex: 1 1 0;      /* let them share space equally */
+    max-width: none;  /* no forced max width on desktop */
+    margin: 0 10px;   /* horizontal gap between cards */
   }
-  
-  .plaque-title {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-      Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #333;
-    margin: 0;
-  }
-  
-  .plaque-description {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.4s ease-in, opacity 0.4s ease-in;
-    transition-delay: 0.5s;
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.5;
-    padding: 0 10px;
-  }
-  
-  .plaque-description.visible {
-    max-height: 200px;
-    opacity: 1;
-    padding-top: 15px;
-  }
-  
+}

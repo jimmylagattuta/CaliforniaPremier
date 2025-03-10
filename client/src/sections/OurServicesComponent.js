@@ -1,10 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServicesComponent.css";
+
 function OurServicesComponent() {
   const navigate = useNavigate();
 
-  // Array of treatment data
+  // 9 Services (Testosterone Replacement Therapy removed)
   const treatments = [
     {
       title: "New Patient Consultations",
@@ -14,11 +15,11 @@ You could receive a new medication or schedule an injection or another type of t
 
 Book your appointment at California Premier Pain Clinics online or by phone now.`,
       link: "/services/new-patient-consultations",
-      image: "https://i.postimg.cc/nhGsKsR8/i-Stock-1358029042-1-1.webp", // Replace with actual image URL if desired
+      image: "https://i.postimg.cc/nhGsKsR8/i-Stock-1358029042-1-1.webp",
     },
     {
       title: "Platelet Rich Plasma",
-      description: `Platelet therapy, or platelet-rich plasma (PRP) therapy, is a revolutionary new treatment that relieves pain by promoting long-lasting healing of musculoskeletal conditions using the healing power of your own body. This rapidly emerging technique is showing exciting success with osteoarthritis of the knee, shoulder, hip and spine, rotator cuff tears, chronic plantar fascitis, anterior cruciate ligament (ACL) injuries, pelvic pain and instability, back and neck injuries, tennis elbow, ankle sprains, tendonitis, and ligament sprains.`,
+      description: `Platelet therapy, or platelet-rich plasma (PRP) therapy, is a revolutionary new treatment that relieves pain by promoting long-lasting healing of musculoskeletal conditions using the healing power of your own body. This rapidly emerging technique is showing exciting success with osteoarthritis of the knee, shoulder, hip and spine, rotator cuff tears, chronic plantar fasciitis, anterior cruciate ligament (ACL) injuries, pelvic pain and instability, back and neck injuries, tennis elbow, ankle sprains, tendonitis, and ligament sprains.`,
       link: "/services/platelet-rich-plasma",
       image: "https://i.postimg.cc/HstkJqv3/i-Stock-92267682-1-1.webp",
     },
@@ -68,6 +69,7 @@ Book your appointment at California Premier Pain Clinics online or by phone now.
 
   return (
     <section className="our-services-section">
+      {/* Header and Slogan */}
       <div className="hero-content-title">
         <div
           style={{ backgroundColor: "rgb(37, 54, 53)", width: "40px", height: "2px" }}
@@ -84,27 +86,39 @@ Book your appointment at California Premier Pain Clinics online or by phone now.
           className="line"
         ></div>
       </div>
+
       <p className="our-services-slogan">Find Relief, Reclaim Your Best Life.</p>
 
-      {/* Map through each treatment and wrap in a button */}
+      {/* Cards */}
       {treatments.map((treatment, index) => (
-        <button
+        <div
           key={index}
           className="service-card"
           onClick={() => navigate(treatment.link)}
         >
-          <img
-            src={treatment.image}
-            alt={treatment.title}
-            className="service-image"
-            loading="lazy"
-          />
-          <h2 className="service-title">{treatment.title}</h2>
-          <p className="service-description">{treatment.description}</p>
-          <p className="service-link">
-            Learn More About {treatment.title}
-          </p>
-        </button>
+          {/* FRONT (Desktop Default) */}
+          <div className="service-front">
+            <img
+              src={treatment.image}
+              alt={treatment.title}
+              className="service-image"
+            />
+            <h2 className="service-title">{treatment.title}</h2>
+            <p className="service-link">Learn More About {treatment.title}</p>
+          </div>
+
+          {/* BACK (Desktop Hover, Mobile Default) */}
+          <div className="service-back">
+            {/* On mobile, show the image along with the text */}
+            <img
+              src={treatment.image}
+              alt={treatment.title}
+              className="service-image-back"
+            />
+            <p className="service-description">{treatment.description}</p>
+            <p className="service-link">Learn More About {treatment.title}</p>
+          </div>
+        </div>
       ))}
     </section>
   );
