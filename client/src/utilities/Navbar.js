@@ -39,16 +39,25 @@ function Navbar() {
             loading="eager"
           />
         </div>
+        
         <div className="menu-icon" onClick={toggleMenu}>
           <div className={isOpen ? 'bar change' : 'bar'}></div>
           <div className={isOpen ? 'bar change' : 'bar'}></div>
           <div className={isOpen ? 'bar change' : 'bar'}></div>
         </div>
+        
         <ul className={isOpen ? 'nav-menu active' : 'nav-menu'}>
-          <li className="nav-item" onClick={() => handleNavItemClick('/')}>
+          <li 
+            className="nav-item home-link" 
+            onClick={() => handleNavItemClick('/')}
+          >
             Home
           </li>
-          <li className="nav-item" onClick={toggleSubMenu}>
+          
+          <li 
+            className="nav-item services-link" 
+            onClick={toggleSubMenu}
+          >
             Services
             {subMenuOpen && (
               <ul className="sub-nav-menu">
@@ -64,16 +73,23 @@ function Navbar() {
               </ul>
             )}
           </li>
+          
           <li className="nav-item" onClick={() => handleNavItemClick('/locations')}>
             Locations
           </li>
+          
           <li className="nav-item" onClick={() => handleNavItemClick('/faq')}>
             FAQ
           </li>
+          
           <li className="nav-item" onClick={() => handleNavItemClick('/about-us')}>
             About Us
           </li>
-          <li className="nav-item" onClick={() => handleNavItemClick('/appointment')}>
+          
+          <li 
+            className="nav-item book-appointment" 
+            onClick={() => handleNavItemClick('/appointment')}
+          >
             Book Appointment
           </li>
         </ul>
