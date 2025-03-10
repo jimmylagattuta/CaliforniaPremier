@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { servicesData } from '../data';
 import './Navbar.css';
@@ -8,12 +8,12 @@ function Navbar() {
   const [subMenuOpen, setSubMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 769);
   const navigate = useNavigate();
+  const hoverTimeout = useRef(null);
 
   // Toggle entire mobile menu
   const toggleMenu = () => {
     if (isMobile) {
       setIsOpen(!isOpen);
-      // Close the Services sub-menu if we are closing the main menu
       if (isOpen) {
         setSubMenuOpen(false);
       }
@@ -34,17 +34,22 @@ function Navbar() {
     }
   };
 
-  // For desktop: hover over "Services" to show sub-menu
+  // For desktop: hover over "Services" or its submenu to show it
   const handleServicesEnter = () => {
     if (!isMobile) {
+      if (hoverTimeout.current) {
+        clearTimeout(hoverTimeout.current);
+      }
       setSubMenuOpen(true);
     }
   };
 
-  // For desktop: stop hovering to hide sub-menu
+  // For desktop: add a delay before closing the submenu
   const handleServicesLeave = () => {
     if (!isMobile) {
-      setSubMenuOpen(false);
+      hoverTimeout.current = setTimeout(() => {
+        setSubMenuOpen(false);
+      }, 300);
     }
   };
 
@@ -53,8 +58,6 @@ function Navbar() {
     const handleResize = () => {
       const mobileView = window.innerWidth < 769;
       setIsMobile(mobileView);
-
-      // If switching to desktop, close the mobile menus
       if (!mobileView) {
         setIsOpen(false);
         setSubMenuOpen(false);
@@ -67,8 +70,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        
-        {/* Brand: Logo + Desktop Company Name */}
+        {/* Brand: Logo + Desktop Company Name (clickable to home) */}
         <div className="navbar-brand">
           <div className="navbar-logo" onClick={() => handleNavItemClick('/')}>
             <img
@@ -77,7 +79,10 @@ function Navbar() {
               loading="eager"
             />
           </div>
-          <div className="company-name-desktop">
+          <div
+            className="company-name-desktop"
+            onClick={() => handleNavItemClick('/')}
+          >
             California Premier Pain Clinics
           </div>
         </div>
@@ -93,10 +98,6 @@ function Navbar() {
 
         {/* Main Nav Menu: visible if open on mobile, or always on desktop */}
         <ul className={`nav-menu ${isOpen || !isMobile ? 'active' : ''}`}>
-          <li className="nav-item home-link" onClick={() => handleNavItemClick('/')}>
-            Home
-          </li>
-
           <li
             className="nav-item services-link"
             onClick={handleServicesClick}
@@ -105,7 +106,11 @@ function Navbar() {
           >
             Services
             {subMenuOpen && (
-              <ul className="sub-nav-menu show">
+              <ul
+                className="sub-nav-menu show"
+                onMouseEnter={handleServicesEnter}
+                onMouseLeave={handleServicesLeave}
+              >
                 {Object.entries(servicesData).map(([key, service]) => (
                   <li
                     key={key}
@@ -131,10 +136,7 @@ function Navbar() {
             About Us
           </li>
 
-          <li
-            className="nav-item book-appointment"
-            onClick={() => handleNavItemClick('/appointment')}
-          >
+          <li className="nav-item book-appointment" onClick={() => handleNavItemClick('/appointment')}>
             Book Appointment
           </li>
         </ul>
