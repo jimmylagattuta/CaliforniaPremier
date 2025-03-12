@@ -2,5 +2,15 @@
 
 require_relative "config/environment"
 
+# Serve precompressed .br and .gz assets
+use Rack::Static,
+  urls: [""], root: "public",
+  header_rules: [
+    [:all, {'Cache-Control' => 'public, max-age=31536000'}],
+    ['.br', { 'Content-Encoding' => 'br' }],
+    ['.gz', { 'Content-Encoding' => 'gzip' }]
+  ]
+
+# Start the Rails application
 run Rails.application
 Rails.application.load_server
