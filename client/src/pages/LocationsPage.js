@@ -103,14 +103,12 @@ function LocationsPage() {
     }
   };
 
-  // Determine what to render under the contact form:
   // If a locationId exists, show that office's detail. Otherwise, show the list of locations.
   let officeContent = null;
   if (locationId) {
     const office = locationsData[locationId];
     if (office) {
-      officeContent = <SingleLocation office={office} />
-
+      officeContent = <SingleLocation office={office} />;
     } else {
       officeContent = (
         <div className="office-detail not-found">
@@ -209,15 +207,21 @@ function LocationsPage() {
                 )}
               </div>
               <div className="form-group">
-                  <input
-                    id="checkbox-agree"
-                    type="checkbox"
-                    name="agreement"
-                    checked={formData.agreement}
-                    onChange={handleInputChange}
-                    required
-                  />
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+                <input
+                  id="checkbox-agree"
+                  type="checkbox"
+                  name="agreement"
+                  checked={formData.agreement}
+                  onChange={handleInputChange}
+                  required
+                />
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                  }}
+                >
                   <label htmlFor="agreement">
                     By checking this box, I acknowledge and agree that any
                     information submitted will be forwarded to the CPPC office via
@@ -249,7 +253,7 @@ function LocationsPage() {
         {/* Render office details or the full locations list */}
         {officeContent}
       </div>
-      
+
       <FooterComponent />
     </div>
   );

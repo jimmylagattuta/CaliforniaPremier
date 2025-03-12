@@ -1,7 +1,7 @@
 // src/sections/LocationsSection.jsx
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { locationsData } from "../data"; // Import from data.js
+import { locationsData } from "../data";
 import "./LocationsSection.css";
 
 function LocationsSection({ showButton = true }) {
@@ -10,6 +10,17 @@ function LocationsSection({ showButton = true }) {
     ...location,
     id: key,
   }));
+
+  // Determine if the screen width is 769 or greater.
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 769);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 769);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Handler to open the address in Google Maps
   const openMap = (address, e) => {
@@ -24,6 +35,14 @@ function LocationsSection({ showButton = true }) {
   const callPhone = (phone, e) => {
     e.stopPropagation();
     window.location.href = `tel:${phone.replace(/[^0-9]/g, "")}`;
+  };
+
+  // Helper to determine the background image based on screen width and available data.
+  const getBackgroundImage = (location) => {
+    // Use desktopImage if available and on desktop; otherwise, fall back to heroImage (or image)
+    return isDesktop && location.desktopImage
+      ? location.desktopImage
+      : location.image || location.heroImage;
   };
 
   return (
@@ -43,9 +62,7 @@ function LocationsSection({ showButton = true }) {
             <div className={`location-card ${index % 2 !== 0 ? "reverse" : ""}`}>
               <div
                 className="location-image"
-                style={{
-                  backgroundImage: `url(${location.image || location.heroImage})`,
-                }}
+                style={{ backgroundImage: `url(${getBackgroundImage(location)})` }}
               ></div>
               <div className="location-info">
                 <h2 className="location-city">{location.name}</h2>

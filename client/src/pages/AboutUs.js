@@ -46,12 +46,12 @@ const AboutUs = () => {
           <div className="aboutus-card">
             <h3>See the Difference</h3>
             <p>
-              There is no question that putting the right procedure or the right
+              There is no question that putting the right procedure on the right
               structures will create the best outcome. All of our injections are
               done under either ultrasound or fluoroscopic guidance. Certain
               structures are best imaged under fluoroscopy and others are best
-              imaged with ultrasound. The best outcomes happen when the
-              treatments are performed with precision.
+              imaged with ultrasound. The best outcomes happen when treatments
+              are performed with precision.
             </p>
           </div>
         </div>
@@ -67,26 +67,24 @@ const AboutUs = () => {
             <p>
               Stephen Sudekum, DO is a fellowship-trained physical medicine and
               rehabilitation physician specializing in sports, spine, and
-              regenerative medicine. He is dedicated and available as a passion
-              for improving the lives of his patients. He believes that
-              regenerative medicine is a staple for true healing and restoration.
+              regenerative medicine. He is dedicated and passionate about
+              improving the lives of his patients. He believes that regenerative
+              medicine is a staple for true healing and restoration.
             </p>
             <p>
               Dr. Sudekum graduated from Eastern Michigan University magna cum
               laude with a degree in exercise science and an athletic training
               minor. He earned his medical degree from Michigan State University
               College of Osteopathic Medicine and completed his Physical
-              Medicine & Rehabilitation residency training at Michigan State
-              University in association with the Sparrow and McLaren health
-              systems.
+              Medicine & Rehabilitation residency at Michigan State University
+              in association with the Sparrow and McLaren health systems.
             </p>
             <p>
-              He continued his medical training to further specialize in
-              Interventional Spine and Musculoskeletal Medicine by completing his
-              fellowship at Bodor Clinic in Napa, California. Under the guidance
-              of Dr. Marcin Dybek and Dr. Michael A. Bodor, he gained hands-on
-              experience in advanced ultrasound and fluoroscopic-guided spine
-              procedures.
+              He further specialized in Interventional Spine and Musculoskeletal
+              Medicine by completing a fellowship at Bodor Clinic in Napa,
+              California. Under the guidance of Dr. Marcin Dybek and Dr. Michael
+              A. Bodor, he gained hands-on experience in advanced ultrasound and
+              fluoroscopic-guided spine procedures.
             </p>
           </div>
         </div>
@@ -112,6 +110,7 @@ const AboutUs = () => {
           ))}
         </div>
       </section>
+
       <FooterComponent />
     </div>
   );

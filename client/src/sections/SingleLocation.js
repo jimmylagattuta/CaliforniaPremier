@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { servicesData } from "../data";
 import "./SingleLocation.css";
 
 const SingleLocation = ({ office }) => {
+  // Determine if the screen width is 769px or wider
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 769);
+
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth >= 769);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   // Convert servicesData into an array for mapping.
   const servicesArray = Object.entries(servicesData).map(([key, service]) => ({
     ...service,
     id: key,
   }));
+
+  // Use the desktop image if available and on desktop, else fallback to the hero image.
+  const locationImage =
+    isDesktop && office.desktopImage ? office.desktopImage : office.heroImage;
 
   return (
     <div className="sl-location-card">
@@ -16,7 +29,7 @@ const SingleLocation = ({ office }) => {
       <div className="sl-location-cardrow">
         <div
           className="sl-location-image"
-          style={{ backgroundImage: `url(${office.heroImage})` }}
+          style={{ backgroundImage: `url(${locationImage})` }}
         >
           <h2 className="sl-location-name">{office.name}</h2>
         </div>
@@ -24,7 +37,10 @@ const SingleLocation = ({ office }) => {
           <p className="sl-location-address">
             {office.address ? (
               <a
-                href={`https://www.google.com/maps/search/?api=1&query=${office.address.replace(/ /g, "+")}`}
+                href={`https://www.google.com/maps/search/?api=1&query=${office.address.replace(
+                  / /g,
+                  "+"
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -83,7 +99,7 @@ const SingleLocation = ({ office }) => {
       <div
         className="sl-services-section"
         style={{
-          backgroundImage: `url(${office.heroImage})`,
+          backgroundImage: `url(${locationImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

@@ -20,6 +20,7 @@ export const servicesData = {
       // The images for your layout (hero, sections, etc.)
       images: {
         hero: "https://i.postimg.cc/xTGxVvsV/i-Stock-1262682182-1.webp",
+        desktopHero: "https://i.postimg.cc/T2FHqDr5/i-Stock-1262682182-2-1-1.webp", // new desktop image
         section: "https://i.postimg.cc/Vkb1mHbH/i-Stock-1338579925-1-2.webp",
         overlay1: "https://i.postimg.cc/FKmZDJV9/i-Stock-140451432-1-1.webp",
         overlay2: "https://i.postimg.cc/Y0vrZRwY/i-Stock-1665704188-1-1.webp",
@@ -44,6 +45,8 @@ export const servicesData = {
   Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, spine, and regenerative medicine.
       `,
       whyChooseBg: "https://i.postimg.cc/nr2YzqRd/i-Stock-2067515384-1-1.webp",
+      desktopWhyChooseBg: "https://i.postimg.cc/pdNtrSdr/i-Stock-2067515384-2-1.webp",
+
     },
   
 
@@ -58,6 +61,7 @@ This rapidly emerging technique is showing exciting success with osteoarthritis 
     images: {
       // Reusing the same images for now; swap with new ones later
       hero: "https://i.postimg.cc/mrwY3NZ4/i-Stock-1499286438-1-4.webp",
+      desktopHero: "https://i.postimg.cc/VLyNfngY/i-Stock-92267682-3-1.webp",
       section: "https://i.postimg.cc/Vkb1mHbH/i-Stock-1338579925-1-2.webp",
       overlay1: "https://i.postimg.cc/hjbMZzL8/i-Stock-806982196-1-1.webp",
       overlay2: "https://i.postimg.cc/Y9mb6D9P/i-Stock-1341904555-1-1.webp",
@@ -78,6 +82,7 @@ Our mission is to work with you in reducing your level of pain and suffering, ge
 Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, spine, and regenerative medicine.
     `,
     whyChooseBg: "https://i.postimg.cc/4yH0LN3X/i-Stock-1065586248-1.webp",
+    desktopWhyChooseBg: "https://i.postimg.cc/SN5HFffr/i-Stock-1065586248-3.webp",
   },
     // Future services can be added here
     // "testosterone-replacement-therapy": {...}
@@ -94,6 +99,7 @@ Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, sp
         images: {
           // For now, reuse the same images; update with new ones as needed.
           hero: "https://i.postimg.cc/YSd7W9V9/i-Stock-1462826523-1-1.webp",
+          desktopHero: "https://i.postimg.cc/gJgTKqxh/i-Stock-1943823361-4-1.webp",
           section: "https://i.postimg.cc/Vkb1mHbH/i-Stock-1338579925-1-2.webp",
           overlay1: "https://i.postimg.cc/SsNM6Drh/i-Stock-2005411359-1-1.webp",
           overlay2: "https://i.postimg.cc/LsV9VSCq/i-Stock-1266849905-2-1.webp",
@@ -113,6 +119,7 @@ Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, sp
     Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, spine, and regenerative medicine.
         `,
         whyChooseBg: "https://i.postimg.cc/W1gWC1P4/i-Stock-1149902262-1.webp",
+        desktopWhyChooseBg: "https://i.postimg.cc/brwNChqv/i-Stock-1149902262-2-1.webp",
       },
     "epidural-injections": {
         title: "Epidural Injections",
@@ -129,6 +136,7 @@ Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, sp
         images: {
           // For now, reusing the same images; you can update these later.
           hero: "https://i.postimg.cc/ZnDkF17p/i-Stock-1208226579-1.webp",
+          desktopHero: "https://i.postimg.cc/qMpZF7fw/i-Stock-1266849905-3-1.webp",
           section: "https://i.postimg.cc/Vkb1mHbH/i-Stock-1338579925-1-2.webp",
           overlay1: "https://i.postimg.cc/8kxTqvPG/i-Stock-2164643313-1-1.webp",
           overlay2: "https://i.postimg.cc/g208Q3Bs/i-Stock-2151843861-1-1.webp",
@@ -148,6 +156,7 @@ Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, sp
     Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, spine, and regenerative medicine.
         `,
         whyChooseBg: "https://i.postimg.cc/855wNq5F/i-Stock-2024073564-1.webp",
+        desktopWhyChooseBg: "https://i.postimg.cc/VLHpbcTF/i-Stock-2024073564-2-1.webp",
       },
 
       "botox-injections": {
@@ -163,6 +172,7 @@ Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, sp
         images: {
           // Reusing images for now; update with new ones later if desired.
           hero: "https://i.postimg.cc/bY0Pdwxc/i-Stock-2170566773-2.webp",
+          desktopHero: "https://i.postimg.cc/s21NjHKN/i-Stock-2170566773-4-1.webp",
           section: "https://i.postimg.cc/Vkb1mHbH/i-Stock-1338579925-1-2.webp",
           overlay1: "https://i.postimg.cc/FHtZYhNc/i-Stock-973708812-1-1.webp",
           overlay2: "https://i.postimg.cc/W4nk8vrd/i-Stock-1126649089-1-1.webp",
@@ -182,6 +192,7 @@ Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, sp
     Our experienced provider specializes in advanced headache and migraine treatments using Botox.
         `,
         whyChooseBg: "https://i.postimg.cc/Gm8fnKrQ/i-Stock-860143394-1.webp",
+        desktopWhyChooseBg: "https://i.postimg.cc/QtKNTbN6/i-Stock-860143394-2-1.webp",
       },
 
       "steroid-injections": {
@@ -197,6 +208,7 @@ Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, sp
         images: {
           // For now, reusing your common images. Replace these URLs later if needed.
           hero: "https://i.postimg.cc/FzvJv3zz/i-Stock-1498966288-1.jpg",
+          desktopHero: "https://i.postimg.cc/mDr4YSLx/i-Stock-1498966288-3-1.webp",
           section: "https://i.postimg.cc/Vkb1mHbH/i-Stock-1338579925-1-2.webp",
           overlay1: "https://i.postimg.cc/SxZ89gNp/i-Stock-2157383789-1-1.webp",
           overlay2: "https://i.postimg.cc/Y0vrZRwY/i-Stock-1665704188-1-1.webp",
@@ -217,6 +229,7 @@ Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, sp
     Our experienced specialists use state-of-the-art techniques to administer steroid injections, ensuring you receive safe and effective treatment.
         `,
         whyChooseBg: "https://i.postimg.cc/htkJVv7K/i-Stock-2167062787-1-1.webp",
+        desktopWhyChooseBg: "https://i.postimg.cc/jqHVD9QW/i-Stock-2167062787-2-1.webp",
       },
 
       "si-joint-injections": {
@@ -234,6 +247,7 @@ Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, sp
         images: {
           // For now, reusing the same images; update as needed.
           hero: "https://i.postimg.cc/q77bS2cx/i-Stock-1816848945-1.webp",
+          desktopHero: "https://i.postimg.cc/C57FTLF8/i-Stock-1816848945-2-1.webp",
           section: "https://i.postimg.cc/Vkb1mHbH/i-Stock-1338579925-1-2.webp",
           overlay1: "https://i.postimg.cc/kgrNmKQd/i-Stock-1772831186-1-1.webp",
           overlay2: "https://i.postimg.cc/SsX74rvk/i-Stock-1175074579-2-1-1.webp",
@@ -253,6 +267,7 @@ Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, sp
     Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, spine, and regenerative medicine.
         `,
         whyChooseBg: "https://i.postimg.cc/kG7SGPJN/i-Stock-2153084743-1.webp",
+        desktopWhyChooseBg: "https://i.postimg.cc/Hnvk8sfg/i-Stock-2153084743-2-1.webp",
       },
       "trigger-point-injections": {
         title: "Trigger Point Injections",
@@ -269,6 +284,7 @@ Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, sp
         images: {
           // For now, reusing common images; update with specific images later.
           hero: "https://i.postimg.cc/XqrXvzn2/i-Stock-1010681402-1.webp",
+          desktopHero: "https://i.postimg.cc/g2W3YgqH/i-Stock-1010681402-2-1.webp",
           section: "https://i.postimg.cc/Vkb1mHbH/i-Stock-1338579925-1-2.webp",
           overlay1: "https://i.postimg.cc/5yN54KMR/i-Stock-1768925642-1-1.webp",
           overlay2: "https://i.postimg.cc/ZKLg7MTv/i-Stock-1318834027-1-1.webp",
@@ -288,6 +304,7 @@ Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, sp
     Our skilled specialists are experienced in using trigger point injections to relieve chronic muscle pain and improve function.
         `,
         whyChooseBg: "https://i.postimg.cc/0QKmrj5R/i-Stock-687491806-1.webp",
+        desktopWhyChooseBg: "https://i.postimg.cc/9QRshFb7/i-Stock-687491806-2-1.webp",
       },
 
       "emg-testing": {
@@ -303,6 +320,7 @@ Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, sp
         images: {
           // For now, reusing your common images; update these URLs later if needed.
           hero: "https://i.postimg.cc/bvyKt6J8/i-Stock-1443498538-2-1.webp",
+          desktopHero: "https://i.postimg.cc/G2xmxjsd/i-Stock-1443498538-3-1.webp",
           section: "https://i.postimg.cc/Vkb1mHbH/i-Stock-1338579925-1-2.webp",
           overlay1: "https://i.postimg.cc/ZYs6Njbm/i-Stock-1479313987-1-1.webp",
           overlay2: "https://i.postimg.cc/T3TXG2nt/i-Stock-1171963818-1-1.webp",
@@ -322,6 +340,7 @@ Stephen Sudekum, DO is a fellowship-trained physician specializing in sports, sp
     Our expert team uses state-of-the-art electrodiagnostic techniques to provide comprehensive evaluations that inform your treatment plan.
         `,
         whyChooseBg: "https://i.postimg.cc/TYnZktk8/i-Stock-2172948003-1-1.webp",
+        desktopWhyChooseBg: "https://i.postimg.cc/XJP48DYM/i-Stock-2172948003-2-1.webp",
       },
   };
   
@@ -332,6 +351,7 @@ export const locationsData = {
     name: "Santa Rosa Clinic",
     address: "864 2nd Street Suite B, Santa Rosa, CA 95404",
     heroImage: "https://i.postimg.cc/8cBRDRnQ/i-Stock-1878629507-2-1-1.webp",
+    desktopImage: "https://i.postimg.cc/jqLZztZC/i-Stock-1878629507-6.webp", // new desktop image
     description:
       "Our Santa Rosa clinic offers personalized pain management and comprehensive care to help you achieve lasting relief.",
     phone: "(877) 271-0203",
@@ -343,6 +363,7 @@ export const locationsData = {
     name: "Sacramento Clinic",
     address: "7275 E. Southgate Drive Suite 306, Sacramento, CA 95823",
     heroImage: "https://i.postimg.cc/K8NmLRCG/i-Stock-2159424867-1.webp",
+    desktopImage: "https://i.postimg.cc/kGTkBccG/i-Stock-2159424867-2.webp", // new desktop image for Sacramento
     description:
       "Our Sacramento location offers expert consultations and advanced treatments to restore your quality of life.",
     phone: "(877) 271-0203",
@@ -354,6 +375,7 @@ export const locationsData = {
     name: "Stockton Clinic",
     address: "420 Acacia Street Suite 19, Stockton, CA 95203",
     heroImage: "https://i.postimg.cc/KjyWJ5gd/i-Stock-1357814327-1.webp",
+    desktopImage: "https://i.postimg.cc/J7YhYyS3/i-Stock-1357814327-2.webp",
     description:
       "Experience personalized care and effective pain management at our Stockton clinic.",
     phone: "(877) 271-0203",
@@ -365,8 +387,9 @@ export const locationsData = {
     name: "Modesto Clinic",
     address: "1130 Coffee Road BLDG 2B, Modesto, CA 95355",
     heroImage: "https://i.postimg.cc/QdpHz8Pw/i-Stock-1343463188-1.webp",
+    desktopImage: "https://i.postimg.cc/qRspJq7R/i-Stock-1343463188-2.webp",
     description:
-      "Our Modesto office is dedicated to restoring your quality of life with advanced treatments tailored to your needs.",
+    "Our Modesto office is dedicated to restoring your quality of life with advanced treatments tailored to your needs.",
     phone: "(877) 271-0203",
     fax: "(800) 887-1723",
     email: "referrals@californiapremierpainclinics.com",
@@ -376,6 +399,7 @@ export const locationsData = {
     name: "Hayward Clinic",
     address: "24700 Calaroga Ave Suite 103, Hayward, CA 94545",
     heroImage: "https://i.postimg.cc/Hnwkh3v5/i-Stock-1135194294-1.webp",
+    desktopImage: "https://i.postimg.cc/6QwXHwcx/i-Stock-1135194294-2.webp",
     description:
       "Visit our Hayward clinic for expert pain management and compassionate care in a welcoming environment.",
     phone: "(877) 271-0203",
@@ -387,6 +411,7 @@ export const locationsData = {
     name: "Salinas Clinic",
     address: "945 N. Blanco Suite A, Salinas, CA 93901",
     heroImage: "https://i.postimg.cc/MTzPBG2S/i-Stock-1176374269-1.webp",
+    desktopImage: "https://i.postimg.cc/KzxtvK5p/i-Stock-1176374269-2.webp",
     description:
       "Our Salinas location offers state-of-the-art treatments in a comfortable, patient-friendly setting.",
     phone: "(877) 271-0203",
@@ -398,6 +423,7 @@ export const locationsData = {
     name: "San Jose Clinic",
     address: "2375 Montpelier Drive Suite 10, San Jose, CA 95116",
     heroImage: "https://i.postimg.cc/13PWgKkd/i-Stock-465837688-1.webp",
+    desktopImage: "https://i.postimg.cc/kXLCrWJC/i-Stock-465837688-2.webp",
     description:
       "At our San Jose clinic, you'll receive personalized care and advanced pain management treatments tailored to your needs.",
     phone: "(877) 271-0203",
@@ -409,8 +435,9 @@ export const locationsData = {
     name: "Fresno Clinic",
     address: "349 E. Bullard Ave Suite 105, Fresno, CA 93710",
     heroImage: "https://i.postimg.cc/cH87kgqY/i-Stock-588965234-1.webp",
+    desktopImage: "https://i.postimg.cc/8kXQW90w/i-Stock-588965234-2.webp",
     description:
-      "Our Fresno clinic provides comprehensive pain management and a range of treatment options in a modern, comfortable setting.",
+    "Our Fresno clinic provides comprehensive pain management and a range of treatment options in a modern, comfortable setting.",
     phone: "(877) 271-0203",
     fax: "(800) 887-1723",
     email: "referrals@californiapremierpainclinics.com",
@@ -420,8 +447,9 @@ export const locationsData = {
     name: "Hanford Clinic",
     address: "1004 N. Douty Street, Hanford, CA 93230",
     heroImage: "https://i.postimg.cc/50qytbLT/i-Stock-2198440524-1.webp",
+    desktopImage: "https://i.postimg.cc/ZK5Qfn6S/i-Stock-2198440524-2.webp",
     description:
-      "Visit our Hanford clinic for effective treatments and expert care in a friendly atmosphere.",
+    "Visit our Hanford clinic for effective treatments and expert care in a friendly atmosphere.",
     phone: "(877) 271-0203",
     fax: "(800) 887-1723",
     email: "referrals@californiapremierpainclinics.com",
@@ -431,6 +459,7 @@ export const locationsData = {
     name: "Bakersfield Clinic",
     address: "3550 Q. Street Suite 105, Bakersfield, CA 93301",
     heroImage: "https://i.postimg.cc/ZnCGMLbH/i-Stock-2178001181-1.webp",
+    desktopImage: "https://i.postimg.cc/pL8p3Wt0/i-Stock-2178001181-2.webp",
     description:
       "Our Bakersfield clinic offers personalized treatment plans and advanced care to help you manage pain and improve your quality of life.",
     phone: "(877) 271-0203",
