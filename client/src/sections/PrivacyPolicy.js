@@ -1,10 +1,34 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import FooterComponent from "../sections/FooterComponent"; // adjust the path if needed
 import "./PrivacyPolicy.css";
 
 const PrivacyPolicy = () => {
+  // Build the JSON‑LD rich snippet for the Privacy Policy & TOS page.
+  const richSnippet = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy & Terms and Conditions",
+    "url": "https://californiapremierpainclinics.com/privacy-policy",
+    "description": "Review the Privacy Policy and Terms and Conditions for California Premier Pain Clinics to learn how we handle your personal data and what rules apply when using our services.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "California Premier Pain Clinics",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://i.postimg.cc/xTGxVvsV/i-Stock-1262682182-1.webp"
+      }
+    },
+    "dateModified": "2022-08-04"
+  };
+
   return (
     <div>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(richSnippet)}
+        </script>
+      </Helmet>
       <div className="privacy-policy-container">
         <div className="privacy-policy-content">
           {/* Privacy Policy Section */}
@@ -81,7 +105,6 @@ const PrivacyPolicy = () => {
             </a>
           </p>
         </div>
-
       </div>
       <FooterComponent />
     </div>
