@@ -12,6 +12,8 @@ function AboutUsComponent() {
           alt="About Us"
           loading="lazy"
           className="about-image"
+          height="56"
+          width="56"
         />
       </div>
 

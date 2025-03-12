@@ -77,6 +77,8 @@ function Navbar() {
               src="https://i.postimg.cc/mrH0xfnF/i-Stock-1137683414-1-3.webp"
               alt="Company Logo"
               loading="eager"
+              height="56"
+              width="56"
             />
           </div>
           <div

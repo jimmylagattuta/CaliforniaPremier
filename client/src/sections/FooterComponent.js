@@ -54,7 +54,7 @@ function FooterComponent() {
             <li><a href="/">Home</a></li>
             <li><a href="/about-us">About Us</a></li>
             <li><a href="/locations">Become A Patient</a></li>
-            <li><a href="/book-appointment">Book Appointment</a></li>
+            <li><a href="/locations">Book Appointment</a></li>
             <li><a href="/faqs">FAQs</a></li>
             <li><a href="/contact-us">Contact Us</a></li>
             <li><a href="/blog">Blog</a></li>
