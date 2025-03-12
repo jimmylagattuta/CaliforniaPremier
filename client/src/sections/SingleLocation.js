@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { servicesData } from "../data";
 import "./SingleLocation.css";
 
@@ -23,110 +24,152 @@ const SingleLocation = ({ office }) => {
   const locationImage =
     isDesktop && office.desktopImage ? office.desktopImage : office.heroImage;
 
+  // Helper function: attempt to parse office.address into structured components.
+  const parseAddress = (address) => {
+    if (!address) return {};
+    const parts = address.split(",").map((s) => s.trim());
+    if (parts.length < 3) return { streetAddress: address };
+    const streetAddress = parts[0];
+    const addressLocality = parts[1];
+    // Assume the third part contains state and postal code, e.g., "CA 95404"
+    const regionPostal = parts[2].split(" ");
+    const addressRegion = regionPostal[0];
+    const postalCode = regionPostal.slice(1).join(" ");
+    return {
+      "@type": "PostalAddress",
+      streetAddress,
+      addressLocality,
+      addressRegion,
+      postalCode,
+      addressCountry: "US"
+    };
+  };
+
+  const postalAddress = parseAddress(office.address);
+
+  // Build the rich snippet JSON-LD object for this clinic.
+  const richSnippet = {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": office.name,
+    "description": office.description,
+    "address": postalAddress,
+    "telephone": office.phone,
+    "url": window.location.href,
+    "image": locationImage
+  };
+
   return (
-    <div className="sl-location-card">
-      {/* Office Card Row */}
-      <div className="sl-location-cardrow">
-        <div
-          className="sl-location-image"
-          style={{ backgroundImage: `url(${locationImage})` }}
-        >
-          <h2 className="sl-location-name">{office.name}</h2>
+    <>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(richSnippet)}
+        </script>
+      </Helmet>
+      <div className="sl-location-card">
+        {/* Office Card Row */}
+        <div className="sl-location-cardrow">
+          <div
+            className="sl-location-image"
+            style={{ backgroundImage: `url(${locationImage})` }}
+          >
+            <h2 className="sl-location-name">{office.name}</h2>
+          </div>
+          <div className="sl-location-info">
+            <p className="sl-location-address">
+              {office.address ? (
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${office.address.replace(
+                    / /g,
+                    "+"
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
+                    alt="Map icon"
+                    className="sl-map-icon"
+                    height="16"
+                    width="16"
+                  />
+                  {office.address}
+                </a>
+              ) : (
+                "Address coming soon"
+              )}
+            </p>
+          </div>
         </div>
-        <div className="sl-location-info">
-          <p className="sl-location-address">
-            {office.address ? (
-              <a
-                href={`https://www.google.com/maps/search/?api=1&query=${office.address.replace(
-                  / /g,
-                  "+"
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://i.postimg.cc/HLxtkzZm/map-pin-1-1.webp"
-                  alt="Map icon"
-                  className="sl-map-icon"
-                  height="16"
-                  width="16"
-                />
-                {office.address}
-              </a>
-            ) : (
-              "Address coming soon"
+
+        {/* Redesigned Contact Info Section */}
+        <div className="sl-contact-info">
+          <ul className="sl-contact-list">
+            {office.phone && (
+              <li className="sl-contact-item">
+                <strong>Phone:&nbsp;</strong>{" "}
+                <a href={`tel:${office.phone.replace(/[^0-9]/g, "")}`}>
+                  {office.phone}
+                </a>
+              </li>
             )}
-          </p>
+            {office.fax && (
+              <li className="sl-contact-item">
+                <strong>Fax:&nbsp;</strong> {office.fax}
+              </li>
+            )}
+            {office.email && (
+              <li className="sl-contact-item">
+                <a href={`mailto:${office.email}`}>Email us</a>
+              </li>
+            )}
+            {office.hours && (
+              <li className="sl-contact-item">
+                <strong>Hours:&nbsp;</strong> {office.hours}
+              </li>
+            )}
+          </ul>
         </div>
-      </div>
 
-      {/* Redesigned Contact Info Section */}
-      <div className="sl-contact-info">
-        <ul className="sl-contact-list">
-          {office.phone && (
-            <li className="sl-contact-item">
-              <strong>Phone:&nbsp;</strong>{" "}
-              <a href={`tel:${office.phone.replace(/[^0-9]/g, "")}`}>
-                {office.phone}
-              </a>
-            </li>
-          )}
-          {office.fax && (
-            <li className="sl-contact-item">
-              <strong>Fax:&nbsp;</strong> {office.fax}
-            </li>
-          )}
-          {office.email && (
-            <li className="sl-contact-item">
-              <a href={`mailto:${office.email}`}>Email us</a>
-            </li>
-          )}
-          {office.hours && (
-            <li className="sl-contact-item">
-              <strong>Hours:&nbsp;</strong> {office.hours}
-            </li>
-          )}
-        </ul>
-      </div>
+        {/* Office Description */}
+        <div className="sl-office-description">
+          <h3>About {office.name}</h3>
+          <p>{office.description}</p>
+        </div>
 
-      {/* Office Description */}
-      <div className="sl-office-description">
-        <h3>About {office.name}</h3>
-        <p>{office.description}</p>
-      </div>
-
-      {/* Services List Section */}
-      <div
-        className="sl-services-section"
-        style={{
-          backgroundImage: `url(${locationImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="sl-services-overlay">
-          <h2 className="sl-services-title">Our Services</h2>
-          <div className="sl-services-grid">
-            {servicesArray.map((service) => (
-              <Link
-                key={service.id}
-                to={`/services/${service.id}`}
-                className="sl-service-card"
-              >
-                <div
-                  className="sl-service-image"
-                  style={{ backgroundImage: `url(${service.images.hero})` }}
-                ></div>
-                <div className="sl-service-info">
-                  <h3 className="sl-service-name">{service.title}</h3>
-                  <p className="sl-service-short">{service.shortDescription}</p>
-                </div>
-              </Link>
-            ))}
+        {/* Services List Section */}
+        <div
+          className="sl-services-section"
+          style={{
+            backgroundImage: `url(${locationImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="sl-services-overlay">
+            <h2 className="sl-services-title">Our Services</h2>
+            <div className="sl-services-grid">
+              {servicesArray.map((service) => (
+                <Link
+                  key={service.id}
+                  to={`/services/${service.id}`}
+                  className="sl-service-card"
+                >
+                  <div
+                    className="sl-service-image"
+                    style={{ backgroundImage: `url(${service.images.hero})` }}
+                  ></div>
+                  <div className="sl-service-info">
+                    <h3 className="sl-service-name">{service.title}</h3>
+                    <p className="sl-service-short">{service.shortDescription}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { servicesData } from "../data";
 import FooterComponent from "../sections/FooterComponent";
 import "./AboutUs.css";
@@ -10,8 +11,50 @@ const AboutUs = () => {
     id: key,
   }));
 
+  // Build the rich snippet JSON‑LD object for the About Us page.
+  const richSnippet = {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    "name": "California Premier Pain Clinics",
+    "url": "https://californiapremierpainclinics.com/about-us",
+    "logo": "https://i.postimg.cc/xTGxVvsV/i-Stock-1262682182-1.webp",
+    "description":
+      "California Premier Pain Clinics specializes in delivering advanced, individualized pain management solutions designed to restore mobility, reduce pain, and enhance overall quality of life. Our expert team uses state-of-the-art treatments and personalized care to help you regain your quality of life.",
+    "founder": {
+      "@type": "Person",
+      "name": "Stephen Sudekum, DO"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "(877) 271-0203",
+      "contactType": "customer service",
+      "availableLanguage": ["English"]
+    },
+    "areaServed": "California",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Pain Management Services",
+      "itemListElement": servicesArray.map((service, index) => ({
+        "@type": "Offer",
+        "position": index + 1,
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": service.title,
+          "description": service.shortDescription,
+          "url": `https://californiapremierpainclinics.com/services/${service.id}`
+        }
+      }))
+    }
+  };
+
   return (
     <div className="aboutus-container">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(richSnippet)}
+        </script>
+      </Helmet>
+
       {/* Hero Section */}
       <section className="aboutus-hero">
         <div className="aboutus-hero-overlay">
