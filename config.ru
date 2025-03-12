@@ -1,5 +1,4 @@
 # This file is used by Rack-based servers to start the application.
-
 require_relative "config/environment"
 
 # Serve precompressed .br and .gz assets
@@ -11,6 +10,4 @@ use Rack::Static,
     ['.gz', { 'Content-Encoding' => 'gzip' }]
   ]
 
-# Start the Rails application
 run Rails.application
-Rails.application.load_server
