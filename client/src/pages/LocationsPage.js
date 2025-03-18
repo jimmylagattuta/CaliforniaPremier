@@ -66,9 +66,33 @@ function LocationsPage() {
       return;
     }
     setErrors({});
-    // Here you would include your actual submission logic.
-    // For demonstration, we'll just set submitted to true.
-    setSubmitted(true);
+    // Submit the form to the /contact endpoint
+    try {
+      const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute("content");
+      const response = await fetch("/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-CSRF-Token": csrfToken,
+        },
+        body: JSON.stringify({ contact: formData }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        console.log("✅ Message sent successfully!");
+      } else {
+        console.error("❌ Error response from backend:", await response.json());
+        setErrors({
+          form: "There was an error sending your message. Try again later.",
+        });
+      }
+    } catch (error) {
+      console.error("❌ Error during form submission:", error);
+      setErrors({
+        form: "There was an error sending your message. Try again later.",
+      });
+    }
   };
 
   // Determine whether we are showing a single location or the list.
@@ -78,7 +102,6 @@ function LocationsPage() {
   let locationsRichSnippet = null;
   if (!isSingleLocation) {
     const locationsArray = Object.entries(locationsData).map(([key, loc]) => {
-      // Parse address if available
       const addressParts = loc.address ? loc.address.split(",").map(s => s.trim()) : [];
       let streetAddress = loc.address;
       let addressLocality = "";
