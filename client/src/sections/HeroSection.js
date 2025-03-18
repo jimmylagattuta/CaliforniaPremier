@@ -47,7 +47,7 @@ function HeroSection() {
         </p>
         <h1 className="subslogan">Your Path to a Pain-Free Life Begins Here.</h1>
 
-        <a href="#appointment" className="cta-button">Book an Appointment</a>
+        <a href="/locations#contactForm" className="cta-button">Book an Appointment</a>
       </div>
     </section>
   );

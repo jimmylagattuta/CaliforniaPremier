@@ -264,7 +264,7 @@ function FooterComponent() {
           </ul>
 
           <p className="book-appointment-p">
-            <a href="/book-appointment" className="book-appointment-link">
+            <a href="/locations#contactForm" className="book-appointment-link">
               Book Appointment
             </a>
           </p>

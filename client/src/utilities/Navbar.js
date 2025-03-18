@@ -138,7 +138,7 @@ function Navbar() {
             About Us
           </li>
 
-          <li className="nav-item book-appointment" onClick={() => handleNavItemClick('/appointment')}>
+          <li className="nav-item book-appointment" onClick={() => handleNavItemClick('/locations#contactForm')}>
             Book Appointment
           </li>
         </ul>
