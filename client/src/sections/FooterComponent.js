@@ -11,16 +11,13 @@ function FooterComponent() {
           {/* Fancy Brand Row */}
           <div className="fancy-brand-row">
             <img
-              src="https://i.postimg.cc/wT3CPKY5/i-Stock-1137683414-1-1-bg-removed-png.webp"
+              src="https://res.cloudinary.com/djtsuktwb/image/upload/v1743741228/IMG_4918_1_cqjbuy.webp"
               alt="California Premier Pain Clinics"
               className="fancy-brand-logo"
-              height="40"
-              width="40"
+              height="180"
+              width="220"
             />
-            <div className="fancy-text-group">
-              <h1 className="fancy-brand-title">CALIFORNIA PREMIER</h1>
-              <h2 className="fancy-brand-subtitle">PAIN CLINICS</h2>
-            </div>
+
           </div>
 
           {/* Tagline + Social Icons */}
@@ -209,9 +206,10 @@ function FooterComponent() {
                 Fresno - 349 E. Bullard Ave Suite 105, Fresno, CA 93710
               </a>
             </li>
-            <li>
+              {/* Replace Hanford with Visalia */}
+              <li>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Hanford+-+1004+N.+Douty+Street,+Hanford,+CA+93230"
+                href="https://www.google.com/maps/search/?api=1&query=Visalia+-+1622+S.+Court+St.,+Visalia,+CA+93277"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -222,7 +220,7 @@ function FooterComponent() {
                   height="16"
                   width="16"
                 />
-                Hanford - 1004 N. Douty Street, Hanford, CA 93230
+                Visalia - 1622 S. Court St., Visalia, CA 93277
               </a>
             </li>
             <li>
@@ -242,6 +240,39 @@ function FooterComponent() {
               </a>
             </li>
 
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Napa+-+1100+Trancas+St.,+Suite+301,+Napa,+CA+94558"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp"
+                  alt="Map icon"
+                  className="map-icon"
+                  height="16"
+                  width="16"
+                />
+                Napa - 1100 Trancas St., Suite 301, Napa, CA 94558
+              </a>
+            </li>
+            {/* Add New Office: South San Francisco */}
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=South+San+Francisco+-+2400+Westborough+Blvd.,+Suite+2,+South+San+Francisco,+CA+94080"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp"
+                  alt="Map icon"
+                  className="map-icon"
+                  height="16"
+                  width="16"
+                />
+                South San Francisco - 2400 Westborough Blvd., Suite 2, South San Francisco, CA 94080
+              </a>
+            </li>
             {/* Phone, Fax, Email, Hours */}
             <li>
               <strong>Phone: </strong>
@@ -251,16 +282,7 @@ function FooterComponent() {
               <strong>Fax:</strong>
               &nbsp;(800) 887-1723
             </li>
-            <li>
-              <strong>Email: </strong>
-              <a href="mailto:referrals@californiapremierpainclinics.com">
-                &nbsp;referrals@californiapremierpainclinics.com
-              </a>
-            </li>
-            <li>
-              <strong>Hours:&nbsp; </strong>
-              Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed
-            </li>
+
           </ul>
 
           <p className="book-appointment-p">

@@ -443,13 +443,13 @@ export const locationsData = {
     email: "referrals@californiapremierpainclinics.com",
     hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
-  "hanford": {
-    name: "Hanford Clinic",
-    address: "1004 N. Douty Street, Hanford, CA 93230",
+  "visalia": {
+    name: "Visalia Clinic",
+    address: "1622 S. Court St., Visalia, CA 93277",
     heroImage: "https://i.postimg.cc/50qytbLT/i-Stock-2198440524-1.webp",
     desktopImage: "https://i.postimg.cc/ZK5Qfn6S/i-Stock-2198440524-2.webp",
     description:
-    "Visit our Hanford clinic for effective treatments and expert care in a friendly atmosphere.",
+    "Visit our Visalia clinic for effective treatments and expert care in a friendly atmosphere.",
     phone: "(877) 271-0203",
     fax: "(800) 887-1723",
     email: "referrals@californiapremierpainclinics.com",
@@ -462,6 +462,30 @@ export const locationsData = {
     desktopImage: "https://i.postimg.cc/pL8p3Wt0/i-Stock-2178001181-2.webp",
     description:
       "Our Bakersfield clinic offers personalized treatment plans and advanced care to help you manage pain and improve your quality of life.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
+  },
+  "napa": {
+    name: "Napa Clinic",
+    address: "1100 Trancas St., Suite 301, Napa, CA 94558",
+    heroImage: "https://res.cloudinary.com/djtsuktwb/image/upload/v1743980631/iStock-801340888_mogsnh.webp", // replace with the actual hero image
+    desktopImage: "https://res.cloudinary.com/djtsuktwb/image/upload/v1743980631/iStock-801340888_mogsnh.webp", // replace with the actual desktop image
+    description:
+      "Our Napa clinic provides personalized pain management and comprehensive care to help you achieve lasting relief.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
+  },
+  "south-san-francisco": {
+    name: "South San Francisco Clinic",
+    address: "2400 Westborough Blvd., Suite 2, South San Francisco, CA 94080",
+    heroImage: "https://res.cloudinary.com/djtsuktwb/image/upload/v1743980720/iStock-1054196696_bsazzy.webp", // replace with the actual hero image
+    desktopImage: "https://res.cloudinary.com/djtsuktwb/image/upload/v1743980720/iStock-1054196696_bsazzy.webp", // replace with the actual desktop image
+    description:
+      "Our South San Francisco clinic offers expert consultations and advanced treatments to restore your quality of life.",
     phone: "(877) 271-0203",
     fax: "(800) 887-1723",
     email: "referrals@californiapremierpainclinics.com",

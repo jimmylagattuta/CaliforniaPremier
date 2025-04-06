@@ -74,19 +74,14 @@ function Navbar() {
         <div className="navbar-brand">
           <div className="navbar-logo" onClick={() => handleNavItemClick('/')}>
             <img
-              src="https://i.postimg.cc/mrH0xfnF/i-Stock-1137683414-1-3.webp"
+              src="https://res.cloudinary.com/djtsuktwb/image/upload/v1743741228/IMG_4918_1_cqjbuy.webp"
               alt="Company Logo"
               loading="eager"
-              height="56"
-              width="56"
+              height="auto"
+              width="110"
             />
           </div>
-          <div
-            className="company-name-desktop"
-            onClick={() => handleNavItemClick('/')}
-          >
-            California Premier Pain Clinics
-          </div>
+       
         </div>
 
         {/* Mobile burger icon (hidden on desktop) */}
