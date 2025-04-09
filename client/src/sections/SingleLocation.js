@@ -105,14 +105,12 @@ const SingleLocation = ({ office }) => {
         {/* Redesigned Contact Info Section */}
         <div className="sl-contact-info">
           <ul className="sl-contact-list">
-            {office.phone && (
-              <li className="sl-contact-item">
-                <strong>Phone:&nbsp;</strong>{" "}
-                <a href={`tel:${office.phone.replace(/[^0-9]/g, "")}`}>
-                  {office.phone}
-                </a>
-              </li>
-            )}
+            <li className="sl-contact-item">
+              <strong>Phone:&nbsp;</strong>
+              <a href={`tel:${office.phone.replace(/[^0-9]/g, "")}`}>
+                {office.phone}
+              </a>
+            </li>
             {office.fax && (
               <li className="sl-contact-item">
                 <strong>Fax:&nbsp;</strong> {office.fax}
@@ -129,6 +127,16 @@ const SingleLocation = ({ office }) => {
               </li>
             )}
           </ul>
+        </div>
+
+        {/* Call Option Button (always visible) */}
+        <div className="sl-call-option">
+          <a
+            href={`tel:${office.phone.replace(/[^0-9]/g, "")}`}
+            className="sl-call-button"
+          >
+            Call Now
+          </a>
         </div>
 
         {/* Office Description */}
