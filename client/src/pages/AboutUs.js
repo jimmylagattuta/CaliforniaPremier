@@ -115,8 +115,8 @@ const AboutUs = () => {
             </p>
             <p>
               Dr. Sudekum graduated from Eastern Michigan University magna cum
-              laude with a degree in exercise science and an athletic training
-              minor. He earned his medical degree from Michigan State University
+              laude with a degree in exercise science and a Biochemistry
+              Minor. He earned his medical degree from Michigan State University
               College of Osteopathic Medicine and completed his Physical
               Medicine & Rehabilitation residency at Michigan State University
               in association with the Sparrow and McLaren health systems.
@@ -124,9 +124,8 @@ const AboutUs = () => {
             <p>
               He further specialized in Interventional Spine and Musculoskeletal
               Medicine by completing a fellowship at Bodor Clinic in Napa,
-              California. Under the guidance of Dr. Marcin Dybek and Dr. Michael
-              A. Bodor, he gained hands-on experience in advanced ultrasound and
-              fluoroscopic-guided spine procedures.
+              California. Under the guidance of Dr. Marko Bodor, he gained hands-on 
+              experience in advanced ultrasound and fluoroscopic-guided spine procedures.
             </p>
           </div>
         </div>
