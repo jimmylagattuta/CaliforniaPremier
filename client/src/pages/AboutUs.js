@@ -101,35 +101,89 @@ const AboutUs = () => {
 
       {/* Provider Section */}
       <section className="aboutus-provider">
-        <h2 className="aboutus-provider-title">Meet Our Provider</h2>
-        <div className="aboutus-provider-row">
-          <div className="aboutus-provider-image"></div>
-          <div className="aboutus-provider-info">
-            <h3>Stephen Sudekum, DO</h3>
-            <p>
-              Stephen Sudekum, DO is a fellowship-trained physical medicine and
-              rehabilitation physician specializing in sports, spine, and
-              regenerative medicine. He is dedicated and passionate about
-              improving the lives of his patients. He believes that regenerative
-              medicine is a staple for true healing and restoration.
-            </p>
-            <p>
-              Dr. Sudekum graduated from Eastern Michigan University magna cum
-              laude with a degree in exercise science and a Biochemistry
-              Minor. He earned his medical degree from Michigan State University
-              College of Osteopathic Medicine and completed his Physical
-              Medicine & Rehabilitation residency at Michigan State University
-              in association with the Sparrow and McLaren health systems.
-            </p>
-            <p>
-              He further specialized in Interventional Spine and Musculoskeletal
-              Medicine by completing a fellowship at Bodor Clinic in Napa,
-              California. Under the guidance of Dr. Marko Bodor, he gained hands-on 
-              experience in advanced ultrasound and fluoroscopic-guided spine procedures.
-            </p>
+        <h2 className="aboutus-provider-title">Meet Our Providers</h2>
+        <div className="aboutus-provider-grid">
+          {/* Dr. Sudekum */}
+          <div className="aboutus-provider-card">
+            <img
+              src="https://i.postimg.cc/J7KKyP4W/Screenshot-2025-03-08-132625.webp"
+              alt="Stephen Sudekum, DO"
+              className="aboutus-provider-photo"
+            />
+            <div className="aboutus-provider-info">
+              <h3>Stephen Sudekum, DO</h3>
+              <p>
+                Stephen Sudekum, DO is a fellowship-trained physical medicine
+                and rehabilitation physician specializing in sports, spine,
+                and regenerative medicine. He is dedicated and passionate
+                about improving the lives of his patients. He believes that
+                regenerative medicine is a staple for true healing and
+                restoration.
+              </p>
+              <p>
+                Dr. Sudekum graduated from Eastern Michigan University magna
+                cum laude with a degree in exercise science and a Biochemistry
+                Minor. He earned his medical degree from Michigan State
+                University College of Osteopathic Medicine and completed his
+                Physical Medicine & Rehabilitation residency at Michigan State
+                University in association with the Sparrow and McLaren health
+                systems.
+              </p>
+              <p>
+                He further specialized in Interventional Spine and
+                Musculoskeletal Medicine by completing a fellowship at Bodor
+                Clinic in Napa, California. Under the guidance of Dr. Marko
+                Bodor, he gained hands-on experience in advanced ultrasound and
+                fluoroscopic-guided spine procedures.
+              </p>
+            </div>
+          </div>
+
+          {/* Dr. Starley */}
+          <div className="aboutus-provider-card">
+            <img
+              src="https://res.cloudinary.com/djtsuktwb/image/upload/v1752645603/unnamed_x692f1.jpg"
+              alt="Dr. Denice Starley, D.O"
+              className="aboutus-provider-photo"
+            />
+            <div className="aboutus-provider-info">
+              <h3>Dr. Denice Starley, D.O</h3>
+              <p className="provider-cert">
+                Double Board‑Certified in Physical Medicine &amp; Rehabilitation and Pain Medicine
+              </p>
+              <p>
+                Dr. Denice Starley is a highly experienced and compassionate
+                physiatrist and interventional pain management specialist,
+                board‑certified by both the American Board of Physical Medicine
+                and Rehabilitation and the American Board of Pain Medicine. With
+                over 18 years of clinical experience, she specializes in the
+                diagnosis, rehabilitation, and minimally invasive treatment of
+                acute and chronic pain conditions.
+              </p>
+              <p>
+                She earned her Doctor of Osteopathy degree from Kansas City
+                University and completed her residency at the Washington
+                University/Barnes‑Jewish Hospital Consortium in St. Louis,
+                Missouri. Her training includes advanced interventional pain
+                techniques under nationally recognized leaders in the field.
+              </p>
+              <p>
+                Throughout her career, Dr. Starley has held multiple leadership
+                and medical director roles, contributed to pain management
+                literature, and served as an Assistant Professor at Touro
+                University Nevada College of Osteopathic Medicine. She is also
+                a Qualified Medical Evaluator (QME) for California and actively
+                treats workers’ compensation and personal injury patients.
+              </p>
+              <p>
+                Her approach is rooted in restoring function and improving
+                quality of life through evidence‑based, patient‑centered care.
+              </p>
+            </div>
           </div>
         </div>
       </section>
+
 
       {/* Services for SEO */}
       <section className="aboutus-services">
