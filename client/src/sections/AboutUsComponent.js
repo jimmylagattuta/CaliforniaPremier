@@ -34,7 +34,7 @@ function AboutUsComponent() {
         <p className="about-us-paragraph">
           Proudly serving communities across California, our clinics are strategically located in
           Santa Rosa, Sacramento, Stockton, Modesto, Hayward, Salinas, San Jose, Fresno, Hanford,
-          and Bakersfield—with exciting new locations coming soon in Napa and San Francisco in 2025...
+          Bakersfield, Napa and San Francisco.
         </p>
         <Link to="/about-us" className="about-us-button">
           Learn More About California Premier Pain Clinics

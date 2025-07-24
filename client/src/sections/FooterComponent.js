@@ -305,7 +305,6 @@ function FooterComponent() {
           <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
           {/* <li><a href="/return-and-refund">Return and Refund Policy</a></li> */}
         </ul>
-        <p className="footer-credit">Website by James Lagattuta</p>
       </div>
     </footer>
   );
