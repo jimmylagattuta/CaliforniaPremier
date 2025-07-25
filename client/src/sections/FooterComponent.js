@@ -206,7 +206,6 @@ function FooterComponent() {
                 Fresno - 349 E. Bullard Ave Suite 105, Fresno, CA 93710
               </a>
             </li>
-              {/* Replace Hanford with Visalia */}
               <li>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Visalia+-+1622+S.+Court+St.,+Visalia,+CA+93277"

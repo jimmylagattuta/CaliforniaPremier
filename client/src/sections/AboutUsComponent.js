@@ -33,7 +33,7 @@ function AboutUsComponent() {
         </p>
         <p className="about-us-paragraph">
           Proudly serving communities across California, our clinics are strategically located in
-          Santa Rosa, Sacramento, Stockton, Modesto, Hayward, Salinas, San Jose, Fresno, Hanford,
+          Santa Rosa, Sacramento, Stockton, Modesto, Hayward, Salinas, San Jose, Fresno, Visalia,
           Bakersfield, Napa and San Francisco.
         </p>
         <Link to="/about-us" className="about-us-button">
