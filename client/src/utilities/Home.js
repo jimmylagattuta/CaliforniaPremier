@@ -333,7 +333,6 @@ function Home() {
     ]
   };
 
-
   return (
     <div>
       <Helmet>
