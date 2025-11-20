@@ -351,7 +351,7 @@ export const locationsData = {
     name: "Santa Rosa Clinic",
     address: "864 2nd Street Suite B, Santa Rosa, CA 95404",
     heroImage: "https://i.postimg.cc/8cBRDRnQ/i-Stock-1878629507-2-1-1.webp",
-    desktopImage: "https://i.postimg.cc/jqLZztZC/i-Stock-1878629507-6.webp", // new desktop image
+    desktopImage: "https://i.postimg.cc/jqLZztZC/i-Stock-1878629507-6.webp",
     description:
       "Our Santa Rosa clinic offers personalized pain management and comprehensive care to help you achieve lasting relief.",
     phone: "(877) 271-0203",
@@ -359,11 +359,12 @@ export const locationsData = {
     email: "referrals@californiapremierpainclinics.com",
     hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
+
   "sacramento": {
     name: "Sacramento Clinic",
     address: "7275 E. Southgate Drive Suite 306, Sacramento, CA 95823",
     heroImage: "https://i.postimg.cc/K8NmLRCG/i-Stock-2159424867-1.webp",
-    desktopImage: "https://i.postimg.cc/kGTkBccG/i-Stock-2159424867-2.webp", // new desktop image for Sacramento
+    desktopImage: "https://i.postimg.cc/kGTkBccG/i-Stock-2159424867-2.webp",
     description:
       "Our Sacramento location offers expert consultations and advanced treatments to restore your quality of life.",
     phone: "(877) 271-0203",
@@ -371,6 +372,7 @@ export const locationsData = {
     email: "referrals@californiapremierpainclinics.com",
     hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
+
   "stockton": {
     name: "Stockton Clinic",
     address: "420 Acacia Street Suite 19, Stockton, CA 95203",
@@ -383,18 +385,20 @@ export const locationsData = {
     email: "referrals@californiapremierpainclinics.com",
     hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
+
   "modesto": {
     name: "Modesto Clinic",
     address: "1130 Coffee Road BLDG 2B, Modesto, CA 95355",
     heroImage: "https://i.postimg.cc/QdpHz8Pw/i-Stock-1343463188-1.webp",
     desktopImage: "https://i.postimg.cc/qRspJq7R/i-Stock-1343463188-2.webp",
     description:
-    "Our Modesto office is dedicated to restoring your quality of life with advanced treatments tailored to your needs.",
+      "Our Modesto office is dedicated to restoring your quality of life with advanced treatments tailored to your needs.",
     phone: "(877) 271-0203",
     fax: "(800) 887-1723",
     email: "referrals@californiapremierpainclinics.com",
     hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
+
   "hayward": {
     name: "Hayward Clinic",
     address: "24700 Calaroga Ave Suite 103, Hayward, CA 94545",
@@ -407,6 +411,7 @@ export const locationsData = {
     email: "referrals@californiapremierpainclinics.com",
     hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
+
   "salinas": {
     name: "Salinas Clinic",
     address: "945 N. Blanco Suite A, Salinas, CA 93901",
@@ -419,6 +424,7 @@ export const locationsData = {
     email: "referrals@californiapremierpainclinics.com",
     hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
+
   "san-jose": {
     name: "San Jose Clinic",
     address: "2375 Montpelier Drive Suite 10, San Jose, CA 95116",
@@ -431,30 +437,33 @@ export const locationsData = {
     email: "referrals@californiapremierpainclinics.com",
     hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
+
   "fresno": {
     name: "Fresno Clinic",
     address: "349 E. Bullard Ave Suite 105, Fresno, CA 93710",
     heroImage: "https://i.postimg.cc/cH87kgqY/i-Stock-588965234-1.webp",
     desktopImage: "https://i.postimg.cc/8kXQW90w/i-Stock-588965234-2.webp",
     description:
-    "Our Fresno clinic provides comprehensive pain management and a range of treatment options in a modern, comfortable setting.",
+      "Our Fresno clinic provides comprehensive pain management and a range of treatment options in a modern, comfortable setting.",
     phone: "(877) 271-0203",
     fax: "(800) 887-1723",
     email: "referrals@californiapremierpainclinics.com",
     hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
+
   "visalia": {
     name: "Visalia Clinic",
     address: "1622 S. Court St., Visalia, CA 93277",
     heroImage: "https://i.postimg.cc/50qytbLT/i-Stock-2198440524-1.webp",
     desktopImage: "https://i.postimg.cc/ZK5Qfn6S/i-Stock-2198440524-2.webp",
     description:
-    "Visit our Visalia clinic for effective treatments and expert care in a friendly atmosphere.",
+      "Visit our Visalia clinic for effective treatments and expert care in a friendly atmosphere.",
     phone: "(877) 271-0203",
     fax: "(800) 887-1723",
     email: "referrals@californiapremierpainclinics.com",
     hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
+
   "bakersfield": {
     name: "Bakersfield Clinic",
     address: "3550 Q. Street Suite 105, Bakersfield, CA 93301",
@@ -467,11 +476,14 @@ export const locationsData = {
     email: "referrals@californiapremierpainclinics.com",
     hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
+
   "napa": {
     name: "Napa Clinic",
     address: "1100 Trancas St., Suite 301, Napa, CA 94558",
-    heroImage: "https://res.cloudinary.com/djtsuktwb/image/upload/v1743980631/iStock-801340888_mogsnh.webp", // replace with the actual hero image
-    desktopImage: "https://res.cloudinary.com/djtsuktwb/image/upload/v1743980631/iStock-801340888_mogsnh.webp", // replace with the actual desktop image
+    heroImage:
+      "https://res.cloudinary.com/djtsuktwb/image/upload/v1743980631/iStock-801340888_mogsnh.webp",
+    desktopImage:
+      "https://res.cloudinary.com/djtsuktwb/image/upload/v1743980631/iStock-801340888_mogsnh.webp",
     description:
       "Our Napa clinic provides personalized pain management and comprehensive care to help you achieve lasting relief.",
     phone: "(877) 271-0203",
@@ -479,13 +491,33 @@ export const locationsData = {
     email: "referrals@californiapremierpainclinics.com",
     hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
+
   "south-san-francisco": {
     name: "South San Francisco Clinic",
-    address: "2400 Westborough Blvd., Suite 2, South San Francisco, CA 94080",
-    heroImage: "https://res.cloudinary.com/djtsuktwb/image/upload/v1743980720/iStock-1054196696_bsazzy.webp", // replace with the actual hero image
-    desktopImage: "https://res.cloudinary.com/djtsuktwb/image/upload/v1743980720/iStock-1054196696_bsazzy.webp", // replace with the actual desktop image
+    address:
+      "2400 Westborough Blvd., Suite 2, South San Francisco, CA 94080",
+    heroImage:
+      "https://res.cloudinary.com/djtsuktwb/image/upload/v1743980720/iStock-1054196696_bsazzy.webp",
+    desktopImage:
+      "https://res.cloudinary.com/djtsuktwb/image/upload/v1743980720/iStock-1054196696_bsazzy.webp",
     description:
       "Our South San Francisco clinic offers expert consultations and advanced treatments to restore your quality of life.",
+    phone: "(877) 271-0203",
+    fax: "(800) 887-1723",
+    email: "referrals@californiapremierpainclinics.com",
+    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
+  },
+
+  // ⭐⭐⭐ BELLFLOWER — NEW LOCATION ⭐⭐⭐
+  "bellflower": {
+    name: "Bellflower Clinic",
+    address: "9604 Artesia Blvd Suite 202, Bellflower, CA 90706",
+    heroImage:
+      "https://res.cloudinary.com/djtsuktwb/image/upload/v1763660193/iStock-1456886131_lxslwr.jpg",
+    desktopImage:
+      "https://res.cloudinary.com/djtsuktwb/image/upload/v1763660193/iStock-1456886131_lxslwr.jpg",
+    description:
+      "Our Bellflower clinic provides compassionate care and advanced pain management for patients throughout Los Angeles County.",
     phone: "(877) 271-0203",
     fax: "(800) 887-1723",
     email: "referrals@californiapremierpainclinics.com",

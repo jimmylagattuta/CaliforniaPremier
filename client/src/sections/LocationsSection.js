@@ -6,10 +6,15 @@ import "./LocationsSection.css";
 
 function LocationsSection({ showButton = true }) {
   // Convert locationsData (an object) to an array of locations with keys.
-  const locations = Object.entries(locationsData).map(([key, location]) => ({
+  let locations = Object.entries(locationsData).map(([key, location]) => ({
     ...location,
     id: key,
   }));
+
+  // ⭐ Alphabetize by location name
+  locations = locations.sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
 
   // Determine if the screen width is 769 or greater.
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 769);
@@ -39,7 +44,6 @@ function LocationsSection({ showButton = true }) {
 
   // Helper to determine the background image based on screen width and available data.
   const getBackgroundImage = (location) => {
-    // Use desktopImage if available and on desktop; otherwise, fall back to heroImage (or image)
     return isDesktop && location.desktopImage
       ? location.desktopImage
       : location.image || location.heroImage;
@@ -52,6 +56,7 @@ function LocationsSection({ showButton = true }) {
         <h1 className="company-name-locations">OUR LOCATIONS</h1>
         <div className="line-locations"></div>
       </div>
+
       <div className="locations-grid">
         {locations.map((location, index) => (
           <Link
@@ -59,13 +64,19 @@ function LocationsSection({ showButton = true }) {
             to={`/locations/${location.id}`}
             className="location-card-link"
           >
-            <div className={`location-card ${index % 2 !== 0 ? "reverse" : ""}`}>
+            <div
+              className={`location-card ${index % 2 !== 0 ? "reverse" : ""}`}
+            >
               <div
                 className="location-image"
-                style={{ backgroundImage: `url(${getBackgroundImage(location)})` }}
+                style={{
+                  backgroundImage: `url(${getBackgroundImage(location)})`,
+                }}
               ></div>
+
               <div className="location-info">
                 <h2 className="location-city">{location.name}</h2>
+
                 <p className="location-address">
                   {location.address ? (
                     <span
@@ -86,13 +97,17 @@ function LocationsSection({ showButton = true }) {
                     "Address coming soon"
                   )}
                 </p>
+
                 {location.phone && (
                   <p className="location-address">
                     <strong>Phone:</strong>
                     <span
                       onClick={(e) => callPhone(location.phone, e)}
                       className="phone-link"
-                      style={{ cursor: "pointer", marginLeft: "5px" }}
+                      style={{
+                        cursor: "pointer",
+                        marginLeft: "5px",
+                      }}
                     >
                       {location.phone}
                     </span>
@@ -103,6 +118,7 @@ function LocationsSection({ showButton = true }) {
           </Link>
         ))}
       </div>
+
       {showButton && (
         <div
           className="button-container"

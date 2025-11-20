@@ -32,9 +32,7 @@ function AboutUsComponent() {
           quality of life. Our expert team uses state-of-the-art treatments...
         </p>
         <p className="about-us-paragraph">
-          Proudly serving communities across California, our clinics are strategically located in
-          Santa Rosa, Sacramento, Stockton, Modesto, Hayward, Salinas, San Jose, Fresno, Visalia,
-          Bakersfield, Napa and San Francisco.
+          Proudly serving communities across California, our clinics are strategically located in Bakersfield, Bellflower, Fresno, Hayward, Modesto, Napa, Salinas, Sacramento, San Francisco, San Jose, Santa Rosa, Stockton, and Visalia.
         </p>
         <Link to="/about-us" className="about-us-button">
           Learn More About California Premier Pain Clinics

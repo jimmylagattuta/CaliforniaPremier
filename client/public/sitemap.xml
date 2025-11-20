@@ -91,21 +91,27 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Locations Pages -->
+  <!-- Locations Pages (Alphabetized + Bellflower Added) -->
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/santa-rosa</loc>
+    <loc>https://californiapremierpainclinics.com/locations/bakersfield</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/sacramento</loc>
+    <loc>https://californiapremierpainclinics.com/locations/bellflower</loc> 
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/stockton</loc>
+    <loc>https://californiapremierpainclinics.com/locations/fresno</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://californiapremierpainclinics.com/locations/hayward</loc> 
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -117,7 +123,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/visalia</loc>
+    <loc>https://californiapremierpainclinics.com/locations/napa</loc> 
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://californiapremierpainclinics.com/locations/sacramento</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -135,25 +147,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/fresno</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://californiapremierpainclinics.com/locations/visalia</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://californiapremierpainclinics.com/locations/bakersfield</loc>
-    <lastmod>2025-03-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-    <url>
-    <loc>https://californiapremierpainclinics.com/locations/napa</loc>
+    <loc>https://californiapremierpainclinics.com/locations/santa-rosa</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -164,9 +158,20 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://californiapremierpainclinics.com/locations/stockton</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://californiapremierpainclinics.com/locations/visalia</loc>
+    <lastmod>2025-03-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-
-  <!-- Blog Section (If Applicable) -->
+  <!-- Blog Section -->
   <url>
     <loc>https://californiapremierpainclinics.com/blog</loc>
     <lastmod>2025-03-16</lastmod>

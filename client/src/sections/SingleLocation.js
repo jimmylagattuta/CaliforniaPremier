@@ -129,15 +129,7 @@ const SingleLocation = ({ office }) => {
           </ul>
         </div>
 
-        {/* Call Option Button (always visible) */}
-        <div className="sl-call-option">
-          <a
-            href={`tel:${office.phone.replace(/[^0-9]/g, "")}`}
-            className="sl-call-button"
-          >
-            Call Now
-          </a>
-        </div>
+
 
         {/* Office Description */}
         <div className="sl-office-description">

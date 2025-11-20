@@ -17,7 +17,6 @@ function FooterComponent() {
               height="180"
               width="220"
             />
-
           </div>
 
           {/* Tagline + Social Icons */}
@@ -78,164 +77,61 @@ function FooterComponent() {
         <div className="footer-col footer-section contact-col">
           <h3>Get In Touch</h3>
           <ul className="address-list">
-            <li>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Santa+Rosa+-+864+2nd+Street+Suite+B,+Santa+Rosa,+CA+95404"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp"
-                  alt="Map icon"
-                  className="map-icon"
-                  height="16"
-                  width="16"
-                />
-                Santa Rosa - 864 2nd Street Suite B, Santa Rosa, CA 95404
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Sacramento+-+7275+E.+Southgate+Drive+Suite+306,+Sacramento,+CA+95823"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp"
-                  alt="Map icon"
-                  className="map-icon"
-                  height="16"
-                  width="16"
-                />
-                Sacramento - 7275 E. Southgate Drive Suite 306, Sacramento, CA 95823
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Stockton+-+420+Acacia+Street+Suite+19,+Stockton,+CA+95203"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp"
-                  alt="Map icon"
-                  className="map-icon"
-                  height="16"
-                  width="16"
-                />
-                Stockton - 420 Acacia Street Suite 19, Stockton, CA 95203
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Modesto+-+1130+Coffee+Road+BLDG+2B,+Modesto,+CA+95355"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp"
-                  alt="Map icon"
-                  className="map-icon"
-                  height="16"
-                  width="16"
-                />
-                Modesto - 1130 Coffee Road BLDG 2B, Modesto, CA 95355
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Hayward+-+24700+Calaroga+Ave+Suite+103,+Hayward,+CA+94545"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp"
-                  alt="Map icon"
-                  className="map-icon"
-                  height="16"
-                  width="16"
-                />
-                Hayward - 24700 Calaroga Ave Suite 103, Hayward, CA 94545
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Salinas+-+945+N.+Blanco+Suite+A,+Salinas,+CA+93901"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp"
-                  alt="Map icon"
-                  className="map-icon"
-                  height="16"
-                  width="16"
-                />
-                Salinas - 945 N. Blanco Suite A, Salinas, CA 93901
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=San+Jose+-+2375+Montpelier+Drive+Suite+10,+San+Jose,+CA+95116"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp"
-                  alt="Map icon"
-                  className="map-icon"
-                  height="16"
-                  width="16"
-                />
-                San Jose - 2375 Montpelier Drive Suite 10, San Jose, CA 95116
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Fresno+-+349+E.+Bullard+Ave+Suite+105,+Fresno,+CA+93710"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp"
-                  alt="Map icon"
-                  className="map-icon"
-                  height="16"
-                  width="16"
-                />
-                Fresno - 349 E. Bullard Ave Suite 105, Fresno, CA 93710
-              </a>
-            </li>
-              <li>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Visalia+-+1622+S.+Court+St.,+Visalia,+CA+93277"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp"
-                  alt="Map icon"
-                  className="map-icon"
-                  height="16"
-                  width="16"
-                />
-                Visalia - 1622 S. Court St., Visalia, CA 93277
-              </a>
-            </li>
+
+            {/* Alphabetized Locations */}
             <li>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Bakersfield+-+3550+Q.+Street+Suite+105,+Bakersfield,+CA+93301"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp"
-                  alt="Map icon"
-                  className="map-icon"
-                  height="16"
-                  width="16"
-                />
+                <img src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp" className="map-icon" alt="" height="16" width="16" />
                 Bakersfield - 3550 Q. Street Suite 105, Bakersfield, CA 93301
+              </a>
+            </li>
+
+            {/* ⭐ NEW — Bellflower */}
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Bellflower+-+9604+Artesia+Blvd.+Suite+202,+Bellflower,+CA+90706"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp" className="map-icon" alt="" height="16" width="16" />
+                Bellflower - 9604 Artesia Blvd. Suite 202, Bellflower, CA 90706
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Fresno+-+349+E.+Bullard+Ave+Suite+105,+Fresno,+CA+93710"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp" className="map-icon" alt="" height="16" width="16" />
+                Fresno - 349 E. Bullard Ave Suite 105, Fresno, CA 93710
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Hayward+-+24700+Calaroga+Ave+Suite+103,+Hayward,+CA+94545"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp" className="map-icon" alt="" height="16" width="16" />
+                Hayward - 24700 Calaroga Ave Suite 103, Hayward, CA 94545
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Modesto+-+1130+Coffee+Road+BLDG+2B,+Modesto,+CA+95355"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp" className="map-icon" alt="" height="16" width="16" />
+                Modesto - 1130 Coffee Road BLDG 2B, Modesto, CA 95355
               </a>
             </li>
 
@@ -245,34 +141,89 @@ function FooterComponent() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp"
-                  alt="Map icon"
-                  className="map-icon"
-                  height="16"
-                  width="16"
-                />
+                <img src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp" className="map-icon" alt="" height="16" width="16" />
                 Napa - 1100 Trancas St., Suite 301, Napa, CA 94558
               </a>
             </li>
-            {/* Add New Office: South San Francisco */}
+
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Sacramento+-+7275+E.+Southgate+Drive+Suite+306,+Sacramento,+CA+95823"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp" className="map-icon" alt="" height="16" width="16" />
+                Sacramento - 7275 E. Southgate Drive Suite 306, Sacramento, CA 95823
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Salinas+-+945+N.+Blanco+Suite+A,+Salinas,+CA+93901"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp" className="map-icon" alt="" height="16" width="16" />
+                Salinas - 945 N. Blanco Suite A, Salinas, CA 93901
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=San+Jose+-+2375+Montpelier+Drive+Suite+10,+San+Jose,+CA+95116"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp" className="map-icon" alt="" height="16" width="16" />
+                San Jose - 2375 Montpelier Drive Suite 10, San Jose, CA 95116
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Santa+Rosa+-+864+2nd+Street+Suite+B,+Santa+Rosa,+CA+95404"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp" className="map-icon" alt="" height="16" width="16" />
+                Santa Rosa - 864 2nd Street Suite B, Santa Rosa, CA 95404
+              </a>
+            </li>
+
             <li>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=South+San+Francisco+-+2400+Westborough+Blvd.,+Suite+2,+South+San+Francisco,+CA+94080"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp"
-                  alt="Map icon"
-                  className="map-icon"
-                  height="16"
-                  width="16"
-                />
+                <img src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp" className="map-icon" alt="" height="16" width="16" />
                 South San Francisco - 2400 Westborough Blvd., Suite 2, South San Francisco, CA 94080
               </a>
             </li>
-            {/* Phone, Fax, Email, Hours */}
+
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Stockton+-+420+Acacia+Street+Suite+19,+Stockton,+CA+95203"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp" className="map-icon" alt="" height="16" width="16" />
+                Stockton - 420 Acacia Street Suite 19, Stockton, CA 95203
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Visalia+-+1622+S.+Court+St.,+Visalia,+CA+93277"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp" className="map-icon" alt="" height="16" width="16" />
+                Visalia - 1622 S. Court St., Visalia, CA 93277
+              </a>
+            </li>
+
+            {/* Phone, Fax */}
             <li>
               <strong>Phone: </strong>
               <a href="tel:8772710203">&nbsp;(877) 271-0203</a>
@@ -281,7 +232,6 @@ function FooterComponent() {
               <strong>Fax:</strong>
               &nbsp;(800) 887-1723
             </li>
-
           </ul>
 
           <p className="book-appointment-p">
@@ -289,6 +239,7 @@ function FooterComponent() {
               Book Appointment
             </a>
           </p>
+
           <p className="footer-disclaimer-text">
             *All testimonials on our website are verified customers and none have been compensated
             monetarily or provided product in exchange for their testimonials.
@@ -302,7 +253,6 @@ function FooterComponent() {
         <ul className="footer-bottom-links">
           <li><a href="/privacy-policy">Privacy Policy</a></li>
           <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
-          {/* <li><a href="/return-and-refund">Return and Refund Policy</a></li> */}
         </ul>
       </div>
     </footer>
