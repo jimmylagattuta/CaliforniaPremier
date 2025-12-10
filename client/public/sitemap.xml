@@ -3,7 +3,7 @@
 
   <!-- Home Page -->
   <url>
-    <loc>https://californiapremierpainclinics.com/</loc>
+    <loc>https://www.californiapremierpainclinics.com/</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,25 +11,25 @@
 
   <!-- Core Pages -->
   <url>
-    <loc>https://californiapremierpainclinics.com/about</loc>
+    <loc>https://www.californiapremierpainclinics.com/about</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/contact</loc>
+    <loc>https://www.californiapremierpainclinics.com/contact</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/privacy-policy</loc>
+    <loc>https://www.californiapremierpainclinics.com/privacy-policy</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/faq</loc>
+    <loc>https://www.californiapremierpainclinics.com/faq</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
@@ -37,55 +37,55 @@
 
   <!-- Services Pages -->
   <url>
-    <loc>https://californiapremierpainclinics.com/services/new-patient-consultations</loc>
+    <loc>https://www.californiapremierpainclinics.com/services/new-patient-consultations</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/services/platelet-rich-plasma</loc>
+    <loc>https://www.californiapremierpainclinics.com/services/platelet-rich-plasma</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/services/facet-joint-injections</loc>
+    <loc>https://www.californiapremierpainclinics.com/services/facet-joint-injections</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/services/epidural-injections</loc>
+    <loc>https://www.californiapremierpainclinics.com/services/epidural-injections</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/services/botox-injections</loc>
+    <loc>https://www.californiapremierpainclinics.com/services/botox-injections</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/services/steroid-injections</loc>
+    <loc>https://www.californiapremierpainclinics.com/services/steroid-injections</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/services/si-joint-injections</loc>
+    <loc>https://www.californiapremierpainclinics.com/services/si-joint-injections</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/services/trigger-point-injections</loc>
+    <loc>https://www.californiapremierpainclinics.com/services/trigger-point-injections</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/services/emg-testing</loc>
+    <loc>https://www.californiapremierpainclinics.com/services/emg-testing</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -93,79 +93,79 @@
 
   <!-- Locations Pages (Alphabetized + Bellflower Added) -->
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/bakersfield</loc>
+    <loc>https://www.californiapremierpainclinics.com/locations/bakersfield</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/bellflower</loc> 
+    <loc>https://www.californiapremierpainclinics.com/locations/bellflower</loc> 
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/fresno</loc>
+    <loc>https://www.californiapremierpainclinics.com/locations/fresno</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/hayward</loc> 
+    <loc>https://www.californiapremierpainclinics.com/locations/hayward</loc> 
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/modesto</loc>
+    <loc>https://www.californiapremierpainclinics.com/locations/modesto</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/napa</loc> 
+    <loc>https://www.californiapremierpainclinics.com/locations/napa</loc> 
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/sacramento</loc>
+    <loc>https://www.californiapremierpainclinics.com/locations/sacramento</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/salinas</loc>
+    <loc>https://www.californiapremierpainclinics.com/locations/salinas</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/san-jose</loc>
+    <loc>https://www.californiapremierpainclinics.com/locations/san-jose</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/santa-rosa</loc>
+    <loc>https://www.californiapremierpainclinics.com/locations/santa-rosa</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/south-san-francisco</loc>
+    <loc>https://www.californiapremierpainclinics.com/locations/south-san-francisco</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/stockton</loc>
+    <loc>https://www.californiapremierpainclinics.com/locations/stockton</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://californiapremierpainclinics.com/locations/visalia</loc>
+    <loc>https://www.californiapremierpainclinics.com/locations/visalia</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -173,7 +173,7 @@
 
   <!-- Blog Section -->
   <url>
-    <loc>https://californiapremierpainclinics.com/blog</loc>
+    <loc>https://www.californiapremierpainclinics.com/blog</loc>
     <lastmod>2025-03-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

@@ -414,7 +414,7 @@ export const locationsData = {
 
   "salinas": {
     name: "Salinas Clinic",
-    address: "945 N. Blanco Suite A, Salinas, CA 93901",
+    address: "275 W. Laurel Dr., Suite A, Salinas, CA 93906",
     heroImage: "https://i.postimg.cc/MTzPBG2S/i-Stock-1176374269-1.webp",
     desktopImage: "https://i.postimg.cc/KzxtvK5p/i-Stock-1176374269-2.webp",
     description:
