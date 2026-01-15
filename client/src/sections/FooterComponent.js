@@ -164,7 +164,7 @@ function FooterComponent() {
                 rel="noopener noreferrer"
               >
                 <img src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp" className="map-icon" alt="" height="16" width="16" />
-                Salinas - 945 N. Blanco Suite A, Salinas, CA 93901
+                Salinas - 275 W. Laurel Drive Suite A, Salinas, CA 93906
               </a>
             </li>
 
