@@ -1,2 +1,2 @@
-release: npm --prefix client install && npm --prefix client run build
+release: bundle exec rails db:migrate
 web: bundle exec rails server -p $PORT -e production
