@@ -477,21 +477,6 @@ export const locationsData = {
     hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
 
-  "napa": {
-    name: "Napa Clinic",
-    address: "1100 Trancas St., Suite 301, Napa, CA 94558",
-    heroImage:
-      "https://res.cloudinary.com/djtsuktwb/image/upload/v1743980631/iStock-801340888_mogsnh.webp",
-    desktopImage:
-      "https://res.cloudinary.com/djtsuktwb/image/upload/v1743980631/iStock-801340888_mogsnh.webp",
-    description:
-      "Our Napa clinic provides personalized pain management and comprehensive care to help you achieve lasting relief.",
-    phone: "(877) 271-0203",
-    fax: "(800) 887-1723",
-    email: "referrals@californiapremierpainclinics.com",
-    hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
-  },
-
   "south-san-francisco": {
     name: "South San Francisco Clinic",
     address:
