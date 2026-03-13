@@ -14,11 +14,13 @@
   align-items: center;
   justify-content: center;
 }
+
 @media (min-width: 769px) {
   .aboutus-hero {
     background-image: url("https://i.postimg.cc/CMDQ2vFs/i-Stock-824369786-2-2.webp");
   }
 }
+
 .aboutus-hero-overlay {
   background-color: rgba(0, 0, 0, .4);
   padding: 2rem;
@@ -29,12 +31,14 @@
   margin: 0 auto;
   border-radius: 8px;
 }
+
 .aboutus-hero-title {
   font-size: 2rem;
   margin: 0 0 .5rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
 .aboutus-hero-subtitle {
   font-size: 1.1rem;
   margin: 0;
@@ -47,6 +51,7 @@
   padding: 2rem 1rem;
   background-color: #f9f9f9;
 }
+
 .aboutus-heading {
   font-size: 1.8rem;
   text-align: center;
@@ -55,11 +60,13 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
 .aboutus-content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
+
 .aboutus-card {
   background-color: #fff;
   padding: 1.5rem;
@@ -67,9 +74,11 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, .06);
   transition: transform .3s ease;
 }
+
 .aboutus-card:hover {
   transform: translateY(-3px);
 }
+
 .aboutus-card h3 {
   margin-top: 0;
   margin-bottom: .5rem;
@@ -78,6 +87,7 @@
   text-transform: uppercase;
   letter-spacing: .5px;
 }
+
 .aboutus-card p {
   margin: 0;
   font-size: .95rem;
@@ -89,6 +99,7 @@
 .aboutus-provider {
   padding: 2rem 1rem;
 }
+
 .aboutus-provider-title {
   font-size: 1.8rem;
   text-align: center;
@@ -130,9 +141,11 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, .06);
   transition: transform .3s ease;
 }
+
 .aboutus-provider-info:hover {
   transform: translateY(-3px);
 }
+
 .aboutus-provider-info h3 {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -142,11 +155,13 @@
   text-transform: uppercase;
   letter-spacing: .5px;
 }
+
 .provider-cert {
   font-style: italic;
   color: var(--brand-secondary);
   margin-bottom: .5rem;
 }
+
 .aboutus-provider-info p {
   font-size: .95rem;
   color: #555;
@@ -159,6 +174,7 @@
   padding: 2rem 1rem;
   background-color: #f0f0f0;
 }
+
 .aboutus-services-title {
   font-size: 1.8rem;
   text-align: center;
@@ -167,11 +183,13 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
 .aboutus-services-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
+
 .aboutus-service-card {
   background-color: #fff;
   text-decoration: none;
@@ -183,21 +201,25 @@
   flex-direction: column;
   transition: transform .3s ease;
 }
+
 .aboutus-service-card:hover {
   transform: translateY(-3px);
 }
+
 .aboutus-service-image {
   width: 100%;
   height: 150px;
   background-size: cover;
   background-position: center;
 }
+
 .aboutus-service-title {
   font-size: 1rem;
   margin: .75rem;
   text-transform: uppercase;
   letter-spacing: .5px;
 }
+
 .aboutus-service-desc {
   font-size: .85rem;
   color: #666;
@@ -207,25 +229,30 @@
 
 /* ===== Larger screens ===== */
 @media (min-width: 768px) {
+
   /* About Us cards side‑by‑side */
   .aboutus-content {
     flex-direction: row;
   }
+
   .aboutus-card {
     flex: 1;
   }
 
   /* Providers: two‑column grid, card flex to row */
   .aboutus-provider-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
+
   .aboutus-provider-card {
     flex-direction: row;
     align-items: flex-start;
   }
+
   .aboutus-provider-photo {
     flex-shrink: 0;
   }
+
   .aboutus-provider-info {
     margin-left: 1rem;
   }
