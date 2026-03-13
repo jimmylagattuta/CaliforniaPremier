@@ -11,40 +11,40 @@ const AboutUs = () => {
     id: key,
   }));
 
-  // Build the rich snippet JSON‑LD object for the About Us page.
+  // Build the rich snippet JSON-LD object for the About Us page.
   const richSnippet = {
     "@context": "https://schema.org",
     "@type": "MedicalOrganization",
-    "name": "California Premier Pain Clinics",
-    "url": "https://californiapremierpainclinics.com/about-us",
-    "logo": "https://i.postimg.cc/xTGxVvsV/i-Stock-1262682182-1.webp",
-    "description":
+    name: "California Premier Pain Clinics",
+    url: "https://californiapremierpainclinics.com/about-us",
+    logo: "https://i.postimg.cc/xTGxVvsV/i-Stock-1262682182-1.webp",
+    description:
       "California Premier Pain Clinics specializes in delivering advanced, individualized pain management solutions designed to restore mobility, reduce pain, and enhance overall quality of life. Our expert team uses state-of-the-art treatments and personalized care to help you regain your quality of life.",
-    "founder": {
+    founder: {
       "@type": "Person",
-      "name": "Stephen Sudekum, DO"
+      name: "Stephen Sudekum, DO",
     },
-    "contactPoint": {
+    contactPoint: {
       "@type": "ContactPoint",
-      "telephone": "(877) 271-0203",
-      "contactType": "customer service",
-      "availableLanguage": ["English"]
+      telephone: "(877) 271-0203",
+      contactType: "customer service",
+      availableLanguage: ["English"],
     },
-    "areaServed": "California",
-    "hasOfferCatalog": {
+    areaServed: "California",
+    hasOfferCatalog: {
       "@type": "OfferCatalog",
-      "name": "Pain Management Services",
-      "itemListElement": servicesArray.map((service, index) => ({
+      name: "Pain Management Services",
+      itemListElement: servicesArray.map((service, index) => ({
         "@type": "Offer",
-        "position": index + 1,
-        "itemOffered": {
+        position: index + 1,
+        itemOffered: {
           "@type": "MedicalProcedure",
-          "name": service.title,
-          "description": service.shortDescription,
-          "url": `https://californiapremierpainclinics.com/services/${service.id}`
-        }
-      }))
-    }
+          name: service.title,
+          description: service.shortDescription,
+          url: `https://californiapremierpainclinics.com/services/${service.id}`,
+        },
+      })),
+    },
   };
 
   return (
@@ -139,6 +139,63 @@ const AboutUs = () => {
             </div>
           </div>
 
+          {/* Dr. Bodor */}
+          <div className="aboutus-provider-card">
+            <img
+              src="https://res.cloudinary.com/djtsuktwb/image/upload/v1773376592/image0_14_lsuf5n.png"
+              alt="Marko Bodor, MD"
+              className="aboutus-provider-photo"
+            />
+            <div className="aboutus-provider-info">
+              <h3>Marko Bodor, MD</h3>
+              <p className="provider-cert">
+                Board-Certified in Physical Medicine &amp; Rehabilitation, Pain
+                Medicine, Sports Medicine, and Neuromuscular &amp;
+                Electrodiagnostic Medicine
+              </p>
+              <p>
+                Dr. Marko Bodor is a board-certified specialist in Physical
+                Medicine and Rehabilitation (PM&amp;R) with additional board
+                certifications in Pain Medicine, Sports Medicine, and
+                Neuromuscular &amp; Electrodiagnostic Medicine. With decades of
+                experience in interventional spine and musculoskeletal care, Dr.
+                Bodor is nationally recognized for his expertise in
+                ultrasound-guided procedures and regenerative medicine.
+              </p>
+              <p>
+                Dr. Bodor completed his medical degree at the University of
+                Cincinnati College of Medicine, followed by residency training
+                at the University of Michigan. Throughout his career, he has
+                combined advanced diagnostic precision with minimally invasive
+                treatment techniques to help patients recover function, reduce
+                pain, and avoid unnecessary surgery whenever possible.
+              </p>
+              <p>
+                He has served as faculty and lecturer at major institutions and
+                national conferences, including Stanford University, UCSF, Mayo
+                Clinic, and the American Academy of Physical Medicine &amp;
+                Rehabilitation. Dr. Bodor has authored numerous peer-reviewed
+                publications and textbook chapters on musculoskeletal
+                ultrasound, biologics, and regenerative treatments. He also
+                serves as an Adjunct Assistant Professor at Touro University and
+                is actively involved in physician education and research.
+              </p>
+              <p>
+                Dr. Bodor&apos;s clinical focus includes ultrasound-guided spine
+                and joint injections, Platelet-Rich Plasma (PRP) and
+                regenerative treatments, sports injuries and orthopedic
+                conditions, peripheral nerve disorders, and electrodiagnostic
+                testing (EMG/NCS).
+              </p>
+              <p>
+                His approach centers on individualized care, advanced
+                image-guided precision, and evidence-based regenerative
+                therapies designed to restore mobility and improve quality of
+                life.
+              </p>
+            </div>
+          </div>
+
           {/* Dr. Starley */}
           <div className="aboutus-provider-card">
             <img
@@ -149,12 +206,12 @@ const AboutUs = () => {
             <div className="aboutus-provider-info">
               <h3>Dr. Denice Starley, D.O</h3>
               <p className="provider-cert">
-                Double Board‑Certified in Physical Medicine &amp; Rehabilitation and Pain Medicine
+                Double Board-Certified in Physical Medicine &amp; Rehabilitation and Pain Medicine
               </p>
               <p>
                 Dr. Denice Starley is a highly experienced and compassionate
                 physiatrist and interventional pain management specialist,
-                board‑certified by both the American Board of Physical Medicine
+                board-certified by both the American Board of Physical Medicine
                 and Rehabilitation and the American Board of Pain Medicine. With
                 over 18 years of clinical experience, she specializes in the
                 diagnosis, rehabilitation, and minimally invasive treatment of
@@ -163,7 +220,7 @@ const AboutUs = () => {
               <p>
                 She earned her Doctor of Osteopathy degree from Kansas City
                 University and completed her residency at the Washington
-                University/Barnes‑Jewish Hospital Consortium in St. Louis,
+                University/Barnes-Jewish Hospital Consortium in St. Louis,
                 Missouri. Her training includes advanced interventional pain
                 techniques under nationally recognized leaders in the field.
               </p>
@@ -173,17 +230,16 @@ const AboutUs = () => {
                 literature, and served as an Assistant Professor at Touro
                 University Nevada College of Osteopathic Medicine. She is also
                 a Qualified Medical Evaluator (QME) for California and actively
-                treats workers’ compensation and personal injury patients.
+                treats workers&apos; compensation and personal injury patients.
               </p>
               <p>
                 Her approach is rooted in restoring function and improving
-                quality of life through evidence‑based, patient‑centered care.
+                quality of life through evidence-based, patient-centered care.
               </p>
             </div>
           </div>
         </div>
       </section>
-
 
       {/* Services for SEO */}
       <section className="aboutus-services">
