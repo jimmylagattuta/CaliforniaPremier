@@ -139,6 +139,49 @@ const AboutUs = () => {
             </div>
           </div>
 
+          {/* Dr. Starley */}
+          <div className="aboutus-provider-card">
+            <img
+              src="https://res.cloudinary.com/djtsuktwb/image/upload/v1752645603/unnamed_x692f1.jpg"
+              alt="Dr. Denice Starley, D.O"
+              className="aboutus-provider-photo"
+            />
+            <div className="aboutus-provider-info">
+              <h3>Dr. Denice Starley, D.O</h3>
+              <p className="provider-cert">
+                Double Board-Certified in Physical Medicine &amp; Rehabilitation and Pain Medicine
+              </p>
+              <p>
+                Dr. Denice Starley is a highly experienced and compassionate
+                physiatrist and interventional pain management specialist,
+                board-certified by both the American Board of Physical Medicine
+                and Rehabilitation and the American Board of Pain Medicine. With
+                over 18 years of clinical experience, she specializes in the
+                diagnosis, rehabilitation, and minimally invasive treatment of
+                acute and chronic pain conditions.
+              </p>
+              <p>
+                She earned her Doctor of Osteopathy degree from Kansas City
+                University and completed her residency at the Washington
+                University/Barnes-Jewish Hospital Consortium in St. Louis,
+                Missouri. Her training includes advanced interventional pain
+                techniques under nationally recognized leaders in the field.
+              </p>
+              <p>
+                Throughout her career, Dr. Starley has held multiple leadership
+                and medical director roles, contributed to pain management
+                literature, and served as an Assistant Professor at Touro
+                University Nevada College of Osteopathic Medicine. She is also
+                a Qualified Medical Evaluator (QME) for California and actively
+                treats workers&apos; compensation and personal injury patients.
+              </p>
+              <p>
+                Her approach is rooted in restoring function and improving
+                quality of life through evidence-based, patient-centered care.
+              </p>
+            </div>
+          </div>
+          
           {/* Dr. Bodor */}
           <div className="aboutus-provider-card">
             <img
@@ -192,49 +235,6 @@ const AboutUs = () => {
                 image-guided precision, and evidence-based regenerative
                 therapies designed to restore mobility and improve quality of
                 life.
-              </p>
-            </div>
-          </div>
-
-          {/* Dr. Starley */}
-          <div className="aboutus-provider-card">
-            <img
-              src="https://res.cloudinary.com/djtsuktwb/image/upload/v1752645603/unnamed_x692f1.jpg"
-              alt="Dr. Denice Starley, D.O"
-              className="aboutus-provider-photo"
-            />
-            <div className="aboutus-provider-info">
-              <h3>Dr. Denice Starley, D.O</h3>
-              <p className="provider-cert">
-                Double Board-Certified in Physical Medicine &amp; Rehabilitation and Pain Medicine
-              </p>
-              <p>
-                Dr. Denice Starley is a highly experienced and compassionate
-                physiatrist and interventional pain management specialist,
-                board-certified by both the American Board of Physical Medicine
-                and Rehabilitation and the American Board of Pain Medicine. With
-                over 18 years of clinical experience, she specializes in the
-                diagnosis, rehabilitation, and minimally invasive treatment of
-                acute and chronic pain conditions.
-              </p>
-              <p>
-                She earned her Doctor of Osteopathy degree from Kansas City
-                University and completed her residency at the Washington
-                University/Barnes-Jewish Hospital Consortium in St. Louis,
-                Missouri. Her training includes advanced interventional pain
-                techniques under nationally recognized leaders in the field.
-              </p>
-              <p>
-                Throughout her career, Dr. Starley has held multiple leadership
-                and medical director roles, contributed to pain management
-                literature, and served as an Assistant Professor at Touro
-                University Nevada College of Osteopathic Medicine. She is also
-                a Qualified Medical Evaluator (QME) for California and actively
-                treats workers&apos; compensation and personal injury patients.
-              </p>
-              <p>
-                Her approach is rooted in restoring function and improving
-                quality of life through evidence-based, patient-centered care.
               </p>
             </div>
           </div>
