@@ -148,7 +148,7 @@ function FooterComponent() {
 
             <li>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Salinas+-+945+N.+Blanco+Suite+A,+Salinas,+CA+93901"
+                href="https://www.google.com/maps/search/?api=1&query=Salinas+-+275+W.+Laurel+Drive+Suite+A,+Salinas,+CA+93906"
                 target="_blank"
                 rel="noopener noreferrer"
               >
