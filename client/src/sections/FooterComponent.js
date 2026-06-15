@@ -137,12 +137,12 @@ function FooterComponent() {
 
             <li>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Sacramento+-+7275+E.+Southgate+Drive+Suite+306,+Sacramento,+CA+95823"
+                href="https://www.google.com/maps/search/?api=1&query=1792+Tribute+Rd+%23480+Sacramento+CA+95815"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img src="https://i.postimg.cc/Sx95BsW6/inverted-image-1.webp" className="map-icon" alt="" height="16" width="16" />
-                Sacramento - 7275 E. Southgate Drive Suite 306, Sacramento, CA 95823
+                Sacramento - 1792 Tribute Road Suite 480, Sacramento, CA 95815
               </a>
             </li>
 

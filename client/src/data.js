@@ -362,7 +362,7 @@ export const locationsData = {
 
   "sacramento": {
     name: "Sacramento Clinic",
-    address: "7275 E. Southgate Drive Suite 306, Sacramento, CA 95823",
+    address: "1792 Tribute Road Suite 480, Sacramento, CA 95815",
     heroImage: "https://i.postimg.cc/K8NmLRCG/i-Stock-2159424867-1.webp",
     desktopImage: "https://i.postimg.cc/kGTkBccG/i-Stock-2159424867-2.webp",
     description:
