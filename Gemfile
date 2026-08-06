@@ -35,7 +35,7 @@ gem "bootsnap", require: false
 
 # Use the latest stable version (0.6.0 as listed)
 # Brotli gem for asset compression
-gem 'brotli', '~> 0.4.0'
+gem 'brotli', '~> 0.6.0'
 # Use rack-brotli for Brotli compression middleware
 gem 'rack-brotli', '~> 2.0.0'
 # Gem for JavaScript compression
