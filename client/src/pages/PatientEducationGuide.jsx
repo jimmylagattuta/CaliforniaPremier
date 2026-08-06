@@ -1,7 +1,8 @@
 import React from "react";
 import "./PatientEducationGuide.css";
 
-const PDF_URL = "/documents/prp-steroid-injections-guide.pdf";
+const PDF_URL =
+  "https://res.cloudinary.com/djtsuktwb/image/upload/v1786001413/California-Premier-Pain-Clinics-Patient-Guide_amprpg.pdf";
 
 function PatientEducationGuide() {
   return (
@@ -30,7 +31,8 @@ function PatientEducationGuide() {
             <a
               className="patient-guide-button patient-guide-button-secondary"
               href={PDF_URL}
-              download="California-Premier-Pain-Clinics-Patient-Guide.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Download PDF
             </a>
@@ -47,7 +49,7 @@ function PatientEducationGuide() {
 
         <p className="patient-guide-mobile-note">
           Having trouble viewing the document? Use the Open Patient Guide button
-          above to view it in your browser.
+          above to view it directly in your browser.
         </p>
 
         <p className="patient-guide-disclaimer">
