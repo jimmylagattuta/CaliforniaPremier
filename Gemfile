@@ -42,7 +42,7 @@ gem 'rack-brotli', '~> 2.0.0'
 gem 'terser'
 # Gemfile
 
-gem 'rack', '~> 3.0'
+gem 'rack', '~> 3.1'
 # gem 'heroku-deflater'
 
 gem "redis", "~> 5.0"
