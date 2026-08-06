@@ -4,6 +4,9 @@ import "./PatientEducationGuide.css";
 const PDF_URL =
   "https://res.cloudinary.com/djtsuktwb/image/upload/v1786001413/California-Premier-Pain-Clinics-Patient-Guide_amprpg.pdf";
 
+const PDF_DOWNLOAD_URL =
+  "https://res.cloudinary.com/djtsuktwb/image/upload/fl_attachment:California-Premier-Pain-Clinics-Patient-Guide/v1786001413/California-Premier-Pain-Clinics-Patient-Guide_amprpg.pdf";
+
 function PatientEducationGuide() {
   return (
     <div className="patient-guide-page">
@@ -30,9 +33,7 @@ function PatientEducationGuide() {
 
             <a
               className="patient-guide-button patient-guide-button-secondary"
-              href={PDF_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={PDF_DOWNLOAD_URL}
             >
               Download PDF
             </a>
