@@ -12,17 +12,30 @@ const Services = lazy(() => import("./pages/Services"));
 const PrivacyPolicy = lazy(() => import("./sections/PrivacyPolicy"));
 const Faqs = lazy(() => import("./sections/Faqs"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
+
 const PatientEducationGuide = lazy(() =>
   import("./pages/PatientEducationGuide")
+);
+
+const PRPPreOpInstructions = lazy(() =>
+  import("./pages/PRPPreOpInstructions")
+);
+
+const PRPEducationFlyerEnglish = lazy(() =>
+  import("./pages/PRPEducationFlyerEnglish")
+);
+
+const PRPEducationFlyerSpanish = lazy(() =>
+  import("./pages/PRPEducationFlyerSpanish")
 );
 
 function App() {
   console.log(process.env.REACT_APP_RECAPTCHA);
 
   return (
-    <div className="container">
-      <Navbar />
+    <div className="App">
       <ScrollToTop />
+      <Navbar />
 
       <main className="content">
         <Suspense fallback={<div>Loading...</div>}>
@@ -30,6 +43,7 @@ function App() {
             <Route path="/" element={<Home />} />
 
             <Route path="/locations" element={<LocationsPage />} />
+
             <Route
               path="/locations/:locationId"
               element={<LocationsPage />}
@@ -59,6 +73,21 @@ function App() {
             <Route
               path="/patient-education/prp-steroid-injections"
               element={<PatientEducationGuide />}
+            />
+
+            <Route
+              path="/patient-education/prp-pre-op-instructions"
+              element={<PRPPreOpInstructions />}
+            />
+
+            <Route
+              path="/patient-education/prp-education-flyer"
+              element={<PRPEducationFlyerEnglish />}
+            />
+
+            <Route
+              path="/patient-education/prp-education-flyer-spanish"
+              element={<PRPEducationFlyerSpanish />}
             />
 
             {/* Other routes */}
