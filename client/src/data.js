@@ -386,9 +386,10 @@ export const locationsData = {
     hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
 
+
   "modesto": {
     name: "Modesto Clinic",
-    address: "1130 Coffee Road BLDG 2B, Modesto, CA 95355",
+    address: "1524 McHenry Ave, Suite 540, Modesto, CA 95350",
     heroImage: "https://i.postimg.cc/QdpHz8Pw/i-Stock-1343463188-1.webp",
     desktopImage: "https://i.postimg.cc/qRspJq7R/i-Stock-1343463188-2.webp",
     description:
@@ -398,6 +399,7 @@ export const locationsData = {
     email: "referrals@californiapremierpainclinics.com",
     hours: "Mon - Fri: 08:00 AM - 05:00 PM, Sat - Sun: Closed",
   },
+
 
   "hayward": {
     name: "Hayward Clinic",
