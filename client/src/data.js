@@ -468,7 +468,7 @@ export const locationsData = {
 
   "bakersfield": {
     name: "Bakersfield Clinic",
-    address: "3550 Q. Street Suite 105, Bakersfield, CA 93301",
+    address: "5300 California Ave Suite 115, Bakersfield, CA 93309",
     heroImage: "https://i.postimg.cc/ZnCGMLbH/i-Stock-2178001181-1.webp",
     desktopImage: "https://i.postimg.cc/pL8p3Wt0/i-Stock-2178001181-2.webp",
     description:
